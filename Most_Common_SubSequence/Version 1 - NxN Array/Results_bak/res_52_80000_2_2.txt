@@ -1,0 +1,28 @@
+==25213== Massif, a heap profiler
+==25213== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==25213== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==25213== Command: ./a.out ../Inputs/sequenceA_52_80000_2.txt ../Inputs/sequenceB_52_80000_2.txt 2
+==25213== 
+==25213== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==25213== 
+==25213== Process terminating with default action of signal 11 (SIGSEGV)
+==25213==  Access not within mapped region at address 0x1FFE801FF8
+==25213== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==25213==    at 0x10994A: recur_findMCSS (MCSS.c:119)
+==25213==  If you believe this happened as a result of a stack
+==25213==  overflow in your program's main thread (unlikely but
+==25213==  possible), you can try to increase the size of the
+==25213==  main thread stack using the --main-stacksize= flag.
+==25213==  The main thread stack size used in this run was 8388608.
+==25213== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==25213== 
+==25213== Process terminating with default action of signal 11 (SIGSEGV)
+==25213==  Access not within mapped region at address 0x1FFE801FF0
+==25213== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==25213==    at 0x482E110: _vgnU_freeres (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so)
+==25213==  If you believe this happened as a result of a stack
+==25213==  overflow in your program's main thread (unlikely but
+==25213==  possible), you can try to increase the size of the
+==25213==  main thread stack using the --main-stacksize= flag.
+==25213==  The main thread stack size used in this run was 8388608.
+==25213== 

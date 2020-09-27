@@ -1,0 +1,24 @@
+==25930== Memcheck, a memory error detector
+==25930== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==25930== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==25930== Command: ./a.out ../Inputs/sequenceA_26_1000_1.txt ../Inputs/sequenceB_26_1000_1.txt 2
+==25930== 
+==25930== Conditional jump or move depends on uninitialised value(s)
+==25930==    at 0x483BC48: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25930==    by 0x10A0E9: printSolution_recursive (MCSS.c:206)
+==25930==    by 0x10A2F1: main (MCSS.c:274)
+==25930== 
+Sequence_A:1000
+Sequence_B:1000
+Solution.length:330
+Time_taken:0.337843
+==25930== 
+==25930== HEAP SUMMARY:
+==25930==     in use at exit: 0 bytes in 0 blocks
+==25930==   total heap usage: 1,009 allocs, 1,009 frees, 2,027,404 bytes allocated
+==25930== 
+==25930== All heap blocks were freed -- no leaks are possible
+==25930== 
+==25930== For counts of detected and suppressed errors, rerun with: -v
+==25930== Use --track-origins=yes to see where uninitialised values come from
+==25930== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

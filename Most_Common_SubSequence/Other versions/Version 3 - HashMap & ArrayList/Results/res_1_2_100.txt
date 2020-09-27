@@ -1,0 +1,25 @@
+==3438== Memcheck, a memory error detector
+==3438== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3438== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==3438== Command: ./a.out ../Inputs/sequenceA_1_100.txt ../Inputs/sequenceB_1_100.txt 2
+==3438== 
+==3438== Conditional jump or move depends on uninitialised value(s)
+==3438==    at 0x483BC48: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3438==    by 0x10A01D: printSolution_recursive (MCSS.c:213)
+==3438==    by 0x10A257: main (MCSS.c:285)
+==3438== 
+Sequence_A:100
+Sequence_B:100
+Solution.length:31
+Time_taken:0.048855
+NOTE: 2^16 is the limit for new algorithm of top-down since row, col are unsigned short
+==3438== 
+==3438== HEAP SUMMARY:
+==3438==     in use at exit: 0 bytes in 0 blocks
+==3438==   total heap usage: 24,699 allocs, 24,699 frees, 434,804 bytes allocated
+==3438== 
+==3438== All heap blocks were freed -- no leaks are possible
+==3438== 
+==3438== For counts of detected and suppressed errors, rerun with: -v
+==3438== Use --track-origins=yes to see where uninitialised values come from
+==3438== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

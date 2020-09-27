@@ -29,7 +29,6 @@ class Problem{
         
         bool runCheck(Problem_Arguments* args){
             time_iterative = runTimeIterative(args);
-
             time_recursive = runTimeRecursive(args);
 
             return res_iterative == res_recursive;

@@ -1,0 +1,8 @@
+Array type change:
+	>using short instead of int for memory optimization
+
+Added HashMap for recursive approach:
+	- array (that uses hashing) of linked lists
+	> does not allocate O(NxN) memory but its much less
+	optimized for memory (each node is 12 bytes, where as an array index is only 2 - 6x less memory efficient for every subproblem value).
+	> can be further optimized if the linked lists are replaced with arrays that also use hashing
