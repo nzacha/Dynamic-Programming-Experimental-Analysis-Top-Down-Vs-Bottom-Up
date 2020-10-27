@@ -1,6 +1,9 @@
 #include <iostream>
+#include <sstream>
+#include <fstream>
 #include <stdlib.h>
 #include <sys/time.h> 
+#include <chrono>
 
 using namespace std;
 
@@ -13,13 +16,30 @@ class Problem{
     public:
         Problem_Arguments* args;
         ResultType res_iterative, res_recursive;
-        long int time_iterative, time_recursive;
-        int PROBLEM_SIZE, PROBLEM_WIDTH;
+        uint64_t time_iterative, time_recursive;
+        long long PROBLEM_SIZE, PROBLEM_WIDTH;
 
         virtual void* generateData()=0;
         virtual void* initArray(int defaultValue)=0;
-        virtual void* writeData(string)=0;
-        virtual void* loadData(string)=0;
+        
+        //Writes a file with specified name and content
+        void writeFile(string fileName, string content){
+            ofstream myfile (fileName);
+            myfile << content;
+            myfile.close();
+        }
+
+        virtual void* writeData(string fileName){
+            stringstream ss;
+            ss.precision(4);
+            ss << fixed << "recursive time taken: " << time_recursive * 1.0 / 1000000 << " s." << endl;
+            ss << "recursive result: " << res_recursive << endl;
+            ss << fixed << "iterative time taken: " << time_iterative * 1.0 / 1000000<< " s."<< endl; 
+            ss << "iterative result: " << res_iterative << endl;
+            writeFile(fileName, ss.str());
+        }
+
+        virtual void* loadData(string fileName)=0;
 
         virtual ResultType iterate_init(Problem_Arguments*)=0;
         virtual ResultType recurse_init(Problem_Arguments*)=0;
@@ -28,26 +48,46 @@ class Problem{
         virtual ResultType* getSolution(){return NULL;};
         
         bool runCheck(Problem_Arguments* args){
-            time_iterative = runTimeIterative(args);
-            time_recursive = runTimeRecursive(args);
+            cout << "Running check" << endl;
+            uint64_t time_iterative = runTimeIterative(args);
+            uint64_t time_recursive = runTimeRecursive(args);
+            cout << endl;
+            
+            bool retVal = res_iterative == res_recursive;
+            
+            cout << "The values " << (string)(retVal ? "MATCH" : "DO NOT MATCH") << endl;
+            cout << endl;
+            
+            cout << "Iterative found: " << getResultIterative() << endl;
+            cout << "Iterative took: ";
+            printf("%.4Lf s.", ((long double) getTimeIterative()) / 1000000);
+            cout << endl;
+            cout << endl;
+        
+            cout << "Recursive found: " << getResultRecursive() << endl;
+            cout << "Recursive took: ";
+            printf("%.4Lf s.", ((long double) getTimeRecursive()) / 1000000);
+            cout << endl;
 
-            return res_iterative == res_recursive;
+            return retVal;
         }
 
-        long int runTimeIterative(Problem_Arguments* args){
-            long int time_before = this->getClockTime();
+        uint64_t runTimeIterative(Problem_Arguments* args){
+            cout << "Running iterative method" << endl;
+            uint64_t time_before = this->getClockTime();
             res_iterative = this->iterate_init(args);
-            long int time_after = this->getClockTime();
+            uint64_t time_after = this->getClockTime();
 
-            return time_iterative = time_after - time_before;
+            return time_iterative = (time_after - time_before);
         }
 
-        long int runTimeRecursive(Problem_Arguments* args){
-            long int time_before = this->getClockTime();
+        uint64_t runTimeRecursive(Problem_Arguments* args){
+            cout << "Running recursive method" << endl;
+            uint64_t time_before = this->getClockTime();
             res_recursive = this->recurse_init(args);
-            long int time_after = this->getClockTime();
+            uint64_t time_after = this->getClockTime();
 
-            return time_recursive = time_after - time_before;
+            return time_recursive = (time_after - time_before);
         }
 
         ResultType getResultRecursive(){
@@ -58,11 +98,11 @@ class Problem{
             return res_iterative;
         }
 
-        long int getTimeIterative(){
+        uint64_t getTimeIterative(){
             return time_iterative;
         }
 
-        long int getTimeRecursive(){
+        uint64_t getTimeRecursive(){
             return time_recursive;
         }
 
@@ -70,10 +110,8 @@ class Problem{
 
         ResultType min(ResultType a, ResultType b){ return (a <= b) ? a : b;}
 
-        long int getClockTime(){
-            struct timeval tp;
-            gettimeofday(&tp, NULL);
-            return tp.tv_usec;
+        uint64_t getClockTime(){
+            return chrono::duration_cast<chrono::microseconds>(chrono::system_clock::now().time_since_epoch()).count();
         }
 
         template <typename type>

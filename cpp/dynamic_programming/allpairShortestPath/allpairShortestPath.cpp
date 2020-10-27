@@ -1,14 +1,18 @@
+#include <vector>
+
 #include "allpairShortestPath.h"
+#include "../helper/trees.h"
 
 class Arguments : public Problem_Arguments{
     public:
         int** graph;
+        GraphNode** listOfNodes;
         int** array;
         int** path;
 
-        Arguments(int** graph, int** array, int** path){
+        Arguments(int** graph, GraphNode** listOfNodes, int** path){
             this->graph = graph;
-            this->array = array;
+            this->listOfNodes = listOfNodes;
             this->path = path;
         }
 };
@@ -16,7 +20,7 @@ class Arguments : public Problem_Arguments{
 class ShortestPath : public Problem <int>{
     int max_neighbours, min_neighbours;
     int max_weight, min_weight;
-    const int NO_EDGE = -1;
+    
     public: 
         ShortestPath(int problem_size){
             this->PROBLEM_SIZE = problem_size;
@@ -27,65 +31,40 @@ class ShortestPath : public Problem <int>{
             max_weight = 10;
             min_weight = 1;
 
-            int** graph = (int**)generateData();
-            
-            int** array =  (int**)initArray(INT32_MAX);
-            for(int i=0; i<PROBLEM_SIZE; i++){
-                array[i][i] = 0;
-                for(int j=0; j<PROBLEM_WIDTH; j++){
-                    if(graph[i][j] != NO_EDGE){
-                        array[i][j] = graph[i][j];
-                    }
+            pair <int**, GraphNode**>* retval = (pair <int**, GraphNode**>*) generateData();
+            int** graph = retval->first;
+            GraphNode** listOfNodes = retval->second;
+            int** path =  (int**)initArray(-1);            
+            args = new Arguments(graph, listOfNodes, path);
+        }
+
+        bool biDirectional = true, isConnected = true;
+        GraphNode** convertGraph(int** graph){
+            GraphNode** listOfNodes = new GraphNode*[PROBLEM_SIZE];
+            for (int i=0; i<PROBLEM_SIZE; i++){
+                listOfNodes[i] = new GraphNode(i);
+            }
+
+            for (int i=0; i<PROBLEM_SIZE; i++){
+                for (int j=0; j<PROBLEM_SIZE; j++){
+                    if(graph[i][j] == NO_EDGE) continue;
+                    listOfNodes[i]->addConnection(listOfNodes[j], graph[i][j]);
                 }
             }
-            
-            int** path =  (int**)initArray(INT32_MAX);
-            
-            args = new Arguments(graph, array, path);
+            return listOfNodes;
         }
 
         void* generateData(){ 
-            int defaultValue = NO_EDGE;
+            pair <int**, GraphNode**>* retval =  new pair <int**, GraphNode**>();
+            //return generateGraph(PROBLEM_SIZE, min_neighbours, max_neighbours, true);
+            retval->first = generateWeighted(PROBLEM_SIZE, min_neighbours, max_neighbours, min_weight, max_weight, biDirectional, isConnected);
+            for (int i=0; i<PROBLEM_SIZE; i++){
+                for (int j=0; j<PROBLEM_SIZE; j++){
 
-            int** graph =  new int*[PROBLEM_SIZE];
-            /* initialize random seed: */
-            srand (time(NULL));
-            //generate array
-            for( int i=0; i< PROBLEM_SIZE; i++){
-                graph[i] = new int[PROBLEM_SIZE];
-                for(int j=0; j<PROBLEM_SIZE; j++){
-                    graph[i][j] = defaultValue;
-                }
+                }    
             }
-            //populate array
-            for( int nodeIndex=0; nodeIndex< PROBLEM_SIZE; nodeIndex++){
-                int numberOfNeighbours = rand() % (max_neighbours - min_neighbours) + min_neighbours;
-                //generate a connection for every neighbour of node
-                int index, emptyCells;
-                //cout << "Node: " << nodeIndex << ", Neighboors: " << numberOfNeighbours << endl;
-                for( int connCount=0; connCount<numberOfNeighbours; connCount++){
-                    index = rand() % (numberOfNeighbours - connCount +1);
-                    emptyCells=0;
-                    //cout << "Node: " << nodeIndex << ", Neighboor Index: " << index << endl;
-                    for( int nodeIterator=0; nodeIterator<PROBLEM_SIZE; nodeIterator++){
-                        if(nodeIterator == nodeIndex){
-                            emptyCells++;
-                            continue;
-                        }
-
-                        if(emptyCells == index){
-                            graph[nodeIndex][nodeIterator] = rand() % (max_weight - min_weight +1) + min_weight;
-                            graph[nodeIterator][nodeIndex] = graph[nodeIndex][nodeIterator];
-                            break;
-                        }
-
-                        if(graph[nodeIndex][nodeIterator] == defaultValue){
-                            emptyCells++;
-                        }
-                    }
-                }
-            }
-            return graph;
+            retval->second = convertGraph(retval->first);
+            return retval;
         }
 
         void* initArray(int defaultValue){ 
@@ -103,21 +82,54 @@ class ShortestPath : public Problem <int>{
             return NULL;
         }
 
-        void* writeData(string fileName){
-            return NULL;
-        }    
-        
         int recurse_init(Problem_Arguments* args_generic){
             Arguments* args = (Arguments*) args_generic;
-            return recurse(args->array, args->path, 0, 0, 0);
+            
+            args->array = (int**)initArray(INT32_MAX);
+            for(int i=0; i<PROBLEM_SIZE; i++){
+                args->array[i][i] = 0;
+                for(int j=0; j<PROBLEM_WIDTH; j++){
+                    if(args->graph[i][j] != NO_EDGE){
+                        args->array[i][j] = args->graph[i][j];
+                    }
+                }
+            }
+            return recurse(args->array, args->listOfNodes, args->path, 0);
         }
 
-        int recurse(int** array, int** path, int k, int i, int j){
-            return 0;
+        int recurse(int** array, GraphNode** listOfNodes, int** path, int nodeIndex){
+            if(nodeIndex >= PROBLEM_SIZE) return 0;
+            
+            GraphNode* node = listOfNodes[nodeIndex];
+            for(int i=0; i<PROBLEM_SIZE; i++){
+                GraphNode* targetNode = listOfNodes[i];
+                for(pair<GraphNode*, int> connection: node->connections){
+                    GraphNode* pivotNode = connection.first;
+                    if(array[nodeIndex][pivotNode->index] == INT32_MAX) continue;
+                    if(array[pivotNode->index][targetNode->index] == INT32_MAX) continue;
+
+                    int newVal = array[nodeIndex][pivotNode->index] + array[pivotNode->index][targetNode->index];
+                    if(newVal < array[nodeIndex][targetNode->index]){
+                        array[nodeIndex][targetNode->index] = newVal;
+                        path[nodeIndex][targetNode->index] = pivotNode->index;
+                    }
+                }
+            }
+            return recurse(array, listOfNodes, path, nodeIndex+1);
         }
 
         int iterate_init(Problem_Arguments* args_generic){
             Arguments* args = (Arguments*) args_generic;
+
+            args->array = (int**)initArray(INT32_MAX);
+            for(int i=0; i<PROBLEM_SIZE; i++){
+                args->array[i][i] = 0;
+                for(int j=0; j<PROBLEM_WIDTH; j++){
+                    if(args->graph[i][j] != NO_EDGE){
+                        args->array[i][j] = args->graph[i][j];
+                    }
+                }
+            }
             return iterate(args->array, args->path);
         }
 
@@ -144,45 +156,16 @@ class ShortestPath : public Problem <int>{
 };
 
 int main() {
-    int NUM_OF_ITEMS = 5;
+    int NUM_OF_ITEMS = 100;
 
     ShortestPath* problem = new ShortestPath(NUM_OF_ITEMS);
-
-    /*
-    cout << "BEFORE" << endl << endl;
-    cout << "Graph: " << endl;
-    problem->print2D<int>(((Arguments*)problem->args)->graph, NUM_OF_ITEMS, NUM_OF_ITEMS);
-    cout << "Array: " << endl;
-    problem->print2D<int>(((Arguments*)problem->args)->array, NUM_OF_ITEMS, NUM_OF_ITEMS);
-    cout << "Path: "<< endl;
-    problem->print2D<int>(((Arguments*)problem->args)->path, NUM_OF_ITEMS, NUM_OF_ITEMS);
-    */
-
-    /*
-    long int recursiveTimeTaken = problem->runTimeRecursive(problem->args);
-    cout << "Recursive took: " << recursiveTimeTaken <<" microseconds." << endl;
-    //problem->printPath(problem->getSolution());
-    */
-   
-    long int iterativeTimeTaken = problem->runTimeIterative(problem->args);
-    cout << "Iterative took: " << iterativeTimeTaken <<" microseconds." << endl;
-    //problem->print2D(problem->getSolution2D(), problem->PROBLEM_SIZE, problem->PROBLEM_WIDTH);
-
-
-    //cout << "AFTER" << endl << endl;
-    cout << "Graph: " << endl;
-    problem->print2D<int>(((Arguments*)problem->args)->graph, NUM_OF_ITEMS, NUM_OF_ITEMS);
-    cout << "Array: " << endl;
-    problem->print2D<int>(((Arguments*)problem->args)->array, NUM_OF_ITEMS, NUM_OF_ITEMS);
-    cout << "Path: "<< endl;
-    problem->print2D<int>(((Arguments*)problem->args)->path, NUM_OF_ITEMS, NUM_OF_ITEMS);
     
-
     /*
-    bool val = problem->runCheck(problem->args);
-    cout << "The values " << (string)(val ? "MATCH" : "DO NOT MATCH") << endl;
-    
-    cout << "Iterative found: " << problem->getResultIterative() << endl;
-    cout << "Recursive found: " << problem->getResultRecursive() << endl;
+    problem->runTimeIterative(problem->args);
+    problem->print2D(((Arguments*)problem->args)->array, problem->PROBLEM_SIZE, problem->PROBLEM_SIZE);
+    problem->runTimeRecursive(problem->args);
+    problem->print2D(((Arguments*)problem->args)->array, problem->PROBLEM_SIZE, problem->PROBLEM_SIZE);
     */
+    problem->runCheck(problem->args);
+    problem->writeData("out.txt");
 }

@@ -6,13 +6,8 @@ class Arguments : public Problem_Arguments{
         int** graph;
         TreeNode* tree;
 
-        Arguments(int** graph, int size, int noEdge){
+        Arguments(int** graph){
             this->graph = graph;
-            tree = rootGraph(graph, size, noEdge);
-        }
-        
-        Arguments(TreeNode* tree){
-            this->tree = tree;
         }
 
         TreeNode* rootGraph(int** graph, int size, int noEdge){
@@ -32,6 +27,12 @@ class Arguments : public Problem_Arguments{
             }
             return root;
         }
+
+        void cleanTree(TreeNode* root){
+            root->value = 0;
+            for (TreeNode* child: root->children)
+                cleanTree(child);
+        }
 };
 
 class IndependentSet : public Problem <int>{  
@@ -45,17 +46,20 @@ class IndependentSet : public Problem <int>{
             max_neighbours = PROBLEM_SIZE;
             min_neighbours = 0;
 
-            //int** graph = (int**)generateData();   
-            //args = new Arguments(graph, PROBLEM_SIZE, NO_EDGE);
-            args = new Arguments(generateConnectedTree(PROBLEM_SIZE, 2));
-            //args = new Arguments(generatePerfectTree(PROBLEM_SIZE,1));
+            TreeNode* tree = generateConnectedTree(PROBLEM_SIZE, 2);
+            int** graph = treeToGraph(tree, PROBLEM_SIZE, false);
+            destroyTree(tree);
+
+            args = new Arguments(graph);
         }
 
         void* generateData(){ 
-            return generateGraph(PROBLEM_SIZE, min_neighbours, max_neighbours);
+            return generateGraph(PROBLEM_SIZE, min_neighbours, max_neighbours, true);
         }
 
         bool isConnected(TreeNode* tree){
+            if(tree==NULL) return false;
+
             bool visited[PROBLEM_SIZE];
             for(int i=0; i<PROBLEM_SIZE; i++){
                 visited[i] = false;
@@ -81,7 +85,7 @@ class IndependentSet : public Problem <int>{
         }    
 
         void* initArray(int defaultValue){   
-            return NULL;
+            return 0;
         }
 
         void* loadData(string fileName){
@@ -94,6 +98,7 @@ class IndependentSet : public Problem <int>{
         
         int recurse_init(Problem_Arguments* args_generic){
             Arguments* args = (Arguments*) args_generic;
+            args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
             return recurse(args->tree);
         }
 
@@ -124,6 +129,7 @@ class IndependentSet : public Problem <int>{
 
         int iterate_init(Problem_Arguments* args_generic){
             Arguments* args = (Arguments*) args_generic;
+            args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
 
             //generate stack of nodes
             bool visited[PROBLEM_SIZE];
@@ -265,31 +271,10 @@ class IndependentSet : public Problem <int>{
 };
 
 int main() {
-    int NUM_OF_ITEMS = 10000;
+    int NUM_OF_ITEMS = 10;
 
-    IndependentSet* problem;
-    bool connected = false;
-    while(!connected){
-        problem = new IndependentSet(NUM_OF_ITEMS);
-        if (DEBUG) problem->print2D(((Arguments*)problem->args)->graph, problem->PROBLEM_SIZE, problem->PROBLEM_SIZE);
-
-        connected = problem->isConnected(((Arguments*)problem->args)->tree);
-    }
-    if(DEBUG){
-        cout << "Printing graph:" << endl;
-        problem->print2D(((Arguments*)problem->args)->graph, problem->PROBLEM_SIZE, problem->PROBLEM_SIZE);
-
-        problem->showTree(((Arguments*)problem->args)->tree);
-    }
-    bool val = problem->runCheck(problem->args);
-    cout << "The values " << (string)(val ? "MATCH" : "DO NOT MATCH") << endl;
-    cout << endl;
+    IndependentSet* problem = new IndependentSet(NUM_OF_ITEMS);
+    problem->runCheck(problem->args);   
     
-    cout << "Iterative found: " << problem->getResultIterative() << endl;
-    cout << "Iterative took: " << problem->getTimeIterative() <<" microseconds." << endl;
-    cout << endl;
-    
-    cout << "Recursive found: " << problem->getResultRecursive() << endl;
-    cout << "Recursive took: " << problem->getTimeRecursive() <<" microseconds." << endl;
-    cout << endl;    
+    return 0;
 }

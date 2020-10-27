@@ -25,20 +25,20 @@ TreeNode* generateConnectedTree(int treeSize, int degree){
     srand (time(NULL));
     int generatedNodes = 0;
     TreeNode* root = new TreeNode(generatedNodes++);
-    list<TreeNode*> nodes;
-    nodes.push_back(root);
-    list<TreeNode*>::iterator it;
+
+    TreeNode** nodes = new TreeNode*[treeSize];
+    for (int i=0; i<treeSize; i++) nodes[i] = NULL;
+    nodes[generatedNodes++] = root;
+    
     TreeNode* node;
     for(int i=generatedNodes; i<treeSize; i++){
-        node = new TreeNode(generatedNodes++);
-        int index = rand() % nodes.size();
-        it = nodes.begin();
-        advance(it, index);
-        (*it)->appendChild(node);
-        if((*it)->children.size() >= degree){
-            nodes.erase(it);
-        }
-        nodes.push_back(node);
+        int index = rand() % (i-1);
+        node = new TreeNode(i);
+        while(nodes[index % treeSize] == NULL) index++;
+        nodes[index]->appendChild(node);
+        nodes[i] = NULL;
+
+        nodes[i] = node;
     }
     return root;
 }
@@ -60,4 +60,32 @@ TreeNode* generatePerfectTree(int treeSize, int degree){
         nodes.pop_front();
     }
     return root;
+}
+
+void destroyTree(TreeNode* node){
+    for(TreeNode* child: node->children)
+        destroyTree(child);
+    delete(node);
+}
+
+void treeToGraph_recur(TreeNode* node, int** graph, int weight){
+    for(TreeNode* child: node->children){
+        graph[node->index][child->index] = weight;
+        treeToGraph_recur(child, graph, weight);
+    }
+}
+
+int** treeToGraph(TreeNode* root, int size, bool weighted){
+    int** graph = new int*[size];
+    for(int i=0; i<size; i++){
+        graph[i] = new int[size];
+        for(int j=0; j<size; j++)
+            graph[i][j] = NO_EDGE;
+    }
+    if(!weighted)
+        treeToGraph_recur(root, graph, EDGE);
+    else
+        cout << "tree 2 weighted graph not implemented yet" << endl; 
+    
+    return graph;
 }

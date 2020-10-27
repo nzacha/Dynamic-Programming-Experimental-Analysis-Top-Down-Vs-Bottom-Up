@@ -1,13 +1,11 @@
 #include "chainMatrixMultiplication.h"
 #define DEBUG false
-#define SOLO false
 
 class Arguments : public Problem_Arguments{
     public:
         int** array;
         int* matrixSizes;
-        Arguments(int** array, int* matrixSizes){
-            this->array = array;
+        Arguments(int* matrixSizes){
             this->matrixSizes = matrixSizes;            
         }
 };
@@ -17,7 +15,8 @@ class ChainMatrixMultiplication : public Problem <int>{
         ChainMatrixMultiplication(int problem_size){
             this->PROBLEM_SIZE = problem_size+1;
             this->PROBLEM_WIDTH = PROBLEM_SIZE;
-            args = new Arguments((int**)initArray(0), (int*)generateData());
+            args = new Arguments((int*)generateData());
+            print1D(((Arguments*)args)->matrixSizes, PROBLEM_SIZE);
         }
 
         void* generateData(){  
@@ -59,10 +58,10 @@ class ChainMatrixMultiplication : public Problem <int>{
         
         int recurse_init(Problem_Arguments* args_generic){
             Arguments* args = (Arguments*) args_generic;
-            int* matrixSizes = args->matrixSizes;
-            int** array = args->array;
-
-            return recurse(array, matrixSizes, 0, PROBLEM_SIZE-2);
+            args->array = (int**)initArray(0);
+            int retVal = recurse(args->array, args->matrixSizes, 0, PROBLEM_SIZE-2);
+            //print2D(args->array, PROBLEM_SIZE, PROBLEM_SIZE);
+            return retVal;
         }
 
         int recurse(int** array, int* matrixSizes, int indexStart, int indexEnd){
@@ -81,50 +80,35 @@ class ChainMatrixMultiplication : public Problem <int>{
 
         int iterate_init(Problem_Arguments* args_generic){
             Arguments* args = (Arguments*) args_generic;
-            int** array = args->array;
-            int* matrixSizes = args->matrixSizes;
-            return iterate(array, matrixSizes);
+            args->array = (int**)initArray(0);
+            int retVal = iterate(args->array, args->matrixSizes);
+            print2D(args->array, PROBLEM_SIZE, PROBLEM_SIZE);
+            return retVal;
         }
 
         int iterate(int** array, int* matrixSizes){
             int indexStart, indexEnd, stepIterator, val1, val2;
             for(int step=1; step<PROBLEM_SIZE; step++){
-                for(indexStart=0; indexStart<PROBLEM_SIZE-1; indexStart++){
-                    indexEnd= indexStart + step;
-                    if(indexEnd>PROBLEM_SIZE){
-                        continue;
-                    }
+                for(indexStart=0; indexStart<PROBLEM_SIZE - step -1; indexStart++){
+                    indexEnd = indexStart + step;
 
                     val1 = array[indexStart][indexEnd-1] + matrixSizes[indexStart]*matrixSizes[indexEnd]*matrixSizes[indexEnd+1];
                     val2 = array[indexStart+1][indexEnd] + matrixSizes[indexStart]*matrixSizes[indexStart+1]*matrixSizes[indexEnd+1];
                     array[indexStart][indexEnd] = min(val1, val2);
                 }
             }
+
             return array[0][PROBLEM_SIZE-2];
         } 
 
         int** getSolution2D(){
-            Arguments* casted_args = (Arguments*) args;
-            return casted_args->array;
+            return ((Arguments*) args)->array;
         }
 };
 
 int main() {
-    int NUM_OF_ITEMS = 1000;
+    int NUM_OF_ITEMS = 5;//30000;
 
     ChainMatrixMultiplication* problem = new ChainMatrixMultiplication(NUM_OF_ITEMS);
-    if(SOLO){
-        long int timeTaken = problem->runTimeRecursive(problem->args);
-        cout << "Recursive took: " << timeTaken <<" microseconds." << endl;
-        //problem->printPath(problem->getSolution2D());
-
-        long int timeTakenIterative = problem->runTimeIterative(problem->args);
-        cout << "Iterative took: " << timeTakenIterative <<" microseconds." << endl;
-        //problem->printPath(problem->getSolution2D());
-    }else{
-        bool val = problem->runCheck(problem->args);
-        cout << "The values " << (string)(val ? "MATCH" : "DO NOT MATCH") << endl;
-        cout << "Iterative found: " << problem->getResultIterative() << endl;
-        cout << "Recursive found: " << problem->getResultRecursive() << endl;
-    }
+    problem->runCheck(problem->args);
 }

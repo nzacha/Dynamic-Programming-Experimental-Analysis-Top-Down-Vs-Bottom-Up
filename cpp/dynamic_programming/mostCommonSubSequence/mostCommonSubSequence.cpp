@@ -1,4 +1,5 @@
 #include "mostCommonSubSequence.h"
+#include "stack"
 
 #define DEBUG false
 
@@ -80,6 +81,8 @@ class MostCommonSubSequence : public Problem <int>{
                 cout << "Iterative table: " << endl;
                 print2D<int>(getSolution2D(), PROBLEM_WIDTH, PROBLEM_SIZE);
             }
+            printSolution(args->array, args->seqA, args->seqB);
+            print2D<int>(getSolution2D(), PROBLEM_WIDTH, PROBLEM_SIZE);
             return retVal;
         }
 
@@ -109,24 +112,39 @@ class MostCommonSubSequence : public Problem <int>{
             return array[PROBLEM_SIZE-1][PROBLEM_WIDTH-1];
         } 
 
+        void printSolution(int** array, string seqA, string seqB){
+            int i = seqA.size(), j = seqB.size();
+            int index = array[i][j];
+            stack<char> word;
+            while(i>1 && j>1){
+                if((array[i-1][j-1] == index-1) && (array[i-1][j] == index-1) && (array[i][j-1] == index-1)){
+                    word.push(seqA.at(i-1));
+                    i--;
+                    j--;
+                    index = array[i][j];
+                }else if(array[i-1][j] == index){
+                    i--;
+                }else{
+                    j--;
+                }
+            }
+
+            cout << ">The output is: ";
+            while(!word.empty()){
+                cout << word.top();
+                word.pop();
+            }
+            cout << endl;
+        }
+
         int** getSolution2D(){
             return ((Arguments*) args)->array;
         }
-
 };
 
 int main(){
-    MostCommonSubSequence* problem = new MostCommonSubSequence("ciawnciawocklwamoikfjoka\nmxokadwadwadwawdwanfaaaaokawmdkowajndoiawkmxkoplmoiawjcmoawmoc", ";lcmawpkljvioawklcmiwanfioawnicownamaaaaaiocniwoanciwajdiwajdijiwadjiawjiod");
-
-    bool val = problem->runCheck(problem->args);
-    cout << "The values " << (string)(val ? "MATCH" : "DO NOT MATCH") << endl;
-    cout << endl;
-    
-    cout << "Iterative found: " << problem->getResultIterative() << endl;
-    cout << "Iterative took: " << problem->getTimeIterative() <<" microseconds." << endl;
-    cout << endl;
-   
-    cout << "Recursive found: " << problem->getResultRecursive() << endl;
-    cout << "Recursive took: " << problem->getTimeRecursive() <<" microseconds." << endl;
-    cout << endl;    
+    string seqA = "abecbecd";
+    string seqB = "decabbd";
+    MostCommonSubSequence* problem = new MostCommonSubSequence(seqA, seqB);
+    problem->runCheck(problem->args);
 }

@@ -5,9 +5,8 @@ class Arguments : public Problem_Arguments{
         Item** items;
         int** weights;
 
-        Arguments(Item** items, int** weights){
+        Arguments(Item** items){
             this->items = items;
-            this->weights = weights;
         }
 };
 
@@ -17,7 +16,7 @@ class Knapsack : public Problem <int>{
             this->PROBLEM_SIZE = problem_size;
             this->PROBLEM_WIDTH = sack_size;
 
-            args = new Arguments((Item**)generateData(), (int**)initArray(-1));
+            args = new Arguments((Item**)generateData());
         }
 
         void* generateData(){
@@ -67,11 +66,10 @@ class Knapsack : public Problem <int>{
         
         int recurse_init(Problem_Arguments* args_generic){
             Arguments* args = (Arguments*) args_generic;
-            Item** items = args->items;
-            int** weights = args->weights;
+            args->weights = (int**)initArray(-1);
             int itemIndex = PROBLEM_SIZE;
             int weightIndex = PROBLEM_WIDTH;
-            return recurse(items, weights, itemIndex, weightIndex);
+            return recurse(args->items, args->weights, itemIndex, weightIndex);
         }
 
         int recurse(Item** items, int** weights, int itemIndex, int weightIndex){
@@ -93,10 +91,8 @@ class Knapsack : public Problem <int>{
 
         int iterate_init(Problem_Arguments* args_generic){
             Arguments* args = (Arguments*) args_generic;
-            Item** items = args->items;
-            int** weights = args->weights;
-            
-            return iterate(items, weights);
+            args->weights = (int**)initArray(-1);
+            return iterate(args->items, args->weights);
         }
 
         int iterate(Item** items, int** weights){ 
@@ -114,7 +110,7 @@ class Knapsack : public Problem <int>{
                         weights[itemIndex][weightIndex] = weights[itemIndex - 1][weightIndex]; 
                 } 
             } 
-
+            
             return weights[PROBLEM_SIZE][PROBLEM_WIDTH]; 
         } 
 
@@ -124,25 +120,8 @@ class Knapsack : public Problem <int>{
 };
 
 int main() {
-    int NUM_OF_ITEMS = 3000, SACK_SIZE = 3000;
+    int NUM_OF_ITEMS = 20, SACK_SIZE = 50;
 
     Knapsack* problem = new Knapsack(NUM_OF_ITEMS, SACK_SIZE);
-
-    /*
-    long int timeTaken = problem->runTimeRecursive(problem->args);
-    cout << "Recursive took: " << timeTaken <<" microseconds." << endl;
-    //problem->printPath(problem->getSolution2D());
-    */
-
-    /*
-    timeTaken = problem->runTimeIterative(problem->args);
-    cout << "Iterative took: " << timeTaken <<" microseconds." << endl;
-    //problem->printPath(problem->getSolution2D());
-    */
-
-    bool val = problem->runCheck(problem->args);
-    cout << "The values " << (string)(val ? "MATCH" : "DO NOT MATCH") << endl;
-    
-    cout << "Iterative found: " << problem->getResultIterative() << endl;
-    cout << "Recursive found: " << problem->getResultRecursive() << endl;
+    problem->runCheck(problem->args);
 }
