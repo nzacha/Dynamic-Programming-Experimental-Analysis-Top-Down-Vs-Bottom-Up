@@ -1,18 +1,40 @@
+#include <stack>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+
 #include "mostCommonSubSequence.h"
-#include "stack"
 
 #define DEBUG false
 
-class Arguments : public Problem_Arguments{
+class MCSS_Arguments : public Problem_Arguments{
     public:
         int** array;
         string seqA, seqB;
 
-        Arguments(string seqA, string seqB){
+        MCSS_Arguments(string seqA, string seqB){
             this->seqA = seqA;
             this->seqB = seqB;
         }
 };
+
+string getSequenceFromFile(string filename){
+    stringstream str;
+    ifstream myfile(filename);
+    string line;
+
+    if(myfile.is_open()){
+        while(getline(myfile, line)){
+            str << line << endl;
+        }
+        myfile.close();
+    }else{
+        cout << "Unable to open file " << filename << endl;
+        cout << "Exiting..." << endl;
+        exit(0);
+    }
+    return str.str();
+}
 
 class MostCommonSubSequence : public Problem <int>{
     public:
@@ -20,7 +42,7 @@ class MostCommonSubSequence : public Problem <int>{
             this->PROBLEM_SIZE = seqA.length() +1;
             this->PROBLEM_WIDTH = seqB.length() +1;
 
-            args = new Arguments(seqA, seqB);
+            args = new MCSS_Arguments(seqA, seqB);
         }
 
         void* generateData(){
@@ -42,12 +64,8 @@ class MostCommonSubSequence : public Problem <int>{
             return NULL;
         }
 
-        void* writeData(string fileName){
-            return NULL;
-        }    
-        
         int recurse_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;           
+            MCSS_Arguments* args = (MCSS_Arguments*) args_generic;           
             args->array = (int**)initArray(-1); 
             int retVal = recurse(args->array, args->seqA, args->seqB, args->seqA.length()-1, args->seqB.length()-1);
             if(DEBUG) {
@@ -74,7 +92,7 @@ class MostCommonSubSequence : public Problem <int>{
         }
 
         int iterate_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;            
+            MCSS_Arguments* args = (MCSS_Arguments*) args_generic;            
             args->array = (int**)initArray(0);
             int retVal = iterate(args->array, args->seqA, args->seqB);
             if(DEBUG) {
@@ -138,13 +156,15 @@ class MostCommonSubSequence : public Problem <int>{
         }
 
         int** getSolution2D(){
-            return ((Arguments*) args)->array;
+            return ((MCSS_Arguments*) args)->array;
         }
 };
 
+#ifndef runner_cpp
 int main(){
     string seqA = "abecbecd";
     string seqB = "decabbd";
     MostCommonSubSequence* problem = new MostCommonSubSequence(seqA, seqB);
     problem->runCheck(problem->args);
 }
+#endif

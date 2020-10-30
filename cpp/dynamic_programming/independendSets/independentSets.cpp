@@ -1,12 +1,12 @@
 #include "independentSets.h"
 #include <bits/stdc++.h> 
 
-class Arguments : public Problem_Arguments{
+class IndendentSets_Arguments : public Problem_Arguments{
     public:
         int** graph;
         TreeNode* tree;
 
-        Arguments(int** graph){
+        IndendentSets_Arguments(int** graph){
             this->graph = graph;
         }
 
@@ -50,7 +50,7 @@ class IndependentSet : public Problem <int>{
             int** graph = treeToGraph(tree, PROBLEM_SIZE, false);
             destroyTree(tree);
 
-            args = new Arguments(graph);
+            args = new IndendentSets_Arguments(graph);
         }
 
         void* generateData(){ 
@@ -91,13 +91,9 @@ class IndependentSet : public Problem <int>{
         void* loadData(string fileName){
             return NULL;
         }
-
-        void* writeData(string fileName){
-            return NULL;
-        }    
         
         int recurse_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            IndendentSets_Arguments* args = (IndendentSets_Arguments*) args_generic;
             args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
             return recurse(args->tree);
         }
@@ -128,7 +124,7 @@ class IndependentSet : public Problem <int>{
         }
 
         int iterate_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            IndendentSets_Arguments* args = (IndendentSets_Arguments*) args_generic;
             args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
 
             //generate stack of nodes
@@ -270,6 +266,7 @@ class IndependentSet : public Problem <int>{
         }
 };
 
+#ifndef runner_cpp
 int main() {
     int NUM_OF_ITEMS = 10;
 
@@ -278,3 +275,4 @@ int main() {
     
     return 0;
 }
+#endif

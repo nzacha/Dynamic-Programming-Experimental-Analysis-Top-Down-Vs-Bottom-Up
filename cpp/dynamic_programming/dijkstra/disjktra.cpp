@@ -2,13 +2,13 @@
 
 #define DEBUG false
 
-class Arguments : public Problem_Arguments{
+class Dijkstra_Arguments : public Problem_Arguments{
     public:
         int** graph;
         int* array;
         int start_point, end_point;
 
-        Arguments(int** graph, int start_point, int end_point){
+        Dijkstra_Arguments(int** graph, int start_point, int end_point){
             this->graph = graph;
             this->start_point = start_point;
             this->end_point = end_point;
@@ -30,7 +30,7 @@ class Dijkstra : public Problem <int>{
             min_weight = 5;
 
             int** graph = (int**)generateData();           
-            args = new Arguments(graph, start_point, end_point);
+            args = new Dijkstra_Arguments(graph, start_point, end_point);
         }
 
         void* generateData(){ 
@@ -48,13 +48,9 @@ class Dijkstra : public Problem <int>{
         void* loadData(string fileName){
             return NULL;
         }
-
-        void* writeData(string fileName){
-            return NULL;
-        }    
         
         int recurse_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            Dijkstra_Arguments* args = (Dijkstra_Arguments*) args_generic;
             args->array = (int*)initArray(INT32_MAX);
             bool visited[PROBLEM_SIZE];
             for(int i=0; i<PROBLEM_SIZE; i++){
@@ -93,7 +89,7 @@ class Dijkstra : public Problem <int>{
         }
 
         int iterate_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            Dijkstra_Arguments* args = (Dijkstra_Arguments*) args_generic;
             args->array = (int*)initArray(INT32_MAX);
             args->array[args->start_point] = 0;
             
@@ -157,10 +153,11 @@ class Dijkstra : public Problem <int>{
         } 
 
         int* getSolution1D(){
-            return ((Arguments*) args)->array;
+            return ((Dijkstra_Arguments*) args)->array;
         }
 };
 
+#ifndef runner_cpp
 int main() {
     int NUM_OF_ITEMS = 20000;
 
@@ -168,9 +165,10 @@ int main() {
     if(!problem->runCheck(problem->args)){
         cout << endl;
         cout << "Printing graph:" << endl;
-        problem->print2D(((Arguments*)problem->args)->graph, problem->PROBLEM_SIZE, problem->PROBLEM_SIZE);
+        problem->print2D(((Dijkstra_Arguments*)problem->args)->graph, problem->PROBLEM_SIZE, problem->PROBLEM_SIZE);
 
         cout << "Printing array:" << endl;
-        problem->print1D(((Arguments*)problem->args)->array, problem->PROBLEM_SIZE);
+        problem->print1D(((Dijkstra_Arguments*)problem->args)->array, problem->PROBLEM_SIZE);
     }
 }
+#endif

@@ -1,11 +1,11 @@
 #include "chainMatrixMultiplication.h"
 #define DEBUG false
 
-class Arguments : public Problem_Arguments{
+class ChainMatrix_Arguments : public Problem_Arguments{
     public:
         int** array;
         int* matrixSizes;
-        Arguments(int* matrixSizes){
+        ChainMatrix_Arguments(int* matrixSizes){
             this->matrixSizes = matrixSizes;            
         }
 };
@@ -15,8 +15,8 @@ class ChainMatrixMultiplication : public Problem <int>{
         ChainMatrixMultiplication(int problem_size){
             this->PROBLEM_SIZE = problem_size+1;
             this->PROBLEM_WIDTH = PROBLEM_SIZE;
-            args = new Arguments((int*)generateData());
-            print1D(((Arguments*)args)->matrixSizes, PROBLEM_SIZE);
+            args = new ChainMatrix_Arguments((int*)generateData());
+            //print1D(((ChainMatrix_Arguments*)args)->matrixSizes, PROBLEM_SIZE);
         }
 
         void* generateData(){  
@@ -51,13 +51,9 @@ class ChainMatrixMultiplication : public Problem <int>{
         void* loadData(string fileName){
             return NULL;
         }
-
-        void* writeData(string fileName){
-            return NULL;
-        }    
         
         int recurse_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            ChainMatrix_Arguments* args = (ChainMatrix_Arguments*) args_generic;
             args->array = (int**)initArray(0);
             int retVal = recurse(args->array, args->matrixSizes, 0, PROBLEM_SIZE-2);
             //print2D(args->array, PROBLEM_SIZE, PROBLEM_SIZE);
@@ -79,10 +75,10 @@ class ChainMatrixMultiplication : public Problem <int>{
         }
 
         int iterate_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            ChainMatrix_Arguments* args = (ChainMatrix_Arguments*) args_generic;
             args->array = (int**)initArray(0);
             int retVal = iterate(args->array, args->matrixSizes);
-            print2D(args->array, PROBLEM_SIZE, PROBLEM_SIZE);
+            //print2D(args->array, PROBLEM_SIZE, PROBLEM_SIZE);
             return retVal;
         }
 
@@ -102,13 +98,15 @@ class ChainMatrixMultiplication : public Problem <int>{
         } 
 
         int** getSolution2D(){
-            return ((Arguments*) args)->array;
+            return ((ChainMatrix_Arguments*) args)->array;
         }
 };
 
+#ifndef runner_cpp
 int main() {
     int NUM_OF_ITEMS = 5;//30000;
 
     ChainMatrixMultiplication* problem = new ChainMatrixMultiplication(NUM_OF_ITEMS);
     problem->runCheck(problem->args);
 }
+#endif

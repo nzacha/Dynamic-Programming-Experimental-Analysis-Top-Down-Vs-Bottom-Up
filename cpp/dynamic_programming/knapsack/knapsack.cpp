@@ -1,11 +1,11 @@
 #include "knapsack.h"
 
-class Arguments : public Problem_Arguments{
+class Knapsack_Arguments : public Problem_Arguments{
     public:
         Item** items;
         int** weights;
 
-        Arguments(Item** items){
+        Knapsack_Arguments(Item** items){
             this->items = items;
         }
 };
@@ -16,7 +16,7 @@ class Knapsack : public Problem <int>{
             this->PROBLEM_SIZE = problem_size;
             this->PROBLEM_WIDTH = sack_size;
 
-            args = new Arguments((Item**)generateData());
+            args = new Knapsack_Arguments((Item**)generateData());
         }
 
         void* generateData(){
@@ -59,13 +59,9 @@ class Knapsack : public Problem <int>{
         void* loadData(string fileName){
             return NULL;
         }
-
-        void* writeData(string fileName){
-            return NULL;
-        }    
         
         int recurse_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            Knapsack_Arguments* args = (Knapsack_Arguments*) args_generic;
             args->weights = (int**)initArray(-1);
             int itemIndex = PROBLEM_SIZE;
             int weightIndex = PROBLEM_WIDTH;
@@ -90,7 +86,7 @@ class Knapsack : public Problem <int>{
         }
 
         int iterate_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            Knapsack_Arguments* args = (Knapsack_Arguments*) args_generic;
             args->weights = (int**)initArray(-1);
             return iterate(args->items, args->weights);
         }
@@ -115,13 +111,15 @@ class Knapsack : public Problem <int>{
         } 
 
         int** getSolution2D(){
-            return ((Arguments*) args)->weights;
+            return ((Knapsack_Arguments*) args)->weights;
         }
 };
 
+#ifndef runner_cpp
 int main() {
     int NUM_OF_ITEMS = 20, SACK_SIZE = 50;
 
     Knapsack* problem = new Knapsack(NUM_OF_ITEMS, SACK_SIZE);
     problem->runCheck(problem->args);
 }
+#endif

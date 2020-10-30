@@ -1,5 +1,8 @@
 #include <list>
 
+#ifndef trees_h
+#define trees_h
+
 class TreeNode{
     public:
         int index, value = 0;
@@ -89,3 +92,4 @@ int** treeToGraph(TreeNode* root, int size, bool weighted){
     
     return graph;
 }
+#endif

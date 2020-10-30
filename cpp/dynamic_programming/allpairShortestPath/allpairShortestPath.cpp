@@ -3,14 +3,14 @@
 #include "allpairShortestPath.h"
 #include "../helper/trees.h"
 
-class Arguments : public Problem_Arguments{
+class AllPair_Arguments : public Problem_Arguments{
     public:
         int** graph;
         GraphNode** listOfNodes;
         int** array;
         int** path;
 
-        Arguments(int** graph, GraphNode** listOfNodes, int** path){
+        AllPair_Arguments(int** graph, GraphNode** listOfNodes, int** path){
             this->graph = graph;
             this->listOfNodes = listOfNodes;
             this->path = path;
@@ -35,7 +35,7 @@ class ShortestPath : public Problem <int>{
             int** graph = retval->first;
             GraphNode** listOfNodes = retval->second;
             int** path =  (int**)initArray(-1);            
-            args = new Arguments(graph, listOfNodes, path);
+            args = new AllPair_Arguments(graph, listOfNodes, path);
         }
 
         bool biDirectional = true, isConnected = true;
@@ -83,7 +83,7 @@ class ShortestPath : public Problem <int>{
         }
 
         int recurse_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            AllPair_Arguments* args = (AllPair_Arguments*) args_generic;
             
             args->array = (int**)initArray(INT32_MAX);
             for(int i=0; i<PROBLEM_SIZE; i++){
@@ -119,7 +119,7 @@ class ShortestPath : public Problem <int>{
         }
 
         int iterate_init(Problem_Arguments* args_generic){
-            Arguments* args = (Arguments*) args_generic;
+            AllPair_Arguments* args = (AllPair_Arguments*) args_generic;
 
             args->array = (int**)initArray(INT32_MAX);
             for(int i=0; i<PROBLEM_SIZE; i++){
@@ -151,10 +151,11 @@ class ShortestPath : public Problem <int>{
         } 
 
         int** getSolution2D(){
-            return ((Arguments*) args)->array;
+            return ((AllPair_Arguments*) args)->array;
         }
 };
 
+#ifndef runner_cpp
 int main() {
     int NUM_OF_ITEMS = 100;
 
@@ -169,3 +170,4 @@ int main() {
     problem->runCheck(problem->args);
     problem->writeData("out.txt");
 }
+#endif

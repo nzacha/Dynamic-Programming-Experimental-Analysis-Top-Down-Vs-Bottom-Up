@@ -1,0 +1,2 @@
+rm ../executable.out
+

@@ -1,3 +1,6 @@
+#ifndef problem_h
+#define problem_h
+
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -17,6 +20,7 @@ class Problem{
         Problem_Arguments* args;
         ResultType res_iterative, res_recursive;
         uint64_t time_iterative, time_recursive;
+        bool iterative_done = false, recursive_done = false;
         long long PROBLEM_SIZE, PROBLEM_WIDTH;
 
         virtual void* generateData()=0;
@@ -32,11 +36,21 @@ class Problem{
         virtual void* writeData(string fileName){
             stringstream ss;
             ss.precision(4);
-            ss << fixed << "recursive time taken: " << time_recursive * 1.0 / 1000000 << " s." << endl;
-            ss << "recursive result: " << res_recursive << endl;
-            ss << fixed << "iterative time taken: " << time_iterative * 1.0 / 1000000<< " s."<< endl; 
-            ss << "iterative result: " << res_iterative << endl;
+            if(recursive_done){
+                ss << fixed << "recursive time taken: " << time_recursive * 1.0 / 1000000 << " s." << endl;
+                ss << "recursive result: " << res_recursive << endl;
+            }else{
+                ss << "recursive was not run" << endl;
+            }
+
+            if(iterative_done){
+                ss << fixed << "iterative time taken: " << time_iterative * 1.0 / 1000000<< " s."<< endl; 
+                ss << "iterative result: " << res_iterative << endl;
+            }else{
+                ss << "iterative was not run" << endl;
+            }
             writeFile(fileName, ss.str());
+            return NULL;
         }
 
         virtual void* loadData(string fileName)=0;
@@ -60,14 +74,13 @@ class Problem{
             
             cout << "Iterative found: " << getResultIterative() << endl;
             cout << "Iterative took: ";
-            printf("%.4Lf s.", ((long double) getTimeIterative()) / 1000000);
-            cout << endl;
-            cout << endl;
+            cout.precision(4);
+            cout << fixed << ((long double) getTimeIterative()) / 1000000 << " s." << endl << endl;
         
             cout << "Recursive found: " << getResultRecursive() << endl;
             cout << "Recursive took: ";
-            printf("%.4Lf s.", ((long double) getTimeRecursive()) / 1000000);
-            cout << endl;
+            cout.precision(4);
+            cout << fixed << ((long double) getTimeRecursive()) / 1000000 << " s." << endl << endl;
 
             return retVal;
         }
@@ -78,6 +91,7 @@ class Problem{
             res_iterative = this->iterate_init(args);
             uint64_t time_after = this->getClockTime();
 
+            iterative_done = true;
             return time_iterative = (time_after - time_before);
         }
 
@@ -87,6 +101,7 @@ class Problem{
             res_recursive = this->recurse_init(args);
             uint64_t time_after = this->getClockTime();
 
+            recursive_done = true;
             return time_recursive = (time_after - time_before);
         }
 
@@ -143,3 +158,4 @@ class Problem{
             cout << endl << endl;;
         }
 };
+#endif

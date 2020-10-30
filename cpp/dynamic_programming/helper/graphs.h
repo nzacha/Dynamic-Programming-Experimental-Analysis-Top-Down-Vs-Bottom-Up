@@ -1,5 +1,8 @@
 #include <list>
 
+#ifndef graph_h
+#define graph_h
+
 const int NO_EDGE = -1, EDGE = 1;
 
 class GraphNode{
@@ -92,3 +95,4 @@ int** generateWeighted(int size, int min_neighbours, int max_neighbours, int min
     }
     return graph;
 }
+#endif
