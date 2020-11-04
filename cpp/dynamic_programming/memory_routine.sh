@@ -6,7 +6,7 @@ mkdir mem_results
 ./compile.sh
 
 #declare program arguments
-sizes=(100) #500 1000 5000 10000 50000 100000 500000 1000000)
+sizes=(100 500 1000 5000 10000 50000 100000 500000 1000000)
 problems=("allPairShortestPath" "chainMatrixMultiplication" "dijkstra" "independentSets" "knapsack" "mostCommonSubSequence")
 
 for problem in ${problems[@]}

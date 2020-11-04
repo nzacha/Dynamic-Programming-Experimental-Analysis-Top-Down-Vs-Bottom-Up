@@ -1,0 +1,1096 @@
+desc: --massif-out-file=mem_results/independentSets/massif1000_4.txt --stacks=yes
+cmd: ./executable.out independentSets 1000 -recursive -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=833476
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1592
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1784704
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1592
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=3
+#-----------
+time=2759798
+mem_heap_B=104822
+mem_heap_extra_B=11922
+mem_stacks_B=3200
+heap_tree=detailed
+n5: 104822 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 14440 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 14440 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 14440 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 14440 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 14440 0x1106DB: main (runner.cpp:314)
+ n1: 8664 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 8664 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 8664 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 8664 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 8664 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 8664 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 8664 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 8664 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 8664 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 8664 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 8664 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 8664 0x1106DB: main (runner.cpp:314)
+ n1: 8000 0x10D177: generateConnectedTree(int, int) (trees.h:32)
+  n1: 8000 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 8000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 8000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 8000 0x1106DB: main (runner.cpp:314)
+ n0: 1014 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=3552382
+mem_heap_B=249590
+mem_heap_extra_B=32506
+mem_stacks_B=2832
+heap_tree=detailed
+n7: 249590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 96000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 96000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 96000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 96000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 96000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n1: 8000 0x10D177: generateConnectedTree(int, int) (trees.h:32)
+  n1: 8000 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 8000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 8000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 8000 0x1106DB: main (runner.cpp:314)
+ n1: 8000 0x10D5E2: treeToGraph(TreeNode*, int, bool) (trees.h:82)
+  n1: 8000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 8000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 8000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 8000 0x1106DB: main (runner.cpp:314)
+ n0: 1014 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=4692429
+mem_heap_B=533590
+mem_heap_extra_B=33074
+mem_stacks_B=2832
+heap_tree=detailed
+n7: 533590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 380000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 380000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 380000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 380000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 380000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n1: 8000 0x10D177: generateConnectedTree(int, int) (trees.h:32)
+  n1: 8000 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 8000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 8000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 8000 0x1106DB: main (runner.cpp:314)
+ n1: 8000 0x10D5E2: treeToGraph(TreeNode*, int, bool) (trees.h:82)
+  n1: 8000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 8000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 8000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 8000 0x1106DB: main (runner.cpp:314)
+ n0: 1014 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=5768248
+mem_heap_B=801590
+mem_heap_extra_B=33610
+mem_stacks_B=2832
+heap_tree=detailed
+n5: 801590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 648000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 648000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 648000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 648000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 648000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n0: 17014 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=6538984
+mem_heap_B=993590
+mem_heap_extra_B=33994
+mem_stacks_B=2832
+heap_tree=detailed
+n5: 993590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 840000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 840000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 840000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 840000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 840000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n0: 17014 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=7325777
+mem_heap_B=1189590
+mem_heap_extra_B=34386
+mem_stacks_B=2832
+heap_tree=detailed
+n5: 1189590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1036000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1036000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1036000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1036000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1036000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n0: 17014 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=8353425
+mem_heap_B=1445590
+mem_heap_extra_B=34898
+mem_stacks_B=2832
+heap_tree=detailed
+n5: 1445590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1292000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1292000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1292000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1292000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1292000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n0: 17014 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=9509529
+mem_heap_B=1733590
+mem_heap_extra_B=35474
+mem_stacks_B=2832
+heap_tree=detailed
+n5: 1733590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1580000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1580000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1580000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1580000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1580000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n0: 17014 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=10151809
+mem_heap_B=1893590
+mem_heap_extra_B=35794
+mem_stacks_B=2832
+heap_tree=detailed
+n5: 1893590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1740000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1740000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1740000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1740000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1740000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n0: 17014 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=10858317
+mem_heap_B=2069590
+mem_heap_extra_B=36146
+mem_stacks_B=2832
+heap_tree=detailed
+n5: 2069590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1916000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1916000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1916000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1916000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1916000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n0: 17014 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=11629053
+mem_heap_B=2261590
+mem_heap_extra_B=36530
+mem_stacks_B=2832
+heap_tree=detailed
+n5: 2261590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2108000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 2108000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 2108000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 2108000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 2108000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+ n1: 23952 0x120A20: __gnu_cxx::new_allocator<std::_List_node<TreeNode*> >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 23952 0x11F246: std::allocator_traits<std::allocator<std::_List_node<TreeNode*> > >::allocate(std::allocator<std::_List_node<TreeNode*> >&, unsigned long) (alloc_traits.h:444)
+   n1: 23952 0x11D4EE: std::__cxx11::_List_base<TreeNode*, std::allocator<TreeNode*> >::_M_get_node() (stl_list.h:438)
+    n1: 23952 0x11AFBF: std::_List_node<TreeNode*>* std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_create_node<TreeNode* const&>(TreeNode* const&) (stl_list.h:630)
+     n1: 23952 0x1193C5: void std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::_M_insert<TreeNode* const&>(std::_List_iterator<TreeNode*>, TreeNode* const&) (stl_list.h:1907)
+      n1: 23952 0x1164DD: std::__cxx11::list<TreeNode*, std::allocator<TreeNode*> >::push_back(TreeNode* const&) (stl_list.h:1208)
+       n1: 23952 0x11178C: TreeNode::appendChild(TreeNode*) (trees.h:17)
+        n1: 23952 0x10D262: generateConnectedTree(int, int) (trees.h:41)
+         n1: 23952 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+          n1: 23952 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+           n1: 23952 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+            n0: 23952 0x1106DB: main (runner.cpp:314)
+ n0: 17014 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=12447960
+mem_heap_B=2465590
+mem_heap_extra_B=36938
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 2465590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2312000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 2312000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 2312000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 2312000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 2312000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=15
+#-----------
+time=13347152
+mem_heap_B=2689590
+mem_heap_extra_B=37386
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 2689590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2536000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 2536000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 2536000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 2536000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 2536000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=16
+#-----------
+time=14326629
+mem_heap_B=2933590
+mem_heap_extra_B=37874
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 2933590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2780000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 2780000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 2780000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 2780000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 2780000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=17
+#-----------
+time=15354277
+mem_heap_B=3189590
+mem_heap_extra_B=38386
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 3189590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3036000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3036000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3036000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3036000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3036000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=18
+#-----------
+time=15932329
+mem_heap_B=3333590
+mem_heap_extra_B=38674
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 3333590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3180000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3180000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3180000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3180000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3180000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=19
+#-----------
+time=16510381
+mem_heap_B=3477590
+mem_heap_extra_B=38962
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 3477590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3324000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3324000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3324000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3324000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3324000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=20
+#-----------
+time=17104490
+mem_heap_B=3625590
+mem_heap_extra_B=39258
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 3625590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3472000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3472000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3472000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3472000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3472000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=21
+#-----------
+time=17746770
+mem_heap_B=3785590
+mem_heap_extra_B=39578
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 3785590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3632000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3632000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3632000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3632000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3632000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=22
+#-----------
+time=18389050
+mem_heap_B=3945590
+mem_heap_extra_B=39898
+mem_stacks_B=2832
+heap_tree=detailed
+n4: 3945590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3792000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3792000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3792000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3792000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3792000 0x1106DB: main (runner.cpp:314)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+ n0: 40966 in 10 places, all below massif's threshold (1.00%)
+ n1: 39920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 39920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 39920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 39920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 39920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=23
+#-----------
+time=19079501
+mem_heap_B=4117590
+mem_heap_extra_B=40242
+mem_stacks_B=2832
+heap_tree=detailed
+n3: 4117590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3964000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3964000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3964000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3964000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3964000 0x1106DB: main (runner.cpp:314)
+ n0: 80886 in 11 places, all below massif's threshold (1.00%)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+#-----------
+snapshot=24
+#-----------
+time=20134718
+mem_heap_B=4138223
+mem_heap_extra_B=24737
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=20774803
+mem_heap_B=4140983
+mem_heap_extra_B=26577
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=21838091
+mem_heap_B=4144127
+mem_heap_extra_B=28673
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=22291540
+mem_heap_B=4145303
+mem_heap_extra_B=29457
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=23157166
+mem_heap_B=4147319
+mem_heap_extra_B=30801
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=24263036
+mem_heap_B=4149959
+mem_heap_extra_B=32561
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=25224633
+mem_heap_B=4151231
+mem_heap_extra_B=33409
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=26108017
+mem_heap_B=4152503
+mem_heap_extra_B=34257
+mem_stacks_B=2936
+heap_tree=detailed
+n3: 4152503 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 4000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 4000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 4000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 4000000 0x1106DB: main (runner.cpp:314)
+ n0: 79799 in 14 places, all below massif's threshold (1.00%)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+#-----------
+snapshot=32
+#-----------
+time=27256533
+mem_heap_B=4153823
+mem_heap_extra_B=35137
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=27849716
+mem_heap_B=4154639
+mem_heap_extra_B=35681
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=28733210
+mem_heap_B=4155647
+mem_heap_extra_B=36353
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=29575422
+mem_heap_B=4156559
+mem_heap_extra_B=36961
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=30573406
+mem_heap_B=4157327
+mem_heap_extra_B=37473
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=31229018
+mem_heap_B=4157879
+mem_heap_extra_B=37841
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=31782667
+mem_heap_B=4158335
+mem_heap_extra_B=38145
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=32468410
+mem_heap_B=4158839
+mem_heap_extra_B=38497
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=33599821
+mem_heap_B=4159799
+mem_heap_extra_B=39137
+mem_stacks_B=3344
+heap_tree=peak
+n3: 4159799 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 4000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 4000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 4000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 4000000 0x1106DB: main (runner.cpp:314)
+ n0: 87095 in 14 places, all below massif's threshold (1.00%)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???
+#-----------
+snapshot=41
+#-----------
+time=34575996
+mem_heap_B=4160231
+mem_heap_extra_B=39425
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=35290772
+mem_heap_B=4160543
+mem_heap_extra_B=39633
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=35902828
+mem_heap_B=4160711
+mem_heap_extra_B=39745
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=36581119
+mem_heap_B=4160855
+mem_heap_extra_B=39841
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=37656463
+mem_heap_B=4161095
+mem_heap_extra_B=40001
+mem_stacks_B=3200
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=38500350
+mem_heap_B=4161311
+mem_heap_extra_B=40145
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=39177404
+mem_heap_B=4161551
+mem_heap_extra_B=40305
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=39872281
+mem_heap_B=4161647
+mem_heap_extra_B=40369
+mem_stacks_B=2936
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=41490090
+mem_heap_B=4161695
+mem_heap_extra_B=40401
+mem_stacks_B=2856
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=41943539
+mem_heap_B=4161695
+mem_heap_extra_B=40401
+mem_stacks_B=3792
+heap_tree=detailed
+n3: 4161695 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 4000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 4000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 4000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 4000000 0x1106DB: main (runner.cpp:314)
+ n0: 88991 in 14 places, all below massif's threshold (1.00%)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000DE: ???
+        n1: 72704 0x1FFF0000EF: ???
+         n1: 72704 0x1FFF0000FF: ???
+          n1: 72704 0x1FFF000104: ???
+           n0: 72704 0x1FFF00010F: ???

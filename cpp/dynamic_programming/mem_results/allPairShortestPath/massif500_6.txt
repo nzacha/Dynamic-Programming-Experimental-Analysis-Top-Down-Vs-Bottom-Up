@@ -1,0 +1,691 @@
+desc: --massif-out-file=mem_results/allPairShortestPath/massif500_6.txt --stacks=yes
+cmd: ./executable.out allPairShortestPath 500 -recursive -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=128185293
+mem_heap_B=7838686
+mem_heap_extra_B=1201098
+mem_stacks_B=2976
+heap_tree=peak
+n4: 7838686 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4738880 0x1209D1: __gnu_cxx::new_allocator<std::_List_node<std::pair<GraphNode*, int> > >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 4738880 0x11F18C: std::allocator_traits<std::allocator<std::_List_node<std::pair<GraphNode*, int> > > >::allocate(std::allocator<std::_List_node<std::pair<GraphNode*, int> > >&, unsigned long) (alloc_traits.h:444)
+   n1: 4738880 0x11D3AC: std::__cxx11::_List_base<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_get_node() (stl_list.h:438)
+    n1: 4738880 0x11AE3D: std::_List_node<std::pair<GraphNode*, int> >* std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_create_node<std::pair<GraphNode*, int> >(std::pair<GraphNode*, int>&&) (stl_list.h:630)
+     n1: 4738880 0x1192B5: void std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_insert<std::pair<GraphNode*, int> >(std::_List_iterator<std::pair<GraphNode*, int> >, std::pair<GraphNode*, int>&&) (stl_list.h:1907)
+      n1: 4738880 0x116426: std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::push_back(std::pair<GraphNode*, int>&&) (stl_list.h:1213)
+       n1: 4738880 0x111682: GraphNode::addConnection(GraphNode*, int) (graphs.h:18)
+        n1: 4738880 0x111A79: ShortestPath::convertGraph(int**) (allpairShortestPath.cpp:51)
+         n1: 4738880 0x111B6C: ShortestPath::generateData() (allpairShortestPath.cpp:66)
+          n1: 4738880 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+           n1: 4738880 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+            n1: 4738880 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+             n0: 4738880 0x110483: main (runner.cpp:302)
+ n2: 1994000 0x111C18: ShortestPath::initArray(int) (allpairShortestPath.cpp:73)
+  n1: 1000000 0x1118E5: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:37)
+   n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+    n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1000000 0x110483: main (runner.cpp:302)
+  n1: 994000 0x111CCF: ShortestPath::recurse_init(Problem_Arguments*) (allpairShortestPath.cpp:88)
+   n1: 994000 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 994000 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 994000 0x10DAFA: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:29)
+      n1: 994000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 994000 0x110483: main (runner.cpp:302)
+ n1: 1000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 1000000 0x111B0B: ShortestPath::generateData() (allpairShortestPath.cpp:60)
+   n1: 1000000 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+    n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+     n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 1000000 0x110483: main (runner.cpp:302)
+ n0: 105806 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=322012094
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=4320
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=596302138
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=6200
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=770012189
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=7640
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=919969941
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=8864
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1109303998
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=10200
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1227562082
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=11000
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1424659000
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=12760
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1687454849
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=14680
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1907789680
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=16440
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2068033095
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=17720
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2268337544
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=19264
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=2548763685
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=21400
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2720546790
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=22880
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2973107787
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=24600
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=3257238736
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=26944
+heap_tree=detailed
+n4: 7844686 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4738880 0x1209D1: __gnu_cxx::new_allocator<std::_List_node<std::pair<GraphNode*, int> > >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 4738880 0x11F18C: std::allocator_traits<std::allocator<std::_List_node<std::pair<GraphNode*, int> > > >::allocate(std::allocator<std::_List_node<std::pair<GraphNode*, int> > >&, unsigned long) (alloc_traits.h:444)
+   n1: 4738880 0x11D3AC: std::__cxx11::_List_base<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_get_node() (stl_list.h:438)
+    n1: 4738880 0x11AE3D: std::_List_node<std::pair<GraphNode*, int> >* std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_create_node<std::pair<GraphNode*, int> >(std::pair<GraphNode*, int>&&) (stl_list.h:630)
+     n1: 4738880 0x1192B5: void std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_insert<std::pair<GraphNode*, int> >(std::_List_iterator<std::pair<GraphNode*, int> >, std::pair<GraphNode*, int>&&) (stl_list.h:1907)
+      n1: 4738880 0x116426: std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::push_back(std::pair<GraphNode*, int>&&) (stl_list.h:1213)
+       n1: 4738880 0x111682: GraphNode::addConnection(GraphNode*, int) (graphs.h:18)
+        n1: 4738880 0x111A79: ShortestPath::convertGraph(int**) (allpairShortestPath.cpp:51)
+         n1: 4738880 0x111B6C: ShortestPath::generateData() (allpairShortestPath.cpp:66)
+          n1: 4738880 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+           n1: 4738880 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+            n1: 4738880 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+             n0: 4738880 0x110483: main (runner.cpp:302)
+ n2: 2000000 0x111C18: ShortestPath::initArray(int) (allpairShortestPath.cpp:73)
+  n1: 1000000 0x1118E5: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:37)
+   n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+    n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1000000 0x110483: main (runner.cpp:302)
+  n1: 1000000 0x111CCF: ShortestPath::recurse_init(Problem_Arguments*) (allpairShortestPath.cpp:88)
+   n1: 1000000 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 1000000 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 1000000 0x10DAFA: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:29)
+      n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 1000000 0x110483: main (runner.cpp:302)
+ n1: 1000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 1000000 0x111B0B: ShortestPath::generateData() (allpairShortestPath.cpp:60)
+   n1: 1000000 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+    n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+     n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 1000000 0x110483: main (runner.cpp:302)
+ n0: 105806 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=3446659500
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=28352
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=3699220434
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=30200
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=3888641102
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=31480
+heap_tree=detailed
+n4: 7844686 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4738880 0x1209D1: __gnu_cxx::new_allocator<std::_List_node<std::pair<GraphNode*, int> > >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 4738880 0x11F18C: std::allocator_traits<std::allocator<std::_List_node<std::pair<GraphNode*, int> > > >::allocate(std::allocator<std::_List_node<std::pair<GraphNode*, int> > >&, unsigned long) (alloc_traits.h:444)
+   n1: 4738880 0x11D3AC: std::__cxx11::_List_base<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_get_node() (stl_list.h:438)
+    n1: 4738880 0x11AE3D: std::_List_node<std::pair<GraphNode*, int> >* std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_create_node<std::pair<GraphNode*, int> >(std::pair<GraphNode*, int>&&) (stl_list.h:630)
+     n1: 4738880 0x1192B5: void std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_insert<std::pair<GraphNode*, int> >(std::_List_iterator<std::pair<GraphNode*, int> >, std::pair<GraphNode*, int>&&) (stl_list.h:1907)
+      n1: 4738880 0x116426: std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::push_back(std::pair<GraphNode*, int>&&) (stl_list.h:1213)
+       n1: 4738880 0x111682: GraphNode::addConnection(GraphNode*, int) (graphs.h:18)
+        n1: 4738880 0x111A79: ShortestPath::convertGraph(int**) (allpairShortestPath.cpp:51)
+         n1: 4738880 0x111B6C: ShortestPath::generateData() (allpairShortestPath.cpp:66)
+          n1: 4738880 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+           n1: 4738880 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+            n1: 4738880 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+             n0: 4738880 0x110483: main (runner.cpp:302)
+ n2: 2000000 0x111C18: ShortestPath::initArray(int) (allpairShortestPath.cpp:73)
+  n1: 1000000 0x1118E5: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:37)
+   n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+    n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1000000 0x110483: main (runner.cpp:302)
+  n1: 1000000 0x111CCF: ShortestPath::recurse_init(Problem_Arguments*) (allpairShortestPath.cpp:88)
+   n1: 1000000 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 1000000 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 1000000 0x10DAFA: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:29)
+      n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 1000000 0x110483: main (runner.cpp:302)
+ n1: 1000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 1000000 0x111B0B: ShortestPath::generateData() (allpairShortestPath.cpp:60)
+   n1: 1000000 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+    n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+     n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 1000000 0x110483: main (runner.cpp:302)
+ n0: 105806 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=4046491690
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=32760
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=4172772188
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=33720
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=4350069481
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=35160
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=4597830187
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=37024
+heap_tree=detailed
+n4: 7844686 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4738880 0x1209D1: __gnu_cxx::new_allocator<std::_List_node<std::pair<GraphNode*, int> > >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 4738880 0x11F18C: std::allocator_traits<std::allocator<std::_List_node<std::pair<GraphNode*, int> > > >::allocate(std::allocator<std::_List_node<std::pair<GraphNode*, int> > >&, unsigned long) (alloc_traits.h:444)
+   n1: 4738880 0x11D3AC: std::__cxx11::_List_base<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_get_node() (stl_list.h:438)
+    n1: 4738880 0x11AE3D: std::_List_node<std::pair<GraphNode*, int> >* std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_create_node<std::pair<GraphNode*, int> >(std::pair<GraphNode*, int>&&) (stl_list.h:630)
+     n1: 4738880 0x1192B5: void std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_insert<std::pair<GraphNode*, int> >(std::_List_iterator<std::pair<GraphNode*, int> >, std::pair<GraphNode*, int>&&) (stl_list.h:1907)
+      n1: 4738880 0x116426: std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::push_back(std::pair<GraphNode*, int>&&) (stl_list.h:1213)
+       n1: 4738880 0x111682: GraphNode::addConnection(GraphNode*, int) (graphs.h:18)
+        n1: 4738880 0x111A79: ShortestPath::convertGraph(int**) (allpairShortestPath.cpp:51)
+         n1: 4738880 0x111B6C: ShortestPath::generateData() (allpairShortestPath.cpp:66)
+          n1: 4738880 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+           n1: 4738880 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+            n1: 4738880 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+             n0: 4738880 0x110483: main (runner.cpp:302)
+ n2: 2000000 0x111C18: ShortestPath::initArray(int) (allpairShortestPath.cpp:73)
+  n1: 1000000 0x1118E5: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:37)
+   n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+    n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1000000 0x110483: main (runner.cpp:302)
+  n1: 1000000 0x111CCF: ShortestPath::recurse_init(Problem_Arguments*) (allpairShortestPath.cpp:88)
+   n1: 1000000 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 1000000 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 1000000 0x10DAFA: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:29)
+      n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 1000000 0x110483: main (runner.cpp:302)
+ n1: 1000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 1000000 0x111B0B: ShortestPath::generateData() (allpairShortestPath.cpp:60)
+   n1: 1000000 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+    n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+     n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 1000000 0x110483: main (runner.cpp:302)
+ n0: 105806 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=4721710592
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=37880
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=4886884411
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=39000
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=5093351720
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=40440
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=5341112463
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=42200
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=5506286346
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=43640
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=5671460211
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=44800
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=5795340570
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=45560
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=5960514414
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=46912
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=6125688390
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=48120
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=6332155750
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=49400
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=6521576525
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=50840
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=6774137612
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=52600
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=6900418163
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=53440
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=7089838987
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=55040
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=7216119557
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=55960
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=7468680608
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=57760
+heap_tree=detailed
+n4: 7844686 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4738880 0x1209D1: __gnu_cxx::new_allocator<std::_List_node<std::pair<GraphNode*, int> > >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 4738880 0x11F18C: std::allocator_traits<std::allocator<std::_List_node<std::pair<GraphNode*, int> > > >::allocate(std::allocator<std::_List_node<std::pair<GraphNode*, int> > >&, unsigned long) (alloc_traits.h:444)
+   n1: 4738880 0x11D3AC: std::__cxx11::_List_base<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_get_node() (stl_list.h:438)
+    n1: 4738880 0x11AE3D: std::_List_node<std::pair<GraphNode*, int> >* std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_create_node<std::pair<GraphNode*, int> >(std::pair<GraphNode*, int>&&) (stl_list.h:630)
+     n1: 4738880 0x1192B5: void std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_insert<std::pair<GraphNode*, int> >(std::_List_iterator<std::pair<GraphNode*, int> >, std::pair<GraphNode*, int>&&) (stl_list.h:1907)
+      n1: 4738880 0x116426: std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::push_back(std::pair<GraphNode*, int>&&) (stl_list.h:1213)
+       n1: 4738880 0x111682: GraphNode::addConnection(GraphNode*, int) (graphs.h:18)
+        n1: 4738880 0x111A79: ShortestPath::convertGraph(int**) (allpairShortestPath.cpp:51)
+         n1: 4738880 0x111B6C: ShortestPath::generateData() (allpairShortestPath.cpp:66)
+          n1: 4738880 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+           n1: 4738880 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+            n1: 4738880 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+             n0: 4738880 0x110483: main (runner.cpp:302)
+ n2: 2000000 0x111C18: ShortestPath::initArray(int) (allpairShortestPath.cpp:73)
+  n1: 1000000 0x1118E5: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:37)
+   n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+    n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1000000 0x110483: main (runner.cpp:302)
+  n1: 1000000 0x111CCF: ShortestPath::recurse_init(Problem_Arguments*) (allpairShortestPath.cpp:88)
+   n1: 1000000 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 1000000 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 1000000 0x10DAFA: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:29)
+      n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 1000000 0x110483: main (runner.cpp:302)
+ n1: 1000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 1000000 0x111B0B: ShortestPath::generateData() (allpairShortestPath.cpp:60)
+   n1: 1000000 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+    n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+     n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 1000000 0x110483: main (runner.cpp:302)
+ n0: 105806 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=7658101391
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=59200
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=7784381916
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=60000
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=8036942938
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=61824
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=8289503942
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=63552
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=8542064985
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=65248
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=8668345555
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=66200
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=8920906581
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=68064
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=9110327387
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=69400
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=9299748226
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=70520
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=9489169049
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=71960
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=9607427199
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=72920
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=9725685290
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=73760
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=9843943384
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=74520
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=9962201481
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=75424
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=10080459570
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=76120
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=10198717692
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=76920
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=10316975792
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=77880
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=10435233895
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=78680
+heap_tree=detailed
+n4: 7844686 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4738880 0x1209D1: __gnu_cxx::new_allocator<std::_List_node<std::pair<GraphNode*, int> > >::allocate(unsigned long, void const*) (new_allocator.h:114)
+  n1: 4738880 0x11F18C: std::allocator_traits<std::allocator<std::_List_node<std::pair<GraphNode*, int> > > >::allocate(std::allocator<std::_List_node<std::pair<GraphNode*, int> > >&, unsigned long) (alloc_traits.h:444)
+   n1: 4738880 0x11D3AC: std::__cxx11::_List_base<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_get_node() (stl_list.h:438)
+    n1: 4738880 0x11AE3D: std::_List_node<std::pair<GraphNode*, int> >* std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_create_node<std::pair<GraphNode*, int> >(std::pair<GraphNode*, int>&&) (stl_list.h:630)
+     n1: 4738880 0x1192B5: void std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::_M_insert<std::pair<GraphNode*, int> >(std::_List_iterator<std::pair<GraphNode*, int> >, std::pair<GraphNode*, int>&&) (stl_list.h:1907)
+      n1: 4738880 0x116426: std::__cxx11::list<std::pair<GraphNode*, int>, std::allocator<std::pair<GraphNode*, int> > >::push_back(std::pair<GraphNode*, int>&&) (stl_list.h:1213)
+       n1: 4738880 0x111682: GraphNode::addConnection(GraphNode*, int) (graphs.h:18)
+        n1: 4738880 0x111A79: ShortestPath::convertGraph(int**) (allpairShortestPath.cpp:51)
+         n1: 4738880 0x111B6C: ShortestPath::generateData() (allpairShortestPath.cpp:66)
+          n1: 4738880 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+           n1: 4738880 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+            n1: 4738880 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+             n0: 4738880 0x110483: main (runner.cpp:302)
+ n2: 2000000 0x111C18: ShortestPath::initArray(int) (allpairShortestPath.cpp:73)
+  n1: 1000000 0x1118E5: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:37)
+   n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+    n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1000000 0x110483: main (runner.cpp:302)
+  n1: 1000000 0x111CCF: ShortestPath::recurse_init(Problem_Arguments*) (allpairShortestPath.cpp:88)
+   n1: 1000000 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 1000000 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 1000000 0x10DAFA: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:29)
+      n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 1000000 0x110483: main (runner.cpp:302)
+ n1: 1000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 1000000 0x111B0B: ShortestPath::generateData() (allpairShortestPath.cpp:60)
+   n1: 1000000 0x1118B9: ShortestPath::ShortestPath(int) (allpairShortestPath.cpp:34)
+    n1: 1000000 0x10DABD: runAllPairShortestPath(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:27)
+     n1: 1000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 1000000 0x110483: main (runner.cpp:302)
+ n0: 105806 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=10553492047
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=79640
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=10671750131
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=80640
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=10790008219
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=81280
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=10908266306
+mem_heap_B=7844686
+mem_heap_extra_B=1201122
+mem_stacks_B=82304
+heap_tree=empty

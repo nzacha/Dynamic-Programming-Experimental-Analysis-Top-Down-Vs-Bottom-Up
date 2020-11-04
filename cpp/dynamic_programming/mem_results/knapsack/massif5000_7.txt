@@ -1,0 +1,557 @@
+desc: --massif-out-file=mem_results/knapsack/massif5000_7.txt --stacks=yes
+cmd: ./executable.out knapsack 5000 -recursive -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=14342213
+mem_heap_B=1831385
+mem_heap_extra_B=88551
+mem_stacks_B=2976
+heap_tree=detailed
+n6: 1831385 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1637636 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 1637636 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 1637636 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 1637636 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 1637636 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 1637636 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 1637636 0x1107A3: main (runner.cpp:318)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000E6: ???
+        n1: 72704 0x1FFF0000F7: ???
+         n1: 72704 0x1FFF000100: ???
+          n1: 72704 0x1FFF000105: ???
+           n0: 72704 0x1FFF000110: ???
+ n1: 40008 0x114729: Knapsack::initArray(int) (knapsack.cpp:49)
+  n1: 40008 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 40008 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 40008 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 40008 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 40008 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 40008 0x1107A3: main (runner.cpp:318)
+ n1: 40000 0x1145F0: Knapsack::generateData() (knapsack.cpp:23)
+  n1: 40000 0x114580: Knapsack::Knapsack(int, int) (knapsack.cpp:19)
+   n1: 40000 0x10E02E: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:55)
+    n1: 40000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 40000 0x1107A3: main (runner.cpp:318)
+ n1: 40000 0x114695: Knapsack::generateData() (knapsack.cpp:33)
+  n1: 40000 0x114580: Knapsack::Knapsack(int, int) (knapsack.cpp:19)
+   n1: 40000 0x10E02E: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:55)
+    n1: 40000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 40000 0x1107A3: main (runner.cpp:318)
+ n0: 1037 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=35923605
+mem_heap_B=5142693
+mem_heap_extra_B=105091
+mem_stacks_B=2976
+heap_tree=detailed
+n3: 5142693 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4948944 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 4948944 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 4948944 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 4948944 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 4948944 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 4948944 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 4948944 0x1107A3: main (runner.cpp:318)
+ n0: 121045 in 10 places, all below massif's threshold (1.00%)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x4: ???
+       n1: 72704 0x1FFF0000E6: ???
+        n1: 72704 0x1FFF0000F7: ???
+         n1: 72704 0x1FFF000100: ???
+          n1: 72704 0x1FFF000105: ???
+           n0: 72704 0x1FFF000110: ???
+#-----------
+snapshot=3
+#-----------
+time=49206469
+mem_heap_B=7180729
+mem_heap_extra_B=115271
+mem_stacks_B=2976
+heap_tree=detailed
+n2: 7180729 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6986980 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 6986980 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 6986980 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 6986980 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 6986980 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 6986980 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 6986980 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=68126069
+mem_heap_B=10083629
+mem_heap_extra_B=129771
+mem_stacks_B=2976
+heap_tree=detailed
+n2: 10083629 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9889880 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 9889880 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 9889880 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 9889880 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 9889880 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 9889880 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 9889880 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=79764885
+mem_heap_B=11869413
+mem_heap_extra_B=138691
+mem_stacks_B=2976
+heap_tree=detailed
+n2: 11869413 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 11675664 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 11675664 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 11675664 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 11675664 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 11675664 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 11675664 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 11675664 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=93465285
+mem_heap_B=13971513
+mem_heap_extra_B=149191
+mem_stacks_B=2976
+heap_tree=detailed
+n2: 13971513 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 13777764 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 13777764 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 13777764 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 13777764 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 13777764 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 13777764 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 13777764 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=109514325
+mem_heap_B=16433973
+mem_heap_extra_B=161491
+mem_stacks_B=2976
+heap_tree=detailed
+n2: 16433973 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16240224 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 16240224 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 16240224 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 16240224 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 16240224 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 16240224 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 16240224 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=134490648
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=482928
+heap_tree=peak
+n2: 20217753 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20024004 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 20024004 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 20024004 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 20024004 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 20024004 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 20024004 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 20024004 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=159282107
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=94912
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=171025585
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=277496
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=190598337
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=125848
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=203646822
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=242584
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=216695317
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=326944
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=232353504
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=43736
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=250621415
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=49976
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=274108694
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=170264
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=287157200
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=34904
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=300205658
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=110176
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=315863872
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=458168
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=336741462
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=60728
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=352399631
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=426776
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=370667590
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=339224
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=386325877
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=21464
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=398069620
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=253624
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=417642511
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=24632
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=429386222
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=234296
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=445044539
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=311104
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=456788255
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=89368
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=472446589
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=382040
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=488104887
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=21848
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=499848621
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=233912
+heap_tree=detailed
+n2: 20217753 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20024004 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 20024004 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 20024004 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 20024004 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 20024004 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 20024004 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 20024004 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=515506944
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=354688
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=538994398
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=269728
+heap_tree=detailed
+n2: 20217753 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20024004 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 20024004 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 20024004 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 20024004 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 20024004 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 20024004 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 20024004 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=558567279
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=241016
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=583211737
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=27704
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=607856251
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=46552
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=632500760
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=87896
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=650984107
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=107512
+heap_tree=detailed
+n2: 20217753 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20024004 0x1147A0: Knapsack::initArray(int) (knapsack.cpp:52)
+  n1: 20024004 0x11488B: Knapsack::recurse_init(Problem_Arguments*) (knapsack.cpp:65)
+   n1: 20024004 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 20024004 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 20024004 0x10E06B: runKnapsack(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:57)
+      n1: 20024004 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 20024004 0x1107A3: main (runner.cpp:318)
+ n0: 193749 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=663306352
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=115480
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=681789702
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=144152
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=700273060
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=134752
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=724917524
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=125720
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=743400881
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=127096
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=768045362
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=111224
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=786528738
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=77848
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=805012119
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=42200
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=829656588
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=33472
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=848139919
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=168088
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=866623254
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=271352
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=878262078
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=180920
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=889900910
+mem_heap_B=20217753
+mem_heap_extra_B=180391
+mem_stacks_B=192920
+heap_tree=empty

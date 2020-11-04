@@ -1,0 +1,1071 @@
+desc: --massif-out-file=mem_results/independentSets/massif50000_7.txt --stacks=yes
+cmd: ./executable.out independentSets 50000 -iterative -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=769104269
+mem_heap_B=187473638
+mem_heap_extra_B=1607634
+mem_stacks_B=2832
+heap_tree=detailed
+n3: 187473638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 183400000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 183400000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 183400000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 183400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 183400000 0x1106DB: main (runner.cpp:314)
+ n0: 2073718 in 11 places, all below massif's threshold (1.00%)
+ n1: 1999920 0x10D200: generateConnectedTree(int, int) (trees.h:39)
+  n1: 1999920 0x1138C9: IndependentSet::IndependentSet(int) (independentSets.cpp:49)
+   n1: 1999920 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1999920 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1999920 0x1106DB: main (runner.cpp:314)
+#-----------
+snapshot=2
+#-----------
+time=2064396552
+mem_heap_B=511273638
+mem_heap_extra_B=1620586
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 511273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 507200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 507200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 507200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 507200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 507200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=3346087866
+mem_heap_B=831673638
+mem_heap_extra_B=1633402
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 831673638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 827600000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 827600000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 827600000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 827600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 827600000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=4254952618
+mem_heap_B=1058873638
+mem_heap_extra_B=1642490
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 1058873638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1054800000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1054800000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1054800000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1054800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1054800000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=5688654762
+mem_heap_B=1417273638
+mem_heap_extra_B=1656826
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 1417273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1413200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1413200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1413200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1413200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1413200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=6675125043
+mem_heap_B=1663873638
+mem_heap_extra_B=1666690
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 1663873638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1659800000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1659800000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1659800000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1659800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1659800000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=7600790992
+mem_heap_B=1895273638
+mem_heap_extra_B=1675946
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 1895273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1891200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 1891200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 1891200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 1891200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 1891200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=8914484586
+mem_heap_B=2223673638
+mem_heap_extra_B=1689082
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 2223673638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2219600000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 2219600000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 2219600000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 2219600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 2219600000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=10352987072
+mem_heap_B=2583273638
+mem_heap_extra_B=1703466
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 2583273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2579200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 2579200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 2579200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 2579200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 2579200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=11213048347
+mem_heap_B=2798273638
+mem_heap_extra_B=1712066
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 2798273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2794200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 2794200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 2794200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 2794200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 2794200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=12144314695
+mem_heap_B=3031073638
+mem_heap_extra_B=1721378
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 3031073638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3027000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3027000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3027000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3027000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3027000000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=13152386515
+mem_heap_B=3283073638
+mem_heap_extra_B=1731458
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 3283073638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3279000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3279000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3279000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3279000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3279000000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=14244464320
+mem_heap_B=3556073638
+mem_heap_extra_B=1742378
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 3556073638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3552000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3552000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3552000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3552000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3552000000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=15426148509
+mem_heap_B=3851473638
+mem_heap_extra_B=1754194
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 3851473638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3847400000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 3847400000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 3847400000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 3847400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 3847400000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=16706239709
+mem_heap_B=4171473638
+mem_heap_extra_B=1766994
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 4171473638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4167400000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 4167400000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 4167400000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 4167400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 4167400000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=18091938433
+mem_heap_B=4517873638
+mem_heap_extra_B=1780850
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 4517873638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4513800000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 4513800000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 4513800000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 4513800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 4513800000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=19592845365
+mem_heap_B=4893073638
+mem_heap_extra_B=1795858
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 4893073638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4889000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 4889000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 4889000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 4889000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 4889000000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=20389702137
+mem_heap_B=5092273638
+mem_heap_extra_B=1803826
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 5092273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5088200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 5088200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 5088200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 5088200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 5088200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=21218561189
+mem_heap_B=5299473638
+mem_heap_extra_B=1812114
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 5299473638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5295400000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 5295400000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 5295400000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 5295400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 5295400000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=22081822692
+mem_heap_B=5515273638
+mem_heap_extra_B=1820746
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 5515273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5511200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 5511200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 5511200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 5511200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 5511200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=22979486646
+mem_heap_B=5739673638
+mem_heap_extra_B=1829722
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 5739673638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5735600000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 5735600000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 5735600000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 5735600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 5735600000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=23913153165
+mem_heap_B=5973073638
+mem_heap_extra_B=1839058
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 5973073638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5969000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 5969000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 5969000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 5969000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 5969000000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=24884422363
+mem_heap_B=6215873638
+mem_heap_extra_B=1848770
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 6215873638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6211800000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 6211800000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 6211800000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 6211800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 6211800000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=25895694411
+mem_heap_B=6468673638
+mem_heap_extra_B=1858882
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 6468673638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6464600000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 6464600000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 6464600000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 6464600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 6464600000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=26948569423
+mem_heap_B=6731873638
+mem_heap_extra_B=1869410
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 6731873638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6727800000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 6727800000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 6727800000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 6727800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 6727800000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=28043847456
+mem_heap_B=7005673638
+mem_heap_extra_B=1880362
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 7005673638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7001600000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 7001600000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 7001600000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 7001600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 7001600000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=29183128624
+mem_heap_B=7290473638
+mem_heap_extra_B=1891754
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 7290473638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7286400000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 7286400000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 7286400000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 7286400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 7286400000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=30368813098
+mem_heap_B=7586873638
+mem_heap_extra_B=1903610
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 7586873638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7582800000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 7582800000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 7582800000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 7582800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 7582800000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=31603301049
+mem_heap_B=7895473638
+mem_heap_extra_B=1915954
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 7895473638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7891400000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 7891400000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 7891400000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 7891400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 7891400000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=32886592477
+mem_heap_B=8216273638
+mem_heap_extra_B=1928786
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 8216273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8212200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 8212200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 8212200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 8212200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 8212200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=34223487724
+mem_heap_B=8550473638
+mem_heap_extra_B=1942154
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 8550473638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8546400000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 8546400000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 8546400000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 8546400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 8546400000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=35613986790
+mem_heap_B=8898073638
+mem_heap_extra_B=1956058
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 8898073638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8894000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 8894000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 8894000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 8894000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 8894000000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=37060489846
+mem_heap_B=9259673638
+mem_heap_extra_B=1970522
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 9259673638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9255600000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 9255600000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 9255600000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 9255600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 9255600000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=38566997177
+mem_heap_B=9636273638
+mem_heap_extra_B=1985586
+mem_stacks_B=2832
+heap_tree=detailed
+n2: 9636273638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9632200000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 9632200000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 9632200000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 9632200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 9632200000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=39735880454
+mem_heap_B=9928473638
+mem_heap_extra_B=1997274
+mem_stacks_B=2832
+heap_tree=peak
+n2: 9928473638 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9924400000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 9924400000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 9924400000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 9924400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 9924400000 0x1106DB: main (runner.cpp:314)
+ n0: 4073638 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=40729790727
+mem_heap_B=10003355512
+mem_heap_extra_B=1254864
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=41724438239
+mem_heap_B=10003442584
+mem_heap_extra_B=1312912
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=42718455048
+mem_heap_B=10003515424
+mem_heap_extra_B=1361472
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=44209524900
+mem_heap_B=10003608016
+mem_heap_extra_B=1423200
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=45203946973
+mem_heap_B=10003662280
+mem_heap_extra_B=1459376
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=46199455468
+mem_heap_B=10003713400
+mem_heap_extra_B=1493456
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=47194121210
+mem_heap_B=10003759240
+mem_heap_extra_B=1524016
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=48685864602
+mem_heap_B=10003823728
+mem_heap_extra_B=1567008
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=49679861079
+mem_heap_B=10003864768
+mem_heap_extra_B=1594368
+mem_stacks_B=3288
+heap_tree=detailed
+n2: 10003864768 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 10000000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 10000000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 10000000000 0x1106DB: main (runner.cpp:314)
+ n0: 3864768 in 15 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=51171704338
+mem_heap_B=10003920760
+mem_heap_extra_B=1631696
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=52666945670
+mem_heap_B=10003970128
+mem_heap_extra_B=1664608
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=54161841548
+mem_heap_B=10004016784
+mem_heap_extra_B=1695712
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=55159163506
+mem_heap_B=10004047408
+mem_heap_extra_B=1716128
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=56155062451
+mem_heap_B=10004075848
+mem_heap_extra_B=1735088
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=56924310914
+mem_heap_B=10004097280
+mem_heap_extra_B=1749376
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=57695024986
+mem_heap_B=10004116888
+mem_heap_extra_B=1762448
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=58464258837
+mem_heap_B=10004135992
+mem_heap_extra_B=1775184
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=59233964565
+mem_heap_B=10004155072
+mem_heap_extra_B=1787904
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=60003158004
+mem_heap_B=10004172280
+mem_heap_extra_B=1799376
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=60773659118
+mem_heap_B=10004189008
+mem_heap_extra_B=1810528
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=61544823140
+mem_heap_B=10004204776
+mem_heap_extra_B=1821040
+mem_stacks_B=3288
+heap_tree=detailed
+n2: 10004204776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 10000000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 10000000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 10000000000 0x1106DB: main (runner.cpp:314)
+ n0: 4204776 in 15 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=62315001112
+mem_heap_B=10004220640
+mem_heap_extra_B=1831616
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=63086715810
+mem_heap_B=10004234704
+mem_heap_extra_B=1840992
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=63856632279
+mem_heap_B=10004249536
+mem_heap_extra_B=1850880
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=64626400919
+mem_heap_B=10004262880
+mem_heap_extra_B=1859776
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=65396386626
+mem_heap_B=10004276248
+mem_heap_extra_B=1868688
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=66168771448
+mem_heap_B=10004287960
+mem_heap_extra_B=1876496
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=66938441261
+mem_heap_B=10004300248
+mem_heap_extra_B=1884688
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=67709367258
+mem_heap_B=10004311960
+mem_heap_extra_B=1892496
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=68479067659
+mem_heap_B=10004323312
+mem_heap_extra_B=1900064
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=69249246876
+mem_heap_B=10004333920
+mem_heap_extra_B=1907136
+mem_stacks_B=3288
+heap_tree=detailed
+n2: 10004333920 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 10000000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 10000000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 10000000000 0x1106DB: main (runner.cpp:314)
+ n0: 4333920 in 15 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=67
+#-----------
+time=70019967092
+mem_heap_B=10004343520
+mem_heap_extra_B=1913536
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=70790699876
+mem_heap_B=10004353600
+mem_heap_extra_B=1920256
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=71563747921
+mem_heap_B=10004362984
+mem_heap_extra_B=1926512
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=72334419369
+mem_heap_B=10004371288
+mem_heap_extra_B=1932048
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=73104373159
+mem_heap_B=10004379760
+mem_heap_extra_B=1937696
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=73875175905
+mem_heap_B=10004386840
+mem_heap_extra_B=1942416
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=74645057013
+mem_heap_B=10004394256
+mem_heap_extra_B=1947360
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=75414898514
+mem_heap_B=10004401624
+mem_heap_extra_B=1952272
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=76184471635
+mem_heap_B=10004407984
+mem_heap_extra_B=1956512
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=76956617817
+mem_heap_B=10004414344
+mem_heap_extra_B=1960752
+mem_stacks_B=3288
+heap_tree=detailed
+n2: 10004414344 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 10000000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 10000000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 10000000000 0x1106DB: main (runner.cpp:314)
+ n0: 4414344 in 15 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=77
+#-----------
+time=77726276259
+mem_heap_B=10004420608
+mem_heap_extra_B=1964928
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=78504536756
+mem_heap_B=10004426176
+mem_heap_extra_B=1968640
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=79284673757
+mem_heap_B=10004431360
+mem_heap_extra_B=1972096
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=80056510689
+mem_heap_B=10004436520
+mem_heap_extra_B=1975536
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=80836749315
+mem_heap_B=10004440984
+mem_heap_extra_B=1978512
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=81608574624
+mem_heap_B=10004445160
+mem_heap_extra_B=1981296
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=82385622589
+mem_heap_B=10004448952
+mem_heap_extra_B=1983824
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=83160511261
+mem_heap_B=10004452480
+mem_heap_extra_B=1986176
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=83937703162
+mem_heap_B=10004455864
+mem_heap_extra_B=1988432
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=84710463387
+mem_heap_B=10004458984
+mem_heap_extra_B=1990512
+mem_stacks_B=3288
+heap_tree=detailed
+n2: 10004458984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 10000000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 10000000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 10000000000 0x1106DB: main (runner.cpp:314)
+ n0: 4458984 in 15 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=87
+#-----------
+time=85485439755
+mem_heap_B=10004462008
+mem_heap_extra_B=1992528
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=86255247209
+mem_heap_B=10004464552
+mem_heap_extra_B=1994224
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=87031162737
+mem_heap_B=10004466616
+mem_heap_extra_B=1995600
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=87819722824
+mem_heap_B=10004468248
+mem_heap_extra_B=1996688
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=88677679043
+mem_heap_B=10004470024
+mem_heap_extra_B=1997872
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=89456809346
+mem_heap_B=10004471032
+mem_heap_extra_B=1998544
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=90230635603
+mem_heap_B=10004472208
+mem_heap_extra_B=1999328
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=91022369678
+mem_heap_B=10004473048
+mem_heap_extra_B=1999888
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=91847696825
+mem_heap_B=10004473552
+mem_heap_extra_B=2000224
+mem_stacks_B=3288
+heap_tree=empty
+#-----------
+snapshot=96
+#-----------
+time=92616801096
+mem_heap_B=10004655040
+mem_heap_extra_B=2003120
+mem_stacks_B=53256
+heap_tree=detailed
+n2: 10004655040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10D636: treeToGraph(TreeNode*, int, bool) (trees.h:84)
+  n1: 10000000000 0x1138EA: IndependentSet::IndependentSet(int) (independentSets.cpp:50)
+   n1: 10000000000 0x10DEC3: runIndependentSets(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:48)
+    n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+     n0: 10000000000 0x1106DB: main (runner.cpp:314)
+ n0: 4655040 in 17 places, all below massif's threshold (1.00%)

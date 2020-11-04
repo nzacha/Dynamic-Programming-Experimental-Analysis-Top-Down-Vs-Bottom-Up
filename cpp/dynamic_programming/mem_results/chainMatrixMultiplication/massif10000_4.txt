@@ -1,0 +1,480 @@
+desc: --massif-out-file=mem_results/chainMatrixMultiplication/massif10000_4.txt --stacks=yes
+cmd: ./executable.out chainMatrixMultiplication 10000 -recursive -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=3847981
+mem_heap_B=398873516
+mem_heap_extra_B=159812
+mem_stacks_B=2992
+heap_tree=peak
+n2: 398873516 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 398679720 0x1125D8: ChainMatrixMultiplication::initArray(int) (chainMatrixMultiplication.cpp:41)
+  n1: 398679720 0x11267B: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (chainMatrixMultiplication.cpp:57)
+   n1: 398679720 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 398679720 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 398679720 0x10DC4D: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:36)
+      n1: 398679720 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 398679720 0x11054B: main (runner.cpp:306)
+ n0: 193796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=140794090
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=604960
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=325682495
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=615008
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=449836626
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=573664
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=621907678
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=587104
+heap_tree=detailed
+n2: 400353812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 400160016 0x1125D8: ChainMatrixMultiplication::initArray(int) (chainMatrixMultiplication.cpp:41)
+  n1: 400160016 0x11267B: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (chainMatrixMultiplication.cpp:57)
+   n1: 400160016 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 400160016 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 400160016 0x10DC4D: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:36)
+      n1: 400160016 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 400160016 0x11054B: main (runner.cpp:306)
+ n0: 193796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=748036538
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=475104
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=964997800
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=463000
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1181261129
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=476640
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1335635156
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=540896
+heap_tree=detailed
+n2: 400353812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 400160016 0x1125D8: ChainMatrixMultiplication::initArray(int) (chainMatrixMultiplication.cpp:41)
+  n1: 400160016 0x11267B: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (chainMatrixMultiplication.cpp:57)
+   n1: 400160016 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 400160016 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 400160016 0x10DC4D: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:36)
+      n1: 400160016 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 400160016 0x11054B: main (runner.cpp:306)
+ n0: 193796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=1528602749
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=385952
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1644383364
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=388064
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1798805933
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=373920
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=2041470029
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=492512
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2195892612
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=607512
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2372375605
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=313432
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=2615039661
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=313496
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=2824588947
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=532064
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=3056149919
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=452184
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=3249117388
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=272224
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3364897889
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=535256
+heap_tree=detailed
+n2: 400353812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 400160016 0x1125D8: ChainMatrixMultiplication::initArray(int) (chainMatrixMultiplication.cpp:41)
+  n1: 400160016 0x11267B: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (chainMatrixMultiplication.cpp:57)
+   n1: 400160016 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 400160016 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 400160016 0x10DC4D: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:36)
+      n1: 400160016 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 400160016 0x11054B: main (runner.cpp:306)
+ n0: 193796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=3557865380
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=237336
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=3712239356
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=629728
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3905206817
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=622744
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=4020987290
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=477464
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=4213954829
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=433568
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=4368328844
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=312480
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=4561296306
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=212632
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=4677076821
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=319904
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=4870044381
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=525024
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=4998689410
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=180696
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=5191657027
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=622176
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=5384624597
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=486688
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=5513269635
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=323096
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=5641914713
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=247968
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=5834882311
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=167256
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=5899204864
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=544032
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=6092172437
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=421024
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=6220817476
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=157152
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=6413785060
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=403104
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=6606752598
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=577632
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=6735397636
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=328856
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=6864042710
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=190176
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=6992687770
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=641952
+heap_tree=detailed
+n2: 400353812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 400160016 0x1125D8: ChainMatrixMultiplication::initArray(int) (chainMatrixMultiplication.cpp:41)
+  n1: 400160016 0x11267B: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (chainMatrixMultiplication.cpp:57)
+   n1: 400160016 0x11723F: Problem<int>::runTimeRecursive(Problem_Arguments*) (problem.h:101)
+    n1: 400160016 0x10D96F: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:18)
+     n1: 400160016 0x10DC4D: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:36)
+      n1: 400160016 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+       n0: 400160016 0x11054B: main (runner.cpp:306)
+ n0: 193796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=7121332834
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=378648
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=7314300398
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=39968
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=7442945474
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=330336
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=7571590511
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=101592
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=7700235581
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=402464
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=7893203145
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=280160
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=7957525733
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=258592
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=8021848292
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=62744
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=8086170858
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=529816
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=8150493431
+mem_heap_B=400353812
+mem_heap_extra_B=160404
+mem_stacks_B=203808
+heap_tree=empty

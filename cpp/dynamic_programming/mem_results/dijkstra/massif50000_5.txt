@@ -1,0 +1,899 @@
+desc: --massif-out-file=mem_results/dijkstra/massif50000_5.txt --stacks=yes
+cmd: ./executable.out dijkstra 50000 -recursive -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1378606107
+mem_heap_B=344673699
+mem_heap_extra_B=14101
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 344673699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 344200000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 344200000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 344200000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 344200000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 344200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 344200000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=3649167873
+mem_heap_B=912273699
+mem_heap_extra_B=36805
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 912273699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 911800000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 911800000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 911800000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 911800000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 911800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 911800000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=5032466426
+mem_heap_B=1258073699
+mem_heap_extra_B=50637
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 1258073699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1257600000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 1257600000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 1257600000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 1257600000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 1257600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 1257600000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=6934201915
+mem_heap_B=1733473699
+mem_heap_extra_B=69653
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 1733473699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1733000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 1733000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 1733000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 1733000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 1733000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 1733000000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=9546388020
+mem_heap_B=2386473699
+mem_heap_extra_B=95773
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 2386473699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2386000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 2386000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 2386000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 2386000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 2386000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 2386000000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=11200105839
+mem_heap_B=2799873699
+mem_heap_extra_B=112309
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 2799873699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2799400000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 2799400000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 2799400000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 2799400000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 2799400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 2799400000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=13009034716
+mem_heap_B=3252073699
+mem_heap_extra_B=130397
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 3252073699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3251600000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 3251600000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 3251600000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 3251600000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 3251600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 3251600000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=15260395114
+mem_heap_B=3814873699
+mem_heap_extra_B=152909
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 3814873699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3814400000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 3814400000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 3814400000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 3814400000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 3814400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 3814400000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=17899783157
+mem_heap_B=4474673699
+mem_heap_extra_B=179301
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 4474673699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4474200000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 4474200000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 4474200000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 4474200000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 4474200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 4474200000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=19385489006
+mem_heap_B=4846073699
+mem_heap_extra_B=194157
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 4846073699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4845600000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 4845600000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 4845600000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 4845600000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 4845600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 4845600000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=20995203690
+mem_heap_B=5248473699
+mem_heap_extra_B=210253
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 5248473699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5248000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 5248000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 5248000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 5248000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 5248000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 5248000000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=22738527893
+mem_heap_B=5684273699
+mem_heap_extra_B=227685
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 5684273699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5683800000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 5683800000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 5683800000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 5683800000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 5683800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 5683800000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=24625062299
+mem_heap_B=6155873699
+mem_heap_extra_B=246549
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 6155873699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6155400000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 6155400000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 6155400000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 6155400000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 6155400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 6155400000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=26668407877
+mem_heap_B=6666673699
+mem_heap_extra_B=266981
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 6666673699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6666200000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 6666200000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 6666200000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 6666200000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 6666200000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 6666200000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=28881365539
+mem_heap_B=7219873699
+mem_heap_extra_B=289109
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 7219873699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7219400000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 7219400000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 7219400000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 7219400000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 7219400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 7219400000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=31277536254
+mem_heap_B=7818873699
+mem_heap_extra_B=313069
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 7818873699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7818400000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 7818400000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 7818400000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 7818400000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 7818400000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 7818400000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=33871321048
+mem_heap_B=8467273699
+mem_heap_extra_B=339005
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 8467273699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8466800000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 8466800000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 8466800000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 8466800000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 8466800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 8466800000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=36680321175
+mem_heap_B=9169473699
+mem_heap_extra_B=367093
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 9169473699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9169000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 9169000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 9169000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 9169000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 9169000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 9169000000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=38171627423
+mem_heap_B=9542273699
+mem_heap_extra_B=382005
+mem_stacks_B=2928
+heap_tree=detailed
+n2: 9542273699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9541800000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 9541800000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 9541800000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 9541800000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 9541800000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 9541800000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=39722937946
+mem_heap_B=9930073699
+mem_heap_extra_B=397517
+mem_stacks_B=2928
+heap_tree=peak
+n2: 9930073699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9929600000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 9929600000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 9929600000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 9929600000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 9929600000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 9929600000 0x110613: main (runner.cpp:310)
+ n0: 473699 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=42048958870
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=125320
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=43907172052
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=193160
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=45769052702
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=261320
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=48095744844
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=346760
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=50886751125
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=449640
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=52746730123
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=518440
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=54284841562
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=575480
+heap_tree=detailed
+n2: 10000673766 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 10000000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 10000000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 10000000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 10000000000 0x110613: main (runner.cpp:310)
+ n0: 673766 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=55823688921
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=632680
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=57361096061
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=689960
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=58899185986
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=747400
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=60437933074
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=805000
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=62745625890
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=891640
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=64283754574
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=949560
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=65822436789
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1007640
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=68129872409
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1095000
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=69667726468
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1153400
+heap_tree=detailed
+n2: 10000673766 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 10000000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 10000000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 10000000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 10000000000 0x110613: main (runner.cpp:310)
+ n0: 673766 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=71206053082
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1211960
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=72744814515
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1270680
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=75052155343
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1359000
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=76589806814
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1418040
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=78127796600
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1477240
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=79666089741
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1536600
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=81204653973
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1596120
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=82743468092
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1655800
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=84282490664
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1715640
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=86589824682
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1805640
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=88127207544
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1865800
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=89664704603
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1926120
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=91202279269
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=1986600
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=92581860005
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2041000
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=93962243496
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2095560
+heap_tree=detailed
+n2: 10000673766 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 10000000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 10000000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 10000000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 10000000000 0x110613: main (runner.cpp:310)
+ n0: 673766 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=95341388448
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2150200
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=96721295304
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2205000
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=98099920389
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2259880
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=99479255793
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2314920
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=100859271720
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2370120
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=102237950196
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2425400
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=103617259038
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2480840
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=104997176324
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2536440
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=106377668692
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2592200
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=107756729125
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2648040
+heap_tree=detailed
+n2: 10000673766 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 10000000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 10000000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 10000000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 10000000000 0x110613: main (runner.cpp:310)
+ n0: 673766 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=62
+#-----------
+time=109136322585
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2704040
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=110516409728
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2760200
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=111896967942
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2816520
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=113276006785
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2872920
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=114655446758
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2929480
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=116035274463
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=2986200
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=117415461612
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3043080
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=118795972869
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3100120
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=120174858196
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3157240
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=121554025148
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3214520
+heap_tree=detailed
+n2: 10000673766 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 10000000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 10000000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 10000000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 10000000000 0x110613: main (runner.cpp:310)
+ n0: 673766 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=72
+#-----------
+time=122933441039
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3271960
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=124313060457
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3329560
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=125692861808
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3387320
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=127072820050
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3445240
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=128452906569
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3503320
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=129833085491
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3561560
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=131213330830
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3619960
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=132593597756
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3678520
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=133973870727
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3737240
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=135354123375
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3796120
+heap_tree=detailed
+n2: 10000673766 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10000000000 0x10CF9C: generateWeighted(int, int, int, int, int, bool, bool) (graphs.h:76)
+  n1: 10000000000 0x112C15: Dijkstra::generateData() (disjktra.cpp:37)
+   n1: 10000000000 0x112B8F: Dijkstra::Dijkstra(int, int, int) (disjktra.cpp:32)
+    n1: 10000000000 0x10DD70: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (runner.cpp:41)
+     n1: 10000000000 0x11843D: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (runner.cpp:88)
+      n0: 10000000000 0x110613: main (runner.cpp:310)
+ n0: 673766 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=82
+#-----------
+time=136734300768
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3855160
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=138114386764
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3914360
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=139494351557
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=3973720
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=140874144797
+mem_heap_B=10000673766
+mem_heap_extra_B=400370
+mem_stacks_B=4033240
+heap_tree=empty
