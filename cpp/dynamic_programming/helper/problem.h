@@ -28,7 +28,8 @@ class Problem{
         
         //Writes a file with specified name and content
         void writeFile(string fileName, string content){
-            ofstream myfile (fileName);
+            ofstream myfile(fileName, ios_base::app);
+            //myfile.open(fileName, ios_base::app);
             myfile << content;
             myfile.close();
         }
