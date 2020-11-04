@@ -20,7 +20,7 @@ do
 		do
 			echo "Running iterative " ${problem} " size: ${size} x${attempt}"
 
-			./executable.out ${problem} ${size} -iterative -q -o -dir time_results/iterative/
+			./executable.out ${problem} ${size} -iterative -q -o -dir time_results/${problem}/iterative/
 		done
 	done
 done
@@ -35,7 +35,7 @@ do
 		do
 			echo "Running recursive " ${problem} " size: ${size} x${attempt}"
 
-			./executable.out ${problem} ${size} -recursive -q -o -dir time_results/recursive		
+			./executable.out ${problem} ${size} -recursive -q -o -dir time_results/${problem}/recursive		
 		done
 	done
 done
