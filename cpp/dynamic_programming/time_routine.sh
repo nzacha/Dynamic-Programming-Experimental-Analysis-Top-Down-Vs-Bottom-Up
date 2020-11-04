@@ -1,6 +1,6 @@
 #clean results directory
-rm -rf mem_results
-mkdir mem_results
+rm -rf time_results
+mkdir time_results
 
 #compile program
 ./compile.sh
@@ -11,8 +11,8 @@ problems=("allPairShortestPath" "chainMatrixMultiplication" "dijkstra" "independ
 
 for problem in ${problems[@]}
 do
-	mkdir mem_results/${problem}
-	mkdir mem_results/${problem}/iterative
+	mkdir time_results/${problem}
+	mkdir time_results/${problem}/iterative
 				
 	for size in ${sizes[@]}
 	do
@@ -20,14 +20,14 @@ do
 		do
 			echo "Running iterative " ${problem} " size: ${size} x${attempt}"
 
-			./executable.out ${problem} ${size} -iterative -q -o -dir time_results/
+			./executable.out ${problem} ${size} -iterative -q -o -dir time_results/iterative/
 		done
 	done
 done
 
 for problem in ${problems[@]}
 do
-	mkdir mem_results/${problem}/recursive			
+	mkdir time_results/${problem}/recursive			
 	
 	for size in ${sizes[@]}
 	do
@@ -35,7 +35,7 @@ do
 		do
 			echo "Running recursive " ${problem} " size: ${size} x${attempt}"
 
-			./executable.out ${problem} ${size} -recursive -q -o -dir time_results/		
+			./executable.out ${problem} ${size} -recursive -q -o -dir time_results/recursive		
 		done
 	done
 done
