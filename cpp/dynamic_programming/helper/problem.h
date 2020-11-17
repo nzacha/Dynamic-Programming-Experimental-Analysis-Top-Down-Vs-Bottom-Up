@@ -8,9 +8,9 @@
 #include <sys/time.h> 
 #include <chrono>
 
-using namespace std;
+#include "console.h"
 
-#define DEBUG false
+using namespace std;
 
 class Problem_Arguments{};
 
@@ -126,6 +126,7 @@ class Problem{
 
         ResultType min(ResultType a, ResultType b){ return (a <= b) ? a : b;}
 
+        //returns current time in microseconds
         uint64_t getClockTime(){
             return chrono::duration_cast<chrono::microseconds>(chrono::system_clock::now().time_since_epoch()).count();
         }

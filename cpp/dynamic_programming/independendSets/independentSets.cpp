@@ -41,15 +41,24 @@ class IndependentSet : public Problem <int>{
     public: 
         IndependentSet(int problem_size){
             this->PROBLEM_SIZE = problem_size;
-            this->PROBLEM_WIDTH = this->PROBLEM_SIZE;
+            this->PROBLEM_WIDTH = problem_size;
 
-            max_neighbours = PROBLEM_SIZE;
-            min_neighbours = 0;
+            max_neighbours = problem_size;
+            min_neighbours = 1;
 
-            TreeNode* tree = generateConnectedTree(PROBLEM_SIZE, 2);
-            int** graph = treeToGraph(tree, PROBLEM_SIZE, false);
+            TreeNode* tree = generateConnectedTree(problem_size, 2, 1);
+            #ifdef DEBUG
+                showTree(tree);
+            #endif
+            int** graph = treeToGraph(tree, problem_size, false);
+            #ifdef DEBUG
+                cout << "Graph: " << endl;
+                print2D(graph, PROBLEM_SIZE, PROBLEM_SIZE);
+            #endif
             destroyTree(tree);
-
+            
+            //int** graph = generateGraph(problem_size, min_neighbours, max_neighbours, true);
+            
             args = new IndendentSets_Arguments(graph);
         }
 
@@ -95,7 +104,9 @@ class IndependentSet : public Problem <int>{
         int recurse_init(Problem_Arguments* args_generic){
             IndendentSets_Arguments* args = (IndendentSets_Arguments*) args_generic;
             args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
-            return recurse(args->tree);
+            int retVal = recurse(args->tree);
+            
+            return retVal;
         }
 
         int recurse(TreeNode* node){
@@ -151,7 +162,15 @@ class IndependentSet : public Problem <int>{
                 node = s.top();
                 s.pop();
             }
-            return iterate(args->tree, nodes);
+            #ifdef CONSOLE
+                cout << "Running Bottom-up " << flush;
+                Console::create_progressbar(10);
+            #endif
+            int retVal = iterate(args->tree, nodes);
+            #ifdef CONSOLE
+                Console::clear_line();
+            #endif
+            return retVal;
         }
 
         int iterate(TreeNode* root, queue<TreeNode*> nodes){           
@@ -162,6 +181,12 @@ class IndependentSet : public Problem <int>{
             int computed = 0;
             TreeNode* node;
             while(nodes.size() > 0){
+                #ifdef CONSOLE
+                    Console::clear_line();
+                    cout << "Running Bottom-up " << flush;
+                    Console::update_progressbar(computed, PROBLEM_SIZE);
+                #endif    
+                
                 node = nodes.front();
                 
                 //if node has no children (is a leaf) set leaf value
@@ -261,18 +286,27 @@ class IndependentSet : public Problem <int>{
                 node = nodes.front();
                 nodes.pop();
             }
-            cout << "Tree printed" << endl;
             cout << endl;
         }
 };
 
 #ifndef runner_cpp
-int main() {
-    int NUM_OF_ITEMS = 10;
-
-    IndependentSet* problem = new IndependentSet(NUM_OF_ITEMS);
-    problem->runCheck(problem->args);   
-    
-    return 0;
+int main(int argc, char** argv) {
+    //recursive 60000
+    //iterative 60000
+    string method = argv[1];
+    int problemSize = stoi(argv[2]);
+     
+    IndependentSet* problem = new IndependentSet(problemSize);
+    long long int time_taken;
+    if (method=="iterative"){
+        time_taken = problem->runTimeIterative(problem->args);
+    }else if (method == "recursive"){
+        time_taken = problem->runTimeRecursive(problem->args);
+    } else {
+        cout << "Method not recognized" << endl;
+        return 1;
+    }
+    cout <<  "time taken: " << time_taken << endl;
 }
 #endif

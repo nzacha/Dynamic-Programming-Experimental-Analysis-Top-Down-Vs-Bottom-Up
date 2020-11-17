@@ -6,7 +6,7 @@
 #include "helper/problem.h"
 #include "allpairShortestPath/allpairShortestPath.cpp"
 #include "chainMatrixMultiplication/chainMatrixMultiplication.cpp"
-#include "dijkstra/disjktra.cpp"
+#include "dijkstra/dijkstra.cpp"
 #include "independendSets/independentSets.cpp"
 #include "knapsack/knapsack.cpp"
 #include "mostCommonSubSequence/mostCommonSubSequence.cpp"

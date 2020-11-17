@@ -1,4 +1,5 @@
 #include <list>
+#include <algorithm>
 
 #ifndef trees_h
 #define trees_h
@@ -24,24 +25,37 @@ class TreeNode{
         }
 };
 
-TreeNode* generateConnectedTree(int treeSize, int degree){
+TreeNode* generateConnectedTree(int treeSize, int degree, int connectivity){
     srand (time(NULL));
     int generatedNodes = 0;
     TreeNode* root = new TreeNode(generatedNodes++);
 
-    TreeNode** nodes = new TreeNode*[treeSize];
-    for (int i=0; i<treeSize; i++) nodes[i] = NULL;
-    nodes[generatedNodes++] = root;
-    
-    TreeNode* node;
-    for(int i=generatedNodes; i<treeSize; i++){
-        int index = rand() % (i-1);
-        node = new TreeNode(i);
-        while(nodes[index % treeSize] == NULL) index++;
-        nodes[index]->appendChild(node);
-        nodes[i] = NULL;
+    list<TreeNode*> toAdd;
+    toAdd.push_back(root);
 
-        nodes[i] = node;
+    TreeNode* node;
+    list<TreeNode*>::iterator parent;
+    for(int i=generatedNodes; i<treeSize; i++){
+        int connections = (rand() % connectivity) +1;
+        node = new TreeNode(generatedNodes++);
+        for(int j=0; j<min(connections, (int)toAdd.size()); j++){
+            int index;
+            do{            
+                //find a parent that doesnt contain the node
+                index = rand() % (toAdd.size());
+                parent = toAdd.begin();
+                advance(parent, index);
+            }while(find((*parent)->children.begin(), (*parent)->children.end(), node) != (*parent)->children.end());
+            //push node into parent
+            (*parent)->children.push_back(node);
+            
+            //if parent has reached degree limit erase him
+            if((*parent)->children.size() >= degree){
+                toAdd.erase(parent);
+            }
+            //add node in available nodes list
+            toAdd.push_back(node);
+        }
     }
     return root;
 }

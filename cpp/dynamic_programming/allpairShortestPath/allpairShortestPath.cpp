@@ -33,8 +33,16 @@ class ShortestPath : public Problem <int>{
 
             pair <int**, GraphNode**>* retval = (pair <int**, GraphNode**>*) generateData();
             int** graph = retval->first;
+            #ifdef DEBUG
+                cout << "Graph: " << endl;
+                print2D(graph, PROBLEM_SIZE, PROBLEM_SIZE);
+            #endif
+
             GraphNode** listOfNodes = retval->second;
-            int** path =  (int**)initArray(-1);            
+            int** path =  (int**)initArray(-1); 
+            for(int i=0; i<PROBLEM_SIZE; i++){
+                path[i][i] = 0;
+            }         
             args = new AllPair_Arguments(graph, listOfNodes, path);
         }
 
@@ -58,11 +66,6 @@ class ShortestPath : public Problem <int>{
             pair <int**, GraphNode**>* retval =  new pair <int**, GraphNode**>();
             //return generateGraph(PROBLEM_SIZE, min_neighbours, max_neighbours, true);
             retval->first = generateWeighted(PROBLEM_SIZE, min_neighbours, max_neighbours, min_weight, max_weight, biDirectional, isConnected);
-            for (int i=0; i<PROBLEM_SIZE; i++){
-                for (int j=0; j<PROBLEM_SIZE; j++){
-
-                }    
-            }
             retval->second = convertGraph(retval->first);
             return retval;
         }
@@ -85,7 +88,7 @@ class ShortestPath : public Problem <int>{
         int recurse_init(Problem_Arguments* args_generic){
             AllPair_Arguments* args = (AllPair_Arguments*) args_generic;
             
-            args->array = (int**)initArray(INT32_MAX);
+            args->array = (int**)initArray(INT32_MAX);    
             for(int i=0; i<PROBLEM_SIZE; i++){
                 args->array[i][i] = 0;
                 for(int j=0; j<PROBLEM_WIDTH; j++){
@@ -94,24 +97,31 @@ class ShortestPath : public Problem <int>{
                     }
                 }
             }
-            return recurse(args->array, args->listOfNodes, args->path, 0);
+            args->path =  (int**)initArray(-1);
+            
+            int retVal = recurse(args->array, args->listOfNodes, args->path, 0);
+            #ifdef DEBUG
+                cout << "Shortest Paths: " << endl;
+                print2D(args->array, PROBLEM_SIZE, PROBLEM_SIZE);
+                cout << "Intermediates: " << endl;
+                print2D(args->path, PROBLEM_SIZE, PROBLEM_SIZE);
+            #endif
+            return retVal;
         }
 
         int recurse(int** array, GraphNode** listOfNodes, int** path, int nodeIndex){
             if(nodeIndex >= PROBLEM_SIZE) return 0;
             
-            GraphNode* node = listOfNodes[nodeIndex];
+            GraphNode* pivotNode = listOfNodes[nodeIndex];
             for(int i=0; i<PROBLEM_SIZE; i++){
-                GraphNode* targetNode = listOfNodes[i];
-                for(pair<GraphNode*, int> connection: node->connections){
-                    GraphNode* pivotNode = connection.first;
-                    if(array[nodeIndex][pivotNode->index] == INT32_MAX) continue;
-                    if(array[pivotNode->index][targetNode->index] == INT32_MAX) continue;
+                for(int j=0; j<PROBLEM_SIZE; j++){
+                    if(array[i][pivotNode->index] == INT32_MAX) continue;
+                    if(array[pivotNode->index][j] == INT32_MAX) continue;
 
-                    int newVal = array[nodeIndex][pivotNode->index] + array[pivotNode->index][targetNode->index];
-                    if(newVal < array[nodeIndex][targetNode->index]){
-                        array[nodeIndex][targetNode->index] = newVal;
-                        path[nodeIndex][targetNode->index] = pivotNode->index;
+                    int newVal = array[i][pivotNode->index] + array[pivotNode->index][j];
+                    if(newVal < array[i][j] || newVal == 0){
+                        array[i][j] = newVal;
+                        path[i][j] = pivotNode->index;
                     }
                 }
             }
@@ -130,17 +140,37 @@ class ShortestPath : public Problem <int>{
                     }
                 }
             }
-            return iterate(args->array, args->path);
+            args->path =  (int**)initArray(-1); 
+            #ifdef CONSOLE
+                cout << "Running Bottom-up " << flush;
+                Console::create_progressbar(10);
+            #endif
+            int retVal = iterate(args->array, args->path);
+            #ifdef CONSOLE
+                Console::clear_line();
+            #endif
+            #ifdef DEBUG
+                cout << "Shortest Paths: " << endl;
+                print2D(args->array, PROBLEM_SIZE, PROBLEM_SIZE);
+                cout << "Intermediates: " << endl;
+                print2D(args->path, PROBLEM_SIZE, PROBLEM_SIZE);
+            #endif
+            return retVal;
         }
 
         int iterate(int** array, int** path){
             for (int k=0; k<PROBLEM_SIZE; k++){
                 for (int i=0; i<PROBLEM_SIZE; i++){
+                    #ifdef CONSOLE
+                        Console::clear_line();
+                        cout << "Running Bottom-up " << flush;
+                        Console::update_progressbar(k*PROBLEM_SIZE + i, PROBLEM_SIZE*PROBLEM_SIZE);
+                    #endif    
                     for (int j=0; j<PROBLEM_SIZE; j++){
                         if(array[i][k] == INT32_MAX) continue;
                         if(array[k][j] == INT32_MAX) continue;
                         int newVal = (array[i][k] + array[k][j]); 
-                        if(newVal < array[i][j]){
+                        if(newVal < array[i][j] || newVal == 0){
                             array[i][j] = newVal;
                             path[i][j] = k;
                         }
@@ -156,18 +186,22 @@ class ShortestPath : public Problem <int>{
 };
 
 #ifndef runner_cpp
-int main() {
-    int NUM_OF_ITEMS = 100;
-
-    ShortestPath* problem = new ShortestPath(NUM_OF_ITEMS);
-    
-    /*
-    problem->runTimeIterative(problem->args);
-    problem->print2D(((Arguments*)problem->args)->array, problem->PROBLEM_SIZE, problem->PROBLEM_SIZE);
-    problem->runTimeRecursive(problem->args);
-    problem->print2D(((Arguments*)problem->args)->array, problem->PROBLEM_SIZE, problem->PROBLEM_SIZE);
-    */
-    problem->runCheck(problem->args);
-    problem->writeData("out.txt");
+int main(int argc, char** argv) {
+    //recursive 80000
+    //iterative 85000
+    string method = argv[1];
+    int problemSize = stoi(argv[2]);
+     
+    ShortestPath* problem = new ShortestPath(problemSize);
+    long long int time_taken;
+    if (method=="iterative"){
+        time_taken = problem->runTimeIterative(problem->args);
+    }else if (method == "recursive"){
+        time_taken = problem->runTimeRecursive(problem->args);
+    } else {
+        cout << "Method not recognized" << endl;
+        return 1;
+    }
+    cout <<  "time taken: " << time_taken << endl;
 }
 #endif

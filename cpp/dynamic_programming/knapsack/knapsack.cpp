@@ -35,12 +35,13 @@ class Knapsack : public Problem <int>{
 
             //items.sort(ItemComparator());
             //cout << "Printing sorted items list: " << endl;
-            if(DEBUG){
+            #ifdef DEBUG
                 for (int i=0; i<PROBLEM_SIZE; i++){
-                    cout << "Item "+ to_string(i) << endl;
-                    cout << string(*items[i]) << endl;
+                    cout << "Item "+ to_string(i);
+                    cout << ": " << string(*items[i]) << flush;
                 }
-            }
+                cout << endl;
+            #endif
 
         return items;
         }
@@ -65,7 +66,11 @@ class Knapsack : public Problem <int>{
             args->weights = (int**)initArray(-1);
             int itemIndex = PROBLEM_SIZE;
             int weightIndex = PROBLEM_WIDTH;
-            return recurse(args->items, args->weights, itemIndex, weightIndex);
+            int retval = recurse(args->items, args->weights, itemIndex, weightIndex);
+            #ifdef DEBUG
+                print2D(args->weights, PROBLEM_WIDTH+1, PROBLEM_SIZE+1);
+            #endif
+            return retval;
         }
 
         int recurse(Item** items, int** weights, int itemIndex, int weightIndex){
@@ -78,7 +83,8 @@ class Knapsack : public Problem <int>{
 
             Item* item = items[itemIndex-1];
             if(weightIndex < item->weight){
-                return weights[itemIndex][weightIndex] = recurse(items, weights, itemIndex-1, weightIndex);
+                weights[itemIndex][weightIndex] = recurse(items, weights, itemIndex-1, weightIndex);
+                return weights[itemIndex][weightIndex];
             }else{
                 weights[itemIndex][weightIndex] = max(recurse(items, weights, itemIndex-1, weightIndex), recurse(items, weights, itemIndex-1, weightIndex - item->weight) + item->value);
                 return  weights[itemIndex][weightIndex];
@@ -88,7 +94,18 @@ class Knapsack : public Problem <int>{
         int iterate_init(Problem_Arguments* args_generic){
             Knapsack_Arguments* args = (Knapsack_Arguments*) args_generic;
             args->weights = (int**)initArray(-1);
-            return iterate(args->items, args->weights);
+            #ifdef CONSOLE
+                cout << "Running Bottom-up " << flush;
+                Console::create_progressbar(10);
+            #endif
+            int retval = iterate(args->items, args->weights);
+            #ifdef CONSOLE
+                Console::clear_line();
+            #endif
+            #ifdef DEBUG
+                print2D(args->weights, PROBLEM_WIDTH+1, PROBLEM_SIZE+1);
+            #endif
+            return retval;
         }
 
         int iterate(Item** items, int** weights){ 
@@ -96,6 +113,11 @@ class Knapsack : public Problem <int>{
 
             // Build table K[][] in bottom up manner 
             for (itemIndex = 0; itemIndex <= PROBLEM_SIZE; itemIndex++) { 
+                #ifdef CONSOLE
+                    Console::clear_line();
+                    cout << "Running Bottom-up " << flush;
+                    Console::update_progressbar(itemIndex, PROBLEM_SIZE);
+                #endif    
                 for (weightIndex = 0; weightIndex <= PROBLEM_WIDTH; weightIndex++) { 
                     Item* item = items[itemIndex-1];
                     if (itemIndex == 0 || weightIndex == 0) 
@@ -115,11 +137,24 @@ class Knapsack : public Problem <int>{
         }
 };
 
-#ifndef runner_cpp
-int main() {
-    int NUM_OF_ITEMS = 20, SACK_SIZE = 50;
 
-    Knapsack* problem = new Knapsack(NUM_OF_ITEMS, SACK_SIZE);
-    problem->runCheck(problem->args);
+#ifndef runner_cpp
+int main(int argc, char** argv) {
+    //recursive 60000 60000
+    //iterative 60000 60000
+    string method = argv[1];
+    int itemsSize = stoi(argv[2]);
+    int problemSize = stoi(argv[3]);
+     
+    Knapsack* problem = new Knapsack(itemsSize, problemSize);long long int time_taken;
+    if (method=="iterative"){
+        time_taken = problem->runTimeIterative(problem->args);
+    }else if (method == "recursive"){
+        time_taken = problem->runTimeRecursive(problem->args);
+    } else {
+        cout << "Method not recognized" << endl;
+        return 1;
+    }
+    cout <<  "time taken: " << time_taken << endl;
 }
 #endif

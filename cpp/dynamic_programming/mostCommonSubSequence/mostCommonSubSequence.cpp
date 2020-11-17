@@ -5,8 +5,6 @@
 
 #include "mostCommonSubSequence.h"
 
-#define DEBUG false
-
 class MCSS_Arguments : public Problem_Arguments{
     public:
         int** array;
@@ -68,10 +66,10 @@ class MostCommonSubSequence : public Problem <int>{
             MCSS_Arguments* args = (MCSS_Arguments*) args_generic;           
             args->array = (int**)initArray(-1); 
             int retVal = recurse(args->array, args->seqA, args->seqB, args->seqA.length()-1, args->seqB.length()-1);
-            if(DEBUG) {
-                cout << "Recursive table: " << endl;
+            #ifdef DEBUG
+                printSolution(args->array, args->seqA, args->seqB);
                 print2D<int>(getSolution2D(), PROBLEM_WIDTH, PROBLEM_SIZE);
-            }
+            #endif
             return retVal;
         }
 
@@ -85,7 +83,7 @@ class MostCommonSubSequence : public Problem <int>{
             if(seqA[a] == seqB[b]){
                 array[a+1][b+1] = (recurse(array, seqA, seqB, a-1, b-1) +1);
             }else{
-                array[a+1][b+1] = max(recurse(array, seqA, seqB, a-1, b),recurse(array, seqA, seqB, a, b-1));
+                array[a+1][b+1] = max(recurse(array, seqA, seqB, a, b-1),recurse(array, seqA, seqB, a-1, b));
             }
 
             return array[a+1][b+1];
@@ -95,12 +93,10 @@ class MostCommonSubSequence : public Problem <int>{
             MCSS_Arguments* args = (MCSS_Arguments*) args_generic;            
             args->array = (int**)initArray(0);
             int retVal = iterate(args->array, args->seqA, args->seqB);
-            if(DEBUG) {
-                cout << "Iterative table: " << endl;
+            #ifdef DEBUG
+                printSolution(args->array, args->seqA, args->seqB);
                 print2D<int>(getSolution2D(), PROBLEM_WIDTH, PROBLEM_SIZE);
-            }
-            printSolution(args->array, args->seqA, args->seqB);
-            print2D<int>(getSolution2D(), PROBLEM_WIDTH, PROBLEM_SIZE);
+            #endif
             return retVal;
         }
 
@@ -110,9 +106,6 @@ class MostCommonSubSequence : public Problem <int>{
 
             for(int i=1; i<=height; i++){
                 for(int j=1; j<=width; j++){
-                    /*if(DEBUG)
-                        print2D(array, PROBLEM_SIZE, PROBLEM_WIDTH);*/
-
                     if(seqA[i-1] == seqB[j-1]){
                         array[i][j] = array[i-1][j-1] +1;
                         if(array[i][j]<array[i-1][j-1]){
@@ -134,17 +127,20 @@ class MostCommonSubSequence : public Problem <int>{
             int i = seqA.size(), j = seqB.size();
             int index = array[i][j];
             stack<char> word;
-            while(i>1 && j>1){
-                if((array[i-1][j-1] == index-1) && (array[i-1][j] == index-1) && (array[i][j-1] == index-1)){
+            while(i>=1 && j>=1){
+                if((array[i-1][j-1] == index-1 || array[i-1][j-1] == -1) && (seqA[i-1]==seqB[j-1])  && (array[i-1][j] != index) && (array[i][j-1] != index)){
                     word.push(seqA.at(i-1));
                     i--;
                     j--;
                     index = array[i][j];
                 }else if(array[i-1][j] == index){
                     i--;
-                }else{
+                }else if(array[i][j-1] == index){
                     j--;
+                }else {
+                    break;
                 }
+                cout << i << "," << j << endl;
             }
 
             cout << ">The output is: ";
@@ -162,8 +158,8 @@ class MostCommonSubSequence : public Problem <int>{
 
 #ifndef runner_cpp
 int main(){
-    string seqA = "abecbecd";
-    string seqB = "decabbd";
+    string seqA = "PINEAPPLE";
+    string seqB = "APPLES";
     MostCommonSubSequence* problem = new MostCommonSubSequence(seqA, seqB);
     problem->runCheck(problem->args);
 }

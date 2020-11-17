@@ -4,7 +4,7 @@
 using namespace std;
 
 #define MIN_WEIGHT 1
-#define MAX_WEIGHT 20
+#define MAX_WEIGHT 3
 #define MIN_VALUE 1
 #define MAX_VALUE 30
 
