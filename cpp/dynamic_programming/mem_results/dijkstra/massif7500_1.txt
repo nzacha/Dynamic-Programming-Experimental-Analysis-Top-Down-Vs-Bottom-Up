@@ -1,5 +1,5 @@
 desc: --massif-out-file=mem_results/dijkstra/massif7500_1.txt --stacks=yes
-cmd: ./executable.out dijkstra 7500 -iterative -q
+cmd: ./executable.out dijkstra 7500 -recursive -q
 time_unit: i
 #-----------
 snapshot=0
@@ -12,1049 +12,879 @@ heap_tree=empty
 #-----------
 snapshot=1
 #-----------
-time=1089184
+time=1025010
 mem_heap_B=0
 mem_heap_extra_B=0
-mem_stacks_B=1496
+mem_stacks_B=1336
 heap_tree=empty
 #-----------
 snapshot=2
 #-----------
-time=2044625
+time=2013930
 mem_heap_B=0
 mem_heap_extra_B=0
-mem_stacks_B=1752
+mem_stacks_B=1336
 heap_tree=empty
 #-----------
 snapshot=3
 #-----------
-time=2962875
-mem_heap_B=2023699
-mem_heap_extra_B=837
-mem_stacks_B=2704
+time=3259484
+mem_heap_B=3253699
+mem_heap_extra_B=1165
+mem_stacks_B=2784
 heap_tree=detailed
-n4: 2023699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 1890000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 1890000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 1890000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 1890000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n1: 72704 0x48FEC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
-  n1: 72704 0x4011DBD: call_init.part.0 (dl-init.c:74)
-   n1: 72704 0x4011EA7: call_init (dl-init.c:37)
-    n1: 72704 0x4011EA7: _dl_init (dl-init.c:121)
-     n1: 72704 0x4001109: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.32.so)
+n4: 3253699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3120000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3120000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3120000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3120000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n1: 72704 0x48FFC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n1: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
       n1: 72704 0x4: ???
-       n1: 72704 0x1FFF0001A6: ???
-        n1: 72704 0x1FFF0001B7: ???
-         n1: 72704 0x1FFF0001C0: ???
-          n1: 72704 0x1FFF0001C5: ???
-           n0: 72704 0x1FFF0001D0: ???
- n1: 60000 0x10F1D9: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 60000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 60000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 60000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 995 in 11 places, all below massif's threshold (1.00%)
+       n1: 72704 0x1FFF0004F6: ???
+        n1: 72704 0x1FFF000507: ???
+         n1: 72704 0x1FFF000510: ???
+          n1: 72704 0x1FFF000515: ???
+           n0: 72704 0x1FFF000520: ???
+ n1: 60000 0x10F3F9: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 60000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 60000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 60000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 995 in 10 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=4
 #-----------
-time=4351707
-mem_heap_B=7543699
-mem_heap_extra_B=2309
-mem_stacks_B=2704
+time=4361492
+mem_heap_B=7633699
+mem_heap_extra_B=2333
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 7543699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 7410000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 7410000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 7410000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 7410000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 7633699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7500000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 7500000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 7500000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 7500000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=5
 #-----------
-time=5249919
-mem_heap_B=11113699
-mem_heap_extra_B=3261
-mem_stacks_B=2704
+time=5206868
+mem_heap_B=10993699
+mem_heap_extra_B=3229
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 11113699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 10980000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 10980000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 10980000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 10980000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 10993699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10860000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 10860000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 10860000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 10860000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=6
 #-----------
-time=6427407
-mem_heap_B=15793699
-mem_heap_extra_B=4509
-mem_stacks_B=2704
+time=6369260
+mem_heap_B=15613699
+mem_heap_extra_B=4461
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 15793699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 15660000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 15660000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 15660000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 15660000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 15613699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 15480000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 15480000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 15480000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 15480000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=7
 #-----------
-time=7174659
-mem_heap_B=18763699
-mem_heap_extra_B=5301
-mem_stacks_B=2704
+time=7984532
+mem_heap_B=22033699
+mem_heap_extra_B=6173
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 18763699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 18630000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 18630000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 18630000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 18630000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 22033699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 21900000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 21900000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 21900000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 21900000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=8
 #-----------
-time=8057775
-mem_heap_B=22273699
-mem_heap_extra_B=6237
-mem_stacks_B=2704
+time=9003512
+mem_heap_B=26083699
+mem_heap_extra_B=7253
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 22273699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 22140000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 22140000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 22140000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 22140000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 26083699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 25950000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 25950000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 25950000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 25950000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=9
 #-----------
-time=9084303
-mem_heap_B=26353699
-mem_heap_extra_B=7325
-mem_stacks_B=2704
+time=10196096
+mem_heap_B=30823699
+mem_heap_extra_B=8517
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 26353699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 26220000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 26220000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 26220000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 26220000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 30823699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 30690000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 30690000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 30690000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 30690000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=10
 #-----------
-time=10291983
-mem_heap_B=31153699
-mem_heap_extra_B=8605
-mem_stacks_B=2704
+time=11600024
+mem_heap_B=36403699
+mem_heap_extra_B=10005
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 31153699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 31020000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 31020000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 31020000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 31020000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 36403699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 36270000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 36270000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 36270000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 36270000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=11
 #-----------
-time=11711007
-mem_heap_B=36793699
-mem_heap_extra_B=10109
-mem_stacks_B=2704
+time=12392564
+mem_heap_B=39553699
+mem_heap_extra_B=10845
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 36793699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 36660000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 36660000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 36660000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 36660000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 39553699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 39420000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 39420000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 39420000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 39420000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=12
 #-----------
-time=12511095
-mem_heap_B=39973699
-mem_heap_extra_B=10957
-mem_stacks_B=2704
+time=13253036
+mem_heap_B=42973699
+mem_heap_extra_B=11757
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 39973699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 39840000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 39840000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 39840000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 39840000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 42973699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 42840000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 42840000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 42840000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 42840000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=13
 #-----------
-time=13492335
-mem_heap_B=43873699
-mem_heap_extra_B=11997
-mem_stacks_B=2704
+time=14181440
+mem_heap_B=46663699
+mem_heap_extra_B=12741
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 43873699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 43740000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 43740000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 43740000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 43740000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 46663699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 46530000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 46530000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 46530000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 46530000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=14
 #-----------
-time=14435835
-mem_heap_B=47623699
-mem_heap_extra_B=12997
-mem_stacks_B=2704
+time=15185324
+mem_heap_B=50653699
+mem_heap_extra_B=13805
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 47623699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 47490000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 47490000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 47490000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 47490000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 50653699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 50520000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 50520000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 50520000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 50520000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=15
 #-----------
-time=15462363
-mem_heap_B=51703699
-mem_heap_extra_B=14085
-mem_stacks_B=2704
+time=16272236
+mem_heap_B=54973699
+mem_heap_extra_B=14957
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 51703699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 51570000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 51570000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 51570000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 51570000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 54973699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 54840000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 54840000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 54840000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 54840000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=16
 #-----------
-time=16571919
-mem_heap_B=56113699
-mem_heap_extra_B=15261
-mem_stacks_B=2704
+time=17449724
+mem_heap_B=59653699
+mem_heap_extra_B=16205
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 56113699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 55980000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 55980000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 55980000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 55980000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 59653699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 59520000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 59520000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 59520000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 59520000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=17
 #-----------
-time=17772051
-mem_heap_B=60883699
-mem_heap_extra_B=16533
-mem_stacks_B=2704
+time=18725336
+mem_heap_B=64723699
+mem_heap_extra_B=17557
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 60883699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 60750000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 60750000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 60750000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 60750000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 64723699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 64590000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 64590000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 64590000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 64590000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=18
 #-----------
-time=19070307
-mem_heap_B=66043699
-mem_heap_extra_B=17909
-mem_stacks_B=2704
+time=20106620
+mem_heap_B=70213699
+mem_heap_extra_B=19021
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 66043699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 65910000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 65910000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 65910000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 65910000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 70213699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 70080000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 70080000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 70080000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 70080000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=19
 #-----------
-time=19764723
-mem_heap_B=68803699
-mem_heap_extra_B=18645
-mem_stacks_B=2704
+time=21601124
+mem_heap_B=76153699
+mem_heap_extra_B=20605
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 68803699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 68670000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 68670000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 68670000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 68670000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 76153699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 76020000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 76020000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 76020000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 76020000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=20
 #-----------
-time=20662935
-mem_heap_B=72373699
-mem_heap_extra_B=19597
-mem_stacks_B=2704
+time=22393664
+mem_heap_B=79303699
+mem_heap_extra_B=21445
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 72373699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 72240000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 72240000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 72240000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 72240000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 79303699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 79170000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 79170000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 79170000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 79170000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=21
 #-----------
-time=21417735
-mem_heap_B=75373699
-mem_heap_extra_B=20397
-mem_stacks_B=2704
+time=23427740
+mem_heap_B=83413699
+mem_heap_extra_B=22541
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 75373699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 75240000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 75240000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 75240000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 75240000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 83413699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 83280000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 83280000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 83280000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 83280000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=22
 #-----------
-time=22202727
-mem_heap_B=78493699
-mem_heap_extra_B=21229
-mem_stacks_B=2704
+time=24295760
+mem_heap_B=86863699
+mem_heap_extra_B=23461
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 78493699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 78360000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 78360000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 78360000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 78360000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 86863699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 86730000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 86730000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 86730000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 86730000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=23
 #-----------
-time=23017911
-mem_heap_B=81733699
-mem_heap_extra_B=22093
-mem_stacks_B=2704
+time=25193972
+mem_heap_B=90433699
+mem_heap_extra_B=24413
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 81733699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 81600000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 81600000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 81600000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 81600000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 90433699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 90300000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 90300000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 90300000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 90300000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=24
 #-----------
-time=23870835
-mem_heap_B=85123699
-mem_heap_extra_B=22997
-mem_stacks_B=2704
+time=26137472
+mem_heap_B=94183699
+mem_heap_extra_B=25413
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 85123699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 84990000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 84990000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 84990000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 84990000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 94183699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 94050000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 94050000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 94050000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 94050000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=25
 #-----------
-time=24753951
-mem_heap_B=88633699
-mem_heap_extra_B=23933
-mem_stacks_B=2704
+time=27118712
+mem_heap_B=98083699
+mem_heap_extra_B=26453
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 88633699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 88500000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 88500000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 88500000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 88500000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 98083699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 97950000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 97950000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 97950000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 97950000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=26
 #-----------
-time=25674807
-mem_heap_B=92293699
-mem_heap_extra_B=24909
-mem_stacks_B=2704
+time=28137692
+mem_heap_B=102133699
+mem_heap_extra_B=27533
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 92293699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 92160000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 92160000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 92160000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 92160000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 102133699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 102000000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 102000000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 102000000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 102000000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=27
 #-----------
-time=26633403
-mem_heap_B=96103699
-mem_heap_extra_B=25925
-mem_stacks_B=2704
+time=29201960
+mem_heap_B=106363699
+mem_heap_extra_B=28661
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 96103699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 95970000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 95970000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 95970000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 95970000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 106363699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 106230000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 106230000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 106230000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 106230000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=28
 #-----------
-time=27637287
-mem_heap_B=100093699
-mem_heap_extra_B=26989
-mem_stacks_B=2704
+time=30303968
+mem_heap_B=110743699
+mem_heap_extra_B=29829
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 100093699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 99960000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 99960000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 99960000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 99960000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 110743699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 110610000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 110610000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 110610000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 110610000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=29
 #-----------
-time=28678911
-mem_heap_B=104233699
-mem_heap_extra_B=28093
-mem_stacks_B=2704
+time=31451264
+mem_heap_B=115303699
+mem_heap_extra_B=31045
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 104233699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 104100000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 104100000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 104100000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 104100000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 115303699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 115170000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 115170000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 115170000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 115170000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=30
 #-----------
-time=29758275
-mem_heap_B=108523699
-mem_heap_extra_B=29237
-mem_stacks_B=2704
+time=32643848
+mem_heap_B=120043699
+mem_heap_extra_B=32309
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 108523699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 108390000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 108390000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 108390000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 108390000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 120043699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 119910000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 119910000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 119910000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 119910000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=31
 #-----------
-time=30882927
-mem_heap_B=112993699
-mem_heap_extra_B=30429
-mem_stacks_B=2704
+time=33889268
+mem_heap_B=124993699
+mem_heap_extra_B=33629
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 112993699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 112860000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 112860000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 112860000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 112860000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 124993699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 124860000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 124860000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 124860000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 124860000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=32
 #-----------
-time=32354787
-mem_heap_B=118843699
-mem_heap_extra_B=31989
-mem_stacks_B=2704
+time=35512088
+mem_heap_B=131443699
+mem_heap_extra_B=35349
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 118843699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 118710000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 118710000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 118710000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 118710000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 131443699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 131310000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 131310000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 131310000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 131310000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=33
 #-----------
-time=33585111
-mem_heap_B=123733699
-mem_heap_extra_B=33293
-mem_stacks_B=2704
+time=36870728
+mem_heap_B=136843699
+mem_heap_extra_B=36789
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 123733699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 123600000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 123600000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 123600000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 123600000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 136843699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 136710000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 136710000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 136710000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 136710000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=34
 #-----------
-time=34868271
-mem_heap_B=128833699
-mem_heap_extra_B=34653
-mem_stacks_B=2704
+time=38289752
+mem_heap_B=142483699
+mem_heap_extra_B=38293
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 128833699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 128700000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 128700000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 128700000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 128700000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 142483699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 142350000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 142350000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 142350000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 142350000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=35
 #-----------
-time=36196719
-mem_heap_B=134113699
-mem_heap_extra_B=36061
-mem_stacks_B=2704
+time=39754064
+mem_heap_B=148303699
+mem_heap_extra_B=39845
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 134113699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 133980000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 133980000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 133980000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 133980000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 148303699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 148170000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 148170000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 148170000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 148170000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=36
 #-----------
-time=37585551
-mem_heap_B=139633699
-mem_heap_extra_B=37533
-mem_stacks_B=2704
+time=41278760
+mem_heap_B=154363699
+mem_heap_extra_B=41461
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 139633699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 139500000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 139500000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 139500000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 139500000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 154363699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 154230000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 154230000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 154230000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 154230000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=37
 #-----------
-time=39027219
-mem_heap_B=145363699
-mem_heap_extra_B=39061
-mem_stacks_B=2704
+time=42871388
+mem_heap_B=160693699
+mem_heap_extra_B=43149
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 145363699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 145230000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 145230000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 145230000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 145230000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 160693699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 160560000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 160560000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 160560000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 160560000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=38
 #-----------
-time=39766923
-mem_heap_B=148303699
-mem_heap_extra_B=39845
-mem_stacks_B=2704
+time=43694120
+mem_heap_B=163963699
+mem_heap_extra_B=44021
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 148303699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 148170000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 148170000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 148170000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 148170000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 163963699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 163830000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 163830000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 163830000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 163830000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=39
 #-----------
-time=40521723
-mem_heap_B=151303699
-mem_heap_extra_B=40645
-mem_stacks_B=2704
+time=44531948
+mem_heap_B=167293699
+mem_heap_extra_B=44909
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 151303699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 151170000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 151170000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 151170000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 151170000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 167293699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 167160000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 167160000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 167160000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 167160000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=40
 #-----------
-time=41291619
-mem_heap_B=154363699
-mem_heap_extra_B=41461
-mem_stacks_B=2704
+time=45384872
+mem_heap_B=170683699
+mem_heap_extra_B=45813
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 154363699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 154230000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 154230000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 154230000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 154230000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 170683699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 170550000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 170550000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 170550000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 170550000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=41
 #-----------
-time=42076611
-mem_heap_B=157483699
-mem_heap_extra_B=42293
-mem_stacks_B=2704
+time=46252892
+mem_heap_B=174133699
+mem_heap_extra_B=46733
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 157483699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 157350000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 157350000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 157350000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 157350000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 174133699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 174000000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 174000000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 174000000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 174000000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=42
 #-----------
-time=42884247
-mem_heap_B=160693699
-mem_heap_extra_B=43149
-mem_stacks_B=2704
+time=47143556
+mem_heap_B=177673699
+mem_heap_extra_B=47677
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 160693699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 160560000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 160560000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 160560000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 160560000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 177673699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 177540000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 177540000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 177540000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 177540000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=43
 #-----------
-time=43706979
-mem_heap_B=163963699
-mem_heap_extra_B=44021
-mem_stacks_B=2704
+time=48049316
+mem_heap_B=181273699
+mem_heap_extra_B=48637
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 163963699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 163830000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 163830000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 163830000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 163830000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 181273699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 181140000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 181140000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 181140000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 181140000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=44
 #-----------
-time=44544807
-mem_heap_B=167293699
-mem_heap_extra_B=44909
-mem_stacks_B=2704
+time=48977720
+mem_heap_B=184963699
+mem_heap_extra_B=49621
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 167293699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 167160000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 167160000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 167160000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 167160000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 184963699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 184830000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 184830000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 184830000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 184830000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=45
 #-----------
-time=45397731
-mem_heap_B=170683699
-mem_heap_extra_B=45813
-mem_stacks_B=2704
+time=49921220
+mem_heap_B=188713699
+mem_heap_extra_B=50621
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 170683699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 170550000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 170550000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 170550000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 170550000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 188713699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 188580000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 188580000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 188580000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 188580000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=46
 #-----------
-time=46265751
-mem_heap_B=174133699
-mem_heap_extra_B=46733
-mem_stacks_B=2704
+time=50879816
+mem_heap_B=192523699
+mem_heap_extra_B=51637
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 174133699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 174000000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 174000000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 174000000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 174000000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 192523699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 192390000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 192390000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 192390000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 192390000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=47
 #-----------
-time=47156415
-mem_heap_B=177673699
-mem_heap_extra_B=47677
-mem_stacks_B=2704
+time=51861056
+mem_heap_B=196423699
+mem_heap_extra_B=52677
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 177673699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 177540000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 177540000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 177540000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 177540000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 196423699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 196290000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 196290000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 196290000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 196290000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=48
 #-----------
-time=48062175
-mem_heap_B=181273699
-mem_heap_extra_B=48637
-mem_stacks_B=2704
+time=52864940
+mem_heap_B=200413699
+mem_heap_extra_B=53741
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 181273699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 181140000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 181140000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 181140000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 181140000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 200413699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 200280000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 200280000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 200280000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 200280000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=49
 #-----------
-time=48484863
-mem_heap_B=182953699
-mem_heap_extra_B=49085
-mem_stacks_B=2640
-heap_tree=empty
+time=53883920
+mem_heap_B=204463699
+mem_heap_extra_B=54821
+mem_stacks_B=2784
+heap_tree=detailed
+n2: 204463699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 204330000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 204330000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 204330000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 204330000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=50
 #-----------
-time=48522603
-mem_heap_B=183103699
-mem_heap_extra_B=49125
-mem_stacks_B=2704
+time=54404732
+mem_heap_B=206533699
+mem_heap_extra_B=55373
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 183103699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 182970000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 182970000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 182970000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 182970000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 206533699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 206400000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 206400000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 206400000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 206400000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=51
 #-----------
-time=48990579
-mem_heap_B=184963699
-mem_heap_extra_B=49621
-mem_stacks_B=2704
+time=54925544
+mem_heap_B=208603699
+mem_heap_extra_B=55925
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 184963699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 184830000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 184830000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 184830000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 184830000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 208603699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 208470000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 208470000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 208470000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 208470000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=52
 #-----------
-time=49458555
-mem_heap_B=186823699
-mem_heap_extra_B=50117
-mem_stacks_B=2704
+time=55453904
+mem_heap_B=210703699
+mem_heap_extra_B=56485
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 186823699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 186690000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 186690000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 186690000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 186690000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 210703699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 210570000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 210570000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 210570000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 210570000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=53
 #-----------
-time=49934079
-mem_heap_B=188713699
-mem_heap_extra_B=50621
-mem_stacks_B=2704
+time=55989812
+mem_heap_B=212833699
+mem_heap_extra_B=57053
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 188713699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 188580000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 188580000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 188580000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 188580000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 212833699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 212700000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 212700000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 212700000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 212700000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=54
 #-----------
-time=50409603
-mem_heap_B=190603699
-mem_heap_extra_B=51125
-mem_stacks_B=2704
+time=56525720
+mem_heap_B=214963699
+mem_heap_extra_B=57621
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 190603699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 190470000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 190470000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 190470000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 190470000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 214963699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 214830000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 214830000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 214830000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 214830000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=55
 #-----------
-time=50892675
-mem_heap_B=192523699
-mem_heap_extra_B=51637
-mem_stacks_B=2704
+time=57069176
+mem_heap_B=217123699
+mem_heap_extra_B=58197
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 192523699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 192390000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 192390000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 192390000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 192390000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 217123699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 216990000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 216990000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 216990000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 216990000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=56
 #-----------
-time=51383295
-mem_heap_B=194473699
-mem_heap_extra_B=52157
-mem_stacks_B=2704
+time=57620180
+mem_heap_B=219313699
+mem_heap_extra_B=58781
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 194473699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 194340000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 194340000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 194340000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 194340000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 219313699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 219180000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 219180000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 219180000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 219180000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=57
 #-----------
-time=51873915
-mem_heap_B=196423699
-mem_heap_extra_B=52677
-mem_stacks_B=2704
+time=58178732
+mem_heap_B=221533699
+mem_heap_extra_B=59373
+mem_stacks_B=2784
 heap_tree=detailed
-n2: 196423699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 196290000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 196290000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 196290000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 196290000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+n2: 221533699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 221400000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 221400000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 221400000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 221400000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=58
 #-----------
-time=52372083
-mem_heap_B=198403699
-mem_heap_extra_B=53205
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 198403699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 198270000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 198270000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 198270000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 198270000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+time=58737284
+mem_heap_B=223753699
+mem_heap_extra_B=59965
+mem_stacks_B=2784
+heap_tree=peak
+n2: 223753699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 223620000 0x10F45F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 223620000 0x111188: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 223620000 0x119F5A: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 223620000 0x10E760: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 133699 in 12 places, all below massif's threshold (1.00%)
 #-----------
 snapshot=59
 #-----------
-time=52877799
-mem_heap_B=200413699
-mem_heap_extra_B=53741
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 200413699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 200280000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 200280000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 200280000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 200280000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+time=59529826
+mem_heap_B=225133699
+mem_heap_extra_B=60333
+mem_stacks_B=2712
+heap_tree=empty
 #-----------
 snapshot=60
 #-----------
-time=53383515
-mem_heap_B=202423699
-mem_heap_extra_B=54277
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 202423699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 202290000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 202290000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 202290000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 202290000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+time=60322373
+mem_heap_B=225133699
+mem_heap_extra_B=60333
+mem_stacks_B=2760
+heap_tree=empty
 #-----------
 snapshot=61
 #-----------
-time=53896779
-mem_heap_B=204463699
-mem_heap_extra_B=54821
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 204463699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 204330000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 204330000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 204330000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 204330000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+time=61114916
+mem_heap_B=225133699
+mem_heap_extra_B=60333
+mem_stacks_B=2728
+heap_tree=empty
 #-----------
 snapshot=62
 #-----------
-time=54417591
-mem_heap_B=206533699
-mem_heap_extra_B=55373
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 206533699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 206400000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 206400000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 206400000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 206400000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+time=61907472
+mem_heap_B=225133699
+mem_heap_extra_B=60333
+mem_stacks_B=2728
+heap_tree=empty
 #-----------
 snapshot=63
 #-----------
-time=54938403
-mem_heap_B=208603699
-mem_heap_extra_B=55925
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 208603699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 208470000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 208470000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 208470000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 208470000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+time=62700012
+mem_heap_B=225133699
+mem_heap_extra_B=60333
+mem_stacks_B=2728
+heap_tree=empty
 #-----------
 snapshot=64
 #-----------
-time=55466763
-mem_heap_B=210703699
-mem_heap_extra_B=56485
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 210703699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 210570000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 210570000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 210570000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 210570000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+time=63492562
+mem_heap_B=225133699
+mem_heap_extra_B=60333
+mem_stacks_B=2712
+heap_tree=empty
 #-----------
 snapshot=65
 #-----------
-time=56002671
-mem_heap_B=212833699
-mem_heap_extra_B=57053
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 212833699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 212700000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 212700000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 212700000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 212700000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
+time=64285114
+mem_heap_B=225133699
+mem_heap_extra_B=60333
+mem_stacks_B=2712
+heap_tree=empty
 #-----------
 snapshot=66
 #-----------
-time=56538579
-mem_heap_B=214963699
-mem_heap_extra_B=57621
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 214963699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 214830000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 214830000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 214830000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 214830000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
-#-----------
-snapshot=67
-#-----------
-time=57082035
-mem_heap_B=217123699
-mem_heap_extra_B=58197
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 217123699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 216990000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 216990000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 216990000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 216990000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
-#-----------
-snapshot=68
-#-----------
-time=57633039
-mem_heap_B=219313699
-mem_heap_extra_B=58781
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 219313699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 219180000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 219180000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 219180000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 219180000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
-#-----------
-snapshot=69
-#-----------
-time=58191591
-mem_heap_B=221533699
-mem_heap_extra_B=59373
-mem_stacks_B=2704
-heap_tree=detailed
-n2: 221533699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 221400000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 221400000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 221400000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 221400000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
-#-----------
-snapshot=70
-#-----------
-time=58750143
-mem_heap_B=223753699
-mem_heap_extra_B=59965
-mem_stacks_B=2704
-heap_tree=peak
-n2: 223753699 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 223620000 0x10F23F: generateWeighted(int, int, int, int, int, bool, bool) [clone .part.0] (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-  n1: 223620000 0x111D08: runDijkstra(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-   n1: 223620000 0x11A0E1: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
-    n0: 223620000 0x10E93B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
- n0: 133699 in 13 places, all below massif's threshold (1.00%)
-#-----------
-snapshot=71
-#-----------
-time=59444561
-mem_heap_B=225133699
-mem_heap_extra_B=60333
-mem_stacks_B=2632
-heap_tree=empty
-#-----------
-snapshot=72
-#-----------
-time=60138985
-mem_heap_B=225133699
-mem_heap_extra_B=60333
-mem_stacks_B=2648
-heap_tree=empty
-#-----------
-snapshot=73
-#-----------
-time=60833403
-mem_heap_B=225133699
-mem_heap_extra_B=60333
-mem_stacks_B=2672
-heap_tree=empty
-#-----------
-snapshot=74
-#-----------
-time=61527827
-mem_heap_B=225133699
-mem_heap_extra_B=60333
-mem_stacks_B=2648
-heap_tree=empty
-#-----------
-snapshot=75
-#-----------
-time=62222257
-mem_heap_B=225133699
-mem_heap_extra_B=60333
-mem_stacks_B=2672
-heap_tree=empty
-#-----------
-snapshot=76
-#-----------
-time=62916678
-mem_heap_B=225133699
-mem_heap_extra_B=60333
-mem_stacks_B=2648
-heap_tree=empty
-#-----------
-snapshot=77
-#-----------
-time=63611102
-mem_heap_B=225133699
-mem_heap_extra_B=60333
-mem_stacks_B=2648
-heap_tree=empty
-#-----------
-snapshot=78
-#-----------
-time=64305530
-mem_heap_B=225133699
-mem_heap_extra_B=60333
-mem_stacks_B=2648
-heap_tree=empty
-#-----------
-snapshot=79
-#-----------
-time=768202355
+time=768125549
 mem_heap_B=225193773
 mem_heap_extra_B=60371
-mem_stacks_B=2696
+mem_stacks_B=2776
 heap_tree=empty
