@@ -1,11 +1,17 @@
 #!/bin/bash
 
 #declare program arguments
-sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000 62500 65000 67500)
-problems_1=("dijkstra" "independentSets" "knapsack")
+sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
+problems_1=("dijkstra" "independentSets")
 
-sizes_2=(7500 15000 22500 30000 37500 45000 52500 60000 67500 75000 82500 85000 87500 90000)
-problems_2=("allPairShortestPath" "chainMatrixMultiplication")
+sizes_2=(10000 20000 30000 40000 50000 60000 70000 80000)
+problems_2=("chainMatrixMultiplication")
+
+sizes_3=(2500 5000 7500 10000 12500 15000 17500)
+problems_3=("allPairShortestPath")
+
+sizes_4=(20000 40000 60000 80000 100000 120000 130000)
+problems_4=("knapsack")
 
 rm -rf data
 mkdir data
@@ -88,12 +94,12 @@ do
 done
 
 #recursive for first problems
-for problem in ${problems_2[@]}
+for problem in ${problems_1[@]}
 do
 	file=data/mem/r_${problem}.csv
 	t_file=data/time/r_${problem}.csv
 
-	for size in ${sizes_2[@]}
+	for size in ${sizes_1[@]}
 	do
 		#print size
 		echo "Size,$size" >> $file
@@ -108,14 +114,13 @@ do
 	done
 done
 
-
 #iterative for second problems
-for problem in ${problems_1[@]}
+for problem in ${problems_2[@]}
 do
 	file=data/mem/i_${problem}.csv
 	t_file=data/time/i_${problem}.csv
 	
-	for size in ${sizes_1[@]}
+	for size in ${sizes_2[@]}
 	do
 		#print size
 		echo "Size,$size" >> $file
@@ -137,6 +142,90 @@ do
 	t_file=data/time/r_${problem}.csv
 	
 	for size in ${sizes_2[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#create attempts tables
+		printAttempts $file
+		printHeap $file $problem $RECURSIVE $size
+		printExtraHeap $file $problem $RECURSIVE $size
+		printStack $file $problem $RECURSIVE $size
+
+		echo >> $file
+	done
+done
+
+#iterative for third problems
+for problem in ${problems_3[@]}
+do
+	file=data/mem/i_${problem}.csv
+	t_file=data/time/i_${problem}.csv
+	
+	for size in ${sizes_3[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#create attempts tables
+		printAttempts $file
+		printHeap $file $problem $ITERATIVE $size
+		printExtraHeap $file $problem $ITERATIVE $size
+		printStack $file $problem $ITERATIVE $size
+
+		echo >> $file
+	done
+done
+
+#recursive for second problems
+for problem in ${problems_3[@]}
+do
+	file=data/mem/r_${problem}.csv
+	t_file=data/time/r_${problem}.csv
+	
+	for size in ${sizes_3[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#create attempts tables
+		printAttempts $file
+		printHeap $file $problem $RECURSIVE $size
+		printExtraHeap $file $problem $RECURSIVE $size
+		printStack $file $problem $RECURSIVE $size
+
+		echo >> $file
+	done
+done
+
+#iterative for fourth problems
+for problem in ${problems_4[@]}
+do
+	file=data/mem/i_${problem}.csv
+	t_file=data/time/i_${problem}.csv
+	
+	for size in ${sizes_4[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#create attempts tables
+		printAttempts $file
+		printHeap $file $problem $ITERATIVE $size
+		printExtraHeap $file $problem $ITERATIVE $size
+		printStack $file $problem $ITERATIVE $size
+
+		echo >> $file
+	done
+done
+
+#recursive for fourth problems
+for problem in ${problems_4[@]}
+do
+	file=data/mem/r_${problem}.csv
+	t_file=data/time/r_${problem}.csv
+	
+	for size in ${sizes_4[@]}
 	do
 		#print size
 		echo "Size,$size" >> $file
