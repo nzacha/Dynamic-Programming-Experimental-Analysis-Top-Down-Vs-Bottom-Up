@@ -34,16 +34,50 @@ string getSequenceFromFile(string filename){
     return str.str();
 }
 
+string generateSequence(int length){
+    char sequence[length];
+    
+    for(int i=0; i<length; i++){
+        int c = rand()%26;
+        sequence[i] = (char) (c +'A');
+    }
+    string s = sequence;
+    return s;
+}
+
 class MostCommonSubSequence : public Problem <int>{
     public:
-        MostCommonSubSequence(string seqA, string seqB){
+        MostCommonSubSequence(bool isFile, string stringA, string stringB){
+            string seqA,seqB;
+            if(isFile){
+                seqA = getSequenceFromFile(stringA);
+                seqB = getSequenceFromFile(stringB);
+            }else{
+                seqA = stringA;
+                seqB = stringB;
+            }
             this->PROBLEM_SIZE = seqA.length() +1;
             this->PROBLEM_WIDTH = seqB.length() +1;
 
             args = new MCSS_Arguments(seqA, seqB);
         }
 
+        MostCommonSubSequence(int lengthA, int lengthB){
+            string seqA = generateSequence(lengthA);
+            string seqB = generateSequence(lengthB);
+            
+            this->PROBLEM_SIZE = seqA.length() +1;
+            this->PROBLEM_WIDTH = seqB.length() +1;
+
+            srand(time(NULL));
+            args = new MCSS_Arguments(seqA, seqB);
+        }
+
         void* generateData(){
+            return NULL;
+        }
+
+        void* loadData(string FILENAME){
             return NULL;
         }
 
@@ -56,10 +90,6 @@ class MostCommonSubSequence : public Problem <int>{
                 }
             }
             return array;
-        }
-
-        void* loadData(string fileName){
-            return NULL;
         }
 
         int recurse_init(Problem_Arguments* args_generic){
@@ -160,7 +190,7 @@ class MostCommonSubSequence : public Problem <int>{
 int main(){
     string seqA = "PINEAPPLE";
     string seqB = "APPLES";
-    MostCommonSubSequence* problem = new MostCommonSubSequence(seqA, seqB);
+    MostCommonSubSequence* problem = new MostCommonSubSequence(false, seqA, seqB);
     problem->runCheck(problem->args);
 }
 #endif

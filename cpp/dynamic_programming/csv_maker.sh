@@ -7,7 +7,7 @@ problems_1=("dijkstra" "independentSets")
 sizes_2=(10000 20000 30000 40000 50000 60000 70000 80000)
 problems_2=("chainMatrixMultiplication")
 
-sizes_3=(2500 5000 7500 10000 12500 15000 17500)
+#sizes_3=(2500 5000 7500 10000 12500 15000 17500)
 problems_3=("allPairShortestPath")
 
 sizes_4=(20000 40000 60000 80000 100000 120000 130000)
@@ -26,7 +26,7 @@ RECURSIVE="recursive"
 
 function printAttempts {
 	printf "Attempt," >> $1
-	for (( i=1; i<=$M_ATTEMPTS; i++))
+	for (( i=1; i<=$2; i++))
 	do
 		printf "$i," >> $1
 	done
@@ -63,10 +63,11 @@ function printStack {
 	echo >> $1
 }
 
-function printTime{
+function printTime {
 	printf "Time," >> $1
 	for (( i=1; i<=$T_ATTEMPTS; i++))
 	do
+		cat time_results/$2/$3/time_item_${4}_rep_0.txt | grep "$2 time taken: " | tr -d "{$2} time taken: " | rev | cut -c 3- | rev | cut -d ' ' -f 1 | head -$i | tail -1 | tr -d '\n' >> $1
 		printf "," >> $1
 	done
 	echo >> $1
@@ -84,12 +85,15 @@ do
 		echo "Size,$size" >> $file
 
 		#create attempts tables
-		printAttempts $file
+		printAttempts $file $M_ATTEMPTS
 		printHeap $file $problem $ITERATIVE $size
 		printExtraHeap $file $problem $ITERATIVE $size
 		printStack $file $problem $ITERATIVE $size
-
 		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $ITERATIVE $problem $size
 	done
 done
 
@@ -101,16 +105,19 @@ do
 
 	for size in ${sizes_1[@]}
 	do
-		#print size
+		#append size
 		echo "Size,$size" >> $file
 
-		#create attempts tables
-		printAttempts $file
+		#create mem file
+		printAttempts $file $M_ATTEMPTS
 		printHeap $file $problem $RECURSIVE $size
 		printExtraHeap $file $problem $RECURSIVE $size
 		printStack $file $problem $RECURSIVE $size
-
 		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $RECURSIVE $problem $size
 	done
 done
 
@@ -125,13 +132,17 @@ do
 		#print size
 		echo "Size,$size" >> $file
 
-		#create attempts tables
-		printAttempts $file
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
 		printHeap $file $problem $ITERATIVE $size
 		printExtraHeap $file $problem $ITERATIVE $size
 		printStack $file $problem $ITERATIVE $size
-
 		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $ITERATIVE $problem $size
+
 	done
 done
 
@@ -146,13 +157,16 @@ do
 		#print size
 		echo "Size,$size" >> $file
 
-		#create attempts tables
-		printAttempts $file
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
 		printHeap $file $problem $RECURSIVE $size
 		printExtraHeap $file $problem $RECURSIVE $size
 		printStack $file $problem $RECURSIVE $size
-
 		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $RECURSIVE $problem $size
 	done
 done
 
@@ -167,13 +181,16 @@ do
 		#print size
 		echo "Size,$size" >> $file
 
-		#create attempts tables
-		printAttempts $file
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
 		printHeap $file $problem $ITERATIVE $size
 		printExtraHeap $file $problem $ITERATIVE $size
 		printStack $file $problem $ITERATIVE $size
-
 		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $ITERATIVE $problem $size
 	done
 done
 
@@ -188,13 +205,16 @@ do
 		#print size
 		echo "Size,$size" >> $file
 
-		#create attempts tables
-		printAttempts $file
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
 		printHeap $file $problem $RECURSIVE $size
 		printExtraHeap $file $problem $RECURSIVE $size
 		printStack $file $problem $RECURSIVE $size
-
 		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $RECURSIVE $problem $size
 	done
 done
 
@@ -209,13 +229,16 @@ do
 		#print size
 		echo "Size,$size" >> $file
 
-		#create attempts tables
-		printAttempts $file
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
 		printHeap $file $problem $ITERATIVE $size
 		printExtraHeap $file $problem $ITERATIVE $size
 		printStack $file $problem $ITERATIVE $size
-
 		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $ITERATIVE $problem $size
 	done
 done
 
@@ -230,12 +253,15 @@ do
 		#print size
 		echo "Size,$size" >> $file
 
-		#create attempts tables
-		printAttempts $file
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
 		printHeap $file $problem $RECURSIVE $size
 		printExtraHeap $file $problem $RECURSIVE $size
 		printStack $file $problem $RECURSIVE $size
-
 		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $RECURSIVE $problem $size
 	done
 done

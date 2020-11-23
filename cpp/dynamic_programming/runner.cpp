@@ -57,12 +57,15 @@ void runKnapsack(int index, int num_of_items, string outFile, bool recursive, bo
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runMCSS(int index, string fileName, string outFile, bool recursive, bool iterative, bool writeOut){
-    cout << "\t=> Thread " << index << " running \"most common sub-sequence\" with " << fileName << endl; 
-    string inputDir = "mostCommonSubSequence/Inputs/";
-    string seqA_file = inputDir+ "sequenceA"+ fileName; 
-    string seqB_file = inputDir+ "sequenceB"+ fileName; 
-    MostCommonSubSequence* problem = new MostCommonSubSequence(getSequenceFromFile(seqA_file), getSequenceFromFile(seqB_file));
+void runMCSS(int index, int size, string outFile, bool recursive, bool iterative, bool writeOut){
+    cout << "\t=> Thread " << index << " running \"most common sub-sequence\" with " << size << endl; 
+    /*
+    * string inputDir = "mostCommonSubSequence/Inputs/";
+    * string seqA_file = inputDir+ "sequenceA"+ fileName; 
+    * string seqB_file = inputDir+ "sequenceB"+ fileName; 
+    * MostCommonSubSequence* problem = new MostCommonSubSequence(true, getSequenceFromFile(seqA_file), getSequenceFromFile(seqB_file));
+    */
+   MostCommonSubSequence* problem = new MostCommonSubSequence(size, size);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
@@ -104,7 +107,6 @@ void printHelpText(){
     cout << "\t-p [program index] [argument] : selects program by index" << endl << endl;
     cout << "\t-recursive : only recursive methods will be run" << endl << endl;
     cout << "\t-iterative : only iterative methods will be run" << endl << endl;
-    cout << "\t-a -all : to run all programs with hardcoded parameters" << endl << endl;
     cout << "\t-r [amount] : to specify the number of repeatitions for each thread" << endl << endl;
     cout << "\t-t [amount] : to specify the number of threads" << endl << endl;
     cout << "\t-q -quiet : disables default output stream" << endl << endl;
@@ -120,7 +122,7 @@ int main (int argc, char** argv){
     int numThreads = 1;
     //The number of repeatitions for each thread
     int perThreadReps = 1;
-    bool run_all = false, quiet = false, clearOutputDir = false, writeOut=false;
+    bool quiet = false, clearOutputDir = false, writeOut=false;
     bool bothMethods = true, iterative = false, recursive = false;
     for(int i=0; i<argc; i++){
         string arg = (string)argv[i];
@@ -176,8 +178,6 @@ int main (int argc, char** argv){
             }
             numThreads = stoi(argv[++i]);
 
-        } else if(arg == "-all" || arg == "-a") {
-            run_all = true;
         } else if(arg == "-p"){
             if(i+1 >= argc){
                 cout << "Please specify program number after \"-p\" command... Exiting..." << endl;
@@ -219,7 +219,7 @@ int main (int argc, char** argv){
     if(writeOut)
         mkdir(out_dir.c_str(), S_IRWXU);
     
-    if(program == -1 && !run_all){
+    if(program == -1){
         cout << "No program was specified... Exiting..." << endl << endl;
         printHelpText();
         return 1;
@@ -230,7 +230,6 @@ int main (int argc, char** argv){
         cout.setstate(ios_base::failbit);
 
     if(program!=-1) cout << "Running program " << ProgramNames[program] << " with: " << endl;
-    else if(run_all)cout << "Running all programs with hardcoded arguments" << endl;
     //else cout << "Program not specified. Will run everything with hardcoded arguments" << endl;
     
     cout << endl;
@@ -243,7 +242,7 @@ int main (int argc, char** argv){
     {{ProgramNames[Program::allPairShortestPath], out_dir+ "allPairShortestPath/"}, 
     {ProgramNames[Program::chainMatrixMultiplcation], out_dir+ "chainMatrixMultiplication/"},
     {ProgramNames[Program::dijkstra], out_dir+ "dijkstra/"},
-    {ProgramNames[Program::independentSets], out_dir+ "independendSets/"},
+    {ProgramNames[Program::independentSets], out_dir+ "independentSets/"},
     {ProgramNames[Program::knapsack], out_dir+ "knapsack/"},
     {ProgramNames[Program::mostCommonSubSequence], out_dir+ "mostCommonSubSequence/"},
     };
@@ -252,48 +251,11 @@ int main (int argc, char** argv){
     for(pair<string, string> s: fileNames){
         if(clearOutputDir) 
             remove(s.second.c_str());
-        if(run_all)
-            mkdir(s.second.c_str(), S_IRWXU);
     }
 
     if(bothMethods){
         recursive = true;
         iterative = true;
-    }
-
-    //Run problems
-    if(run_all){
-        //Declare the problem arguments
-        vector<int> allPairParams {100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000};
-        vector<int> chainMatrixParams {100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000};
-        vector<int> dijkstraParams {100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000};
-        vector<int> independentSetsParams {100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000};
-        vector<int> knapsackParams {100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000};
-        vector<string> mcssParams {"_26_10_1.txt", "_26_100_1.txt", "_26_1000_1.txt", "_26_10000_1.txt", "_26_20000_1.txt"};
-
-        //Run the problems with specified arguments
-        for(int i: allPairParams)
-            runProblem(i, fileNames[ProgramNames[Program::allPairShortestPath]], numThreads, perThreadReps, runAllPairShortestPath, recursive, iterative, writeOut);
-        
-        for(int i: chainMatrixParams)
-            runProblem(i, fileNames[ProgramNames[Program::chainMatrixMultiplcation]], numThreads, perThreadReps, runChainMatrixMultiplication, recursive, iterative, writeOut);
-        
-        for(int i: dijkstraParams)
-            runProblem(i, fileNames[ProgramNames[Program::dijkstra]], numThreads, perThreadReps, runDijkstra, recursive, iterative, writeOut);
-        
-        for(int i: independentSetsParams)
-            runProblem(i, fileNames[ProgramNames[Program::independentSets]], numThreads, perThreadReps, runIndependentSets, recursive, iterative, writeOut);
-        
-        for(int i: knapsackParams)
-            runProblem(i, fileNames[ProgramNames[Program::knapsack]], numThreads, perThreadReps, runKnapsack, recursive, iterative, writeOut);
-        
-        for(string s: mcssParams)
-            runProblem(s, fileNames[ProgramNames[Program::mostCommonSubSequence]], numThreads, perThreadReps, runMCSS, recursive, iterative, writeOut);
-        
-        //Enable output stream
-        cout.clear();
-        cout << "all routines done" << endl;
-        return 0;
     }
 
     switch (program){
@@ -319,7 +281,7 @@ int main (int argc, char** argv){
             break;
         case mostCommonSubSequence:
             mkdir(fileNames[ProgramNames[Program::mostCommonSubSequence]].c_str(), S_IRWXU);
-            runProblem(argument, fileNames[ProgramNames[Program::mostCommonSubSequence]], numThreads, perThreadReps, runMCSS, recursive, iterative, writeOut);
+            runProblem(stoi(argument), fileNames[ProgramNames[Program::mostCommonSubSequence]], numThreads, perThreadReps, runMCSS, recursive, iterative, writeOut);
             break;
     }
 
