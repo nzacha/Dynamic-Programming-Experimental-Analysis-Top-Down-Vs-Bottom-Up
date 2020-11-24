@@ -100,7 +100,7 @@ class ChainMatrixMultiplication : public Problem <int>{
         }
 
         int iterate(int** array, int* matrixSizes){
-            int indexStart, indexEnd, stepIterator, val1, val2;
+            int indexStart, indexEnd, val1, val2;
             for(int step=1; step<PROBLEM_SIZE; step++){
                 #ifdef CONSOLE
                     Console::clear_line();

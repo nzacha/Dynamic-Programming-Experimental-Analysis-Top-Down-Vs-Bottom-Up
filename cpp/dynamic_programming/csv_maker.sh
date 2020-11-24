@@ -5,7 +5,7 @@ sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
 problems_1=("dijkstra" "independentSets")
 
 sizes_2=(10000 20000 30000 40000 50000 60000 70000 80000)
-problems_2=("chainMatrixMultiplication")
+problems_2=("chainMatrixMultiplication" "mostCommonSubSequence")
 
 #sizes_3=(2500 5000 7500 10000 12500 15000 17500)
 problems_3=("allPairShortestPath")
