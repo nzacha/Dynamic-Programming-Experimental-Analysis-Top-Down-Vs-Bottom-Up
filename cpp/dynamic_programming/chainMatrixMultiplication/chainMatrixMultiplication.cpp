@@ -74,10 +74,13 @@ class ChainMatrixMultiplication : public Problem <int>{
             if(array[indexStart][indexEnd] != 0)
                 return array[indexStart][indexEnd];
 
-            int val1 = recurse(array, matrixSizes, indexStart+1, indexEnd) + matrixSizes[indexStart]*matrixSizes[indexStart+1]*matrixSizes[indexEnd+1];
-            int val2 = recurse(array, matrixSizes, indexStart, indexEnd-1) + matrixSizes[indexStart]*matrixSizes[indexEnd]*matrixSizes[indexEnd+1];
-            int retVal = min (val1, val2);   
-
+            int min = INT32_MAX;
+            for(int k=indexStart; k<indexEnd; k++){
+                int val = recurse(array, matrixSizes, indexStart, k) + recurse(array, matrixSizes, k+1, indexEnd) + matrixSizes[indexStart]*matrixSizes[k+1]*matrixSizes[indexEnd+1];
+                if(val < min)
+                    min = val;
+            }
+            int retVal = min;
             array[indexStart][indexEnd] = retVal;
             return retVal;
         }
@@ -100,7 +103,7 @@ class ChainMatrixMultiplication : public Problem <int>{
         }
 
         int iterate(int** array, int* matrixSizes){
-            int indexStart, indexEnd, val1, val2;
+            int indexStart, indexEnd, val;
             for(int step=1; step<PROBLEM_SIZE; step++){
                 #ifdef CONSOLE
                     Console::clear_line();
@@ -109,9 +112,14 @@ class ChainMatrixMultiplication : public Problem <int>{
                 #endif
                 for(indexStart=0; indexStart<PROBLEM_SIZE - step -1; indexStart++){
                     indexEnd = indexStart + step;
-                    val1 = array[indexStart][indexEnd-1] + matrixSizes[indexStart]*matrixSizes[indexEnd]*matrixSizes[indexEnd+1];
-                    val2 = array[indexStart+1][indexEnd] + matrixSizes[indexStart]*matrixSizes[indexStart+1]*matrixSizes[indexEnd+1];
-                    array[indexStart][indexEnd] = min(val1, val2);
+                    int min = INT32_MAX;
+                    for(int k=indexStart; k<indexEnd; k++){
+                        val = array[indexStart][k] + array[k+1][indexEnd] + matrixSizes[indexStart]*matrixSizes[k+1]*matrixSizes[indexEnd+1];
+                        if(val < min){
+                            min = val;
+                        }
+                    }
+                    array[indexStart][indexEnd] = min;
                 }
             }
 
@@ -127,7 +135,10 @@ class ChainMatrixMultiplication : public Problem <int>{
 int main(int argc, char** argv) {
     //recursive 80000
     //iterative 85000
-    string method = argv[1];
+    int matrices[] = {30,35,15,5,10,20,25};
+    ChainMatrixMultiplication* problem = new ChainMatrixMultiplication(matrices, 7);
+    problem->runCheck(problem->args);
+    /*string method = argv[1];
     int problemSize = stoi(argv[2]);
      
     ChainMatrixMultiplication* problem = new ChainMatrixMultiplication(stoi(argv[2]));
@@ -141,5 +152,6 @@ int main(int argc, char** argv) {
         return 1;
     }
     cout <<  "time taken: " << time_taken << endl;
+    */
 }
 #endif

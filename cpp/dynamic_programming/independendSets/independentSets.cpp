@@ -110,20 +110,25 @@ class IndependentSet : public Problem <int>{
         }
 
         int recurse(TreeNode* node){
+            //node doesnt exist
             if(node == NULL)
                 return 0;
             
+            //if leaf value has already neem calculated
             if(node->value)
                 return node->value;
 
+            //if its a leaf set value
             if(node->children.size() == 0)
                 return (node->value = 1);
 
+            //value when node is excluded
             int value_excluding = 0;
             for(TreeNode* child: node->children){
                 value_excluding += recurse(child);
             }
 
+            //value when node is included
             int value_including = 1;
             for(TreeNode* child: node->children){
                 if(child==NULL) continue;
@@ -131,6 +136,8 @@ class IndependentSet : public Problem <int>{
                     value_including += recurse(grandchild);
                 }
             }
+
+            //return maximum of the 2
             return (node->value = max(value_including, value_excluding));
         }
 
@@ -144,6 +151,7 @@ class IndependentSet : public Problem <int>{
                 visited[i] = false;
             }
             
+            //put the nodes in a queue
             stack <TreeNode*> s;
             queue <TreeNode*> nodes;
             TreeNode* node = args->tree;
@@ -189,7 +197,8 @@ class IndependentSet : public Problem <int>{
                 
                 node = nodes.front();
                 
-                //if node has no children (is a leaf) set leaf value
+                //if node has no children (is a leaf) set leaf value 
+                //and if so, remove it from the queue
                 if(node->children.size() == 0) {
                     node->value = 1;
                     nodes.pop();
@@ -198,6 +207,7 @@ class IndependentSet : public Problem <int>{
                 }
                 
                 //check if node children have computed value
+                //if theres a child without a value then set flag to false
                 bool canCompute = true;
                 for(TreeNode* child: node->children){
                     if(child->value == 0){
@@ -205,25 +215,31 @@ class IndependentSet : public Problem <int>{
                         break;
                     }
                 }
-                //if value can't be computed directly
+
+                //if value can't be computed directly (flag is false)
+                //put node back into the back of the queue
+                //and continue to the next node
                 if(!canCompute) {
                     nodes.pop();
                     nodes.push(node);
                     continue;
                 }
-                
-                //if node has children
+                //the value can be computed
+
+                //calculate value including the current node
                 int val_including = 1;
                 for(TreeNode* child: node->children){
                     for(TreeNode* grandchild: child->children){
                         val_including += grandchild->value;
                     }
                 }
+                //calculate value excluding the current node
                 int val_excluding = 0;
                 for(TreeNode* child: node->children){
                     val_excluding += child->value;
                 }
                 
+                //set the node value to the maximum of the 2 values
                 node->value = max(val_including, val_excluding);
                 nodes.pop();
                 computed++;
