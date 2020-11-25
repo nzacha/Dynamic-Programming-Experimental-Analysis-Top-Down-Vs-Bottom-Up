@@ -1,6 +1,6 @@
 #declare program arguments
 sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-problems_1=("dijkstra" "independentSets")
+problems_1=("dijkstra" "independentSets" "mostCommonSubSequence")
 
 #time iterative first problems
 for problem in ${problems_1[@]}
