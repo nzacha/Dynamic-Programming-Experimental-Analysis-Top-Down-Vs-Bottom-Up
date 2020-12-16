@@ -57,22 +57,20 @@ class LISS : public Problem <int>{
 
         int recurse_init(Problem_Arguments* args_generic){
             LISS_Arguments* args = (LISS_Arguments*) args_generic;
-            int** array = initArray2(DEFAULT_VALUE);
+            int* array = (int*)initArray(DEFAULT_VALUE);
             int retVal = recurse(array, args->data, INT32_MIN, 0);
             cout << "Array" << endl;
-            print2D(array, (int)(PROBLEM_SIZE+1), (int)(PROBLEM_SIZE+1));
+            print1D(array, (int)(PROBLEM_SIZE));
             cout << "Data" << endl;
             print1D(args->data, PROBLEM_SIZE);
             return retVal;
         }
 
-        int recurse(int** array, int* data, int prev, int curr){
+        int recurse(int* array, int* data, int prev, int curr){
             // Base case: nothing is remaining
-            if (curr == PROBLEM_SIZE) {
+            if (curr == PROBLEM_SIZE)
                 return 0;
-            }
-            if (curr > 0 && array[curr-1][curr] != DEFAULT_VALUE) return array[curr-1][curr];
-
+        
             // case 1: exclude the current element and process the
             // remaining elements
             int excl = recurse(array, data, prev, curr + 1);
@@ -80,12 +78,12 @@ class LISS : public Problem <int>{
             // case 2: include the current element if it is greater
             // than previous element in LIS
             int incl = 0;
-            if (curr == 0 || array[curr-1][curr] > prev)
-                incl = 1 + recurse(array, data, prev, curr + 1);
-
+            if (data[curr] > prev)
+                incl = 1 + recurse(array, data, data[curr], curr + 1);
+        
+            array[curr] = max(incl, excl);
             // return maximum of above two choices
-            array[curr][curr+1] = max(incl, excl);
-            return array[curr][curr+1];
+            return array[curr];
         }
         
         int iterate_init(Problem_Arguments* args_generic){

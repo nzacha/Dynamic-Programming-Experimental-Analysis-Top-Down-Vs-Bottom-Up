@@ -1,0 +1,782 @@
+desc: --massif-out-file=mem_results/chainMatrixMultiplication/massif70000_1.txt --stacks=yes
+cmd: ./executable.out chainMatrixMultiplication 70000 -recursive -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=11865626
+mem_heap_B=19504591028
+mem_heap_extra_B=1114836
+mem_stacks_B=2496
+heap_tree=peak
+n2: 19504591028 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19503677232 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19503677232 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19503677232 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19503677232 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19503677232 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19503677232 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19503677232 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=6255241542
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4388336
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=11317790306
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3842544
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=16776655907
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4159336
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=23562663556
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4249200
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=29428247513
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3668592
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=34735204370
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3612456
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=38790085153
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4024432
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=43926948730
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3452008
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=51632244046
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3849456
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=56769107550
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2972336
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=61392284675
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3357168
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=67204383738
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3179312
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=74038047653
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3785192
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=81725919555
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3824560
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=87705375445
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2666928
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=91122207376
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2533416
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=97101663255
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2756720
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=101372703166
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2287024
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=108436878387
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3684848
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=114023148868
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3358064
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=119609419362
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3599144
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=125195689834
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2890216
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=132178527990
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3711856
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=139161366090
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2081256
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=143351068984
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3734384
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=147540771847
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1886064
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=153127042317
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3309480
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=158713312767
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2658920
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=165696150933
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2214000
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=172678989026
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1568944
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=177525798153
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4145072
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=185740493649
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4305008
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=191901515263
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3603760
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=196008863004
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3721968
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=202169884592
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1882736
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=206277232323
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3574184
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=212438253938
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3205488
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=218599275573
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2948400
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=224760297175
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1128752
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=228867644924
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1599272
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=235028666553
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3203824
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=241189688147
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4386416
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=249404383628
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2063784
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=255565405245
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1354480
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=259672752980
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3640112
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=265833774576
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1934832
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=271994796197
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1886832
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=278155817814
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2816432
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=281572649751
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1036016
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=284989481695
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=800048
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=288406313635
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1888816
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=291823145573
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4384296
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=295239977533
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3194608
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=298656809469
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1474416
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=302073641400
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1778408
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=305490473333
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3803176
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=308907305275
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4327728
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=312324137208
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4383400
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=315740969152
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2116144
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=319157801098
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1813480
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=322574633057
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2770416
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=325991465015
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4177264
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=329408296960
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4196336
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=332825128898
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=802096
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=336241960834
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3170536
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=339658792788
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2571760
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=343075624722
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1787632
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=346492456681
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=450160
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=349909288615
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1617264
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=353326120553
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2134824
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=356742952485
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=856688
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=73
+#-----------
+time=360159784422
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3896624
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=363576616354
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=4041448
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=366993448289
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2312816
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=370410280238
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3610224
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=373827112179
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1716080
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=377243944137
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3969584
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=380660776068
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3523824
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=384077608027
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=711984
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=387494439966
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=2262704
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=390911271926
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=1445680
+heap_tree=detailed
+n2: 19602033812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 19601120016 0x1125B2: ChainMatrixMultiplication::initArray(int) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 19601120016 0x112655: ChainMatrixMultiplication::recurse_init(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 19601120016 0x116FF3: Problem<int>::runTimeRecursive(Problem_Arguments*) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 19601120016 0x10E4D7: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+     n1: 19601120016 0x10E7B5: runChainMatrixMultiplication(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+      n1: 19601120016 0x117E17: void runProblem<int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+       n0: 19601120016 0x110046: main (in /home/nzacha/Documents/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 913796 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=83
+#-----------
+time=394328103871
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=3100016
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=397744935819
+mem_heap_B=19602033812
+mem_heap_extra_B=1120404
+mem_stacks_B=330344
+heap_tree=empty
