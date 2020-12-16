@@ -1,8 +1,11 @@
 #include <list>
 #include <algorithm>
+#include <queue>
 
 #ifndef trees_h
 #define trees_h
+
+const int NO_EDGE = -1, EDGE = 1;
 
 class TreeNode{
     public:
@@ -24,6 +27,59 @@ class TreeNode{
             return *it;
         }
 };
+
+void showTree(TreeNode* root, int size){
+    bool visited[size];
+    for(int i=0; i< size; i++)
+        visited[i] = false;
+        
+    queue <TreeNode*> nodes;
+    TreeNode* node = root;
+    cout << "Printing tree:" << endl;
+    //print root
+    cout << "Root: " << node->index << "\t\t";
+    visited[node->index] = true;
+    for(TreeNode* child : node->children){
+        cout << "Node: " << child->index << "\t";
+        nodes.push(child);
+    }
+    cout << endl;
+    int count=1;
+    
+    //pop next node
+    node = nodes.front();
+    nodes.pop();
+    while(node){
+        if(visited[node->index]){
+            node = nodes.front();
+            nodes.pop();
+            continue;
+        }
+
+        cout << "Parent: " << node->index << "\t";
+        visited[node->index] = true;
+        
+        if(node->children.size()>0){
+            for(TreeNode* child: node->children){
+                if(!visited[child->index]){
+                    nodes.push(child);
+                }
+                cout << "Node: " << child->index << "\t";
+            }
+        }else{
+            cout << "  --";
+        }
+        cout << endl;
+
+        count++;
+        if(count==size)
+            break;
+
+        node = nodes.front();
+        nodes.pop();
+    }
+    cout << endl;
+}
 
 TreeNode* generateConnectedTree(int treeSize, int degree, int connectivity){
     srand (time(NULL));

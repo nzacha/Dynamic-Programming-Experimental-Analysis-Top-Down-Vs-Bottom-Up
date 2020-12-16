@@ -48,7 +48,7 @@ class IndependentSet : public Problem <int>{
 
             TreeNode* tree = generateConnectedTree(problem_size, 2, 1);
             #ifdef DEBUG
-                showTree(tree);
+                showTree(tree, PROBLEM_SIZE);
             #endif
             int** graph = treeToGraph(tree, problem_size, false);
             #ifdef DEBUG
@@ -250,59 +250,6 @@ class IndependentSet : public Problem <int>{
         int** getSolution2D(){
             //return ((Arguments*) args)->weights;
             return NULL;
-        }
-
-        void showTree(TreeNode* root){
-            bool visited[PROBLEM_SIZE];
-            for(int i=0; i< PROBLEM_SIZE; i++)
-                visited[i] = false;
-                
-            queue <TreeNode*> nodes;
-            TreeNode* node = root;
-            cout << "Printing tree:" << endl;
-            //print root
-            cout << "Root: " << node->index << "\t\t";
-            visited[node->index] = true;
-            for(TreeNode* child : node->children){
-                cout << "Node: " << child->index << "\t";
-                nodes.push(child);
-            }
-            cout << endl;
-            int count=1;
-            
-            //pop next node
-            node = nodes.front();
-            nodes.pop();
-            while(node){
-                if(visited[node->index]){
-                    node = nodes.front();
-                    nodes.pop();
-                    continue;
-                }
-
-                cout << "Parent: " << node->index << "\t";
-                visited[node->index] = true;
-                
-                if(node->children.size()>0){
-                    for(TreeNode* child: node->children){
-                        if(!visited[child->index]){
-                            nodes.push(child);
-                        }
-                        cout << "Node: " << child->index << "\t";
-                    }
-                }else{
-                    cout << "  --";
-                }
-                cout << endl;
-
-                count++;
-                if(count==PROBLEM_SIZE)
-                    break;
-
-                node = nodes.front();
-                nodes.pop();
-            }
-            cout << endl;
         }
 };
 
