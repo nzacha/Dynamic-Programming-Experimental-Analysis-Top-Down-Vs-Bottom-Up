@@ -182,10 +182,6 @@ class IndependentSet : public Problem <int>{
         }
 
         int iterate(TreeNode* root, queue<TreeNode*> nodes){           
-            bool visited[PROBLEM_SIZE];
-            for (int i=0; i<PROBLEM_SIZE; i++)
-                visited[i] = false;
-
             int computed = 0;
             TreeNode* node;
             while(nodes.size() > 0){
