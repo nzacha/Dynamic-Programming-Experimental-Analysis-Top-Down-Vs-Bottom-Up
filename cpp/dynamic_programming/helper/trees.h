@@ -5,7 +5,10 @@
 #ifndef trees_h
 #define trees_h
 
+#ifndef edge_const
+#define edge_const
 const int NO_EDGE = -1, EDGE = 1;
+#endif
 
 class TreeNode{
     public:

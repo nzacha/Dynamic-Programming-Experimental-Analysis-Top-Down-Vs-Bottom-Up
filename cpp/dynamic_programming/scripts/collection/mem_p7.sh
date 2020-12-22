@@ -1,14 +1,14 @@
 #declare program arguments
-sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-problems_1=("dijkstra" "independentSets" "mostCommonSubSequence")
+sizes_7=(100000 200000 300000 400000 500000 600000 700000 800000)
+problems_7=("kTrees")
 
-#iterative for first problems
-for problem in ${problems_1[@]}
+#iterative for fourth problems
+for problem in ${problems_7[@]}
 do
 	mkdir mem_results/${problem}
 	mkdir mem_results/${problem}/iterative
 				
-	for size in ${sizes_1[@]}
+	for size in ${sizes_7[@]}
 	do
 		for attempt in {1..3}
 		do
@@ -25,12 +25,12 @@ do
 	done
 done
 
-#recursive for first problems
-for problem in ${problems_1[@]}
+#recursive for fourth problems
+for problem in ${problems_7[@]}
 do
 	mkdir mem_results/${problem}/recursive			
 	
-	for size in ${sizes_1[@]}
+	for size in ${sizes_7[@]}
 	do
 		for attempt in {1..3}
 		do

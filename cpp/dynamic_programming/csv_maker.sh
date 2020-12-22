@@ -13,6 +13,16 @@ problems_3=("allPairShortestPath")
 sizes_4=(20000 40000 60000 80000 100000 120000 130000)
 problems_4=("knapsack")
 
+sizes_5=(20000 40000 60000 80000 100000 120000 140000 160000 180000 200000)
+problems_5=("longestIncreasingSubSequence")
+
+sizes_6=(10000 20000 30000 40000 50000 60000 70000 80000 90000)
+problems_6=("treeDiameter")
+
+sizes_7=(100000 200000 300000 400000 500000 600000 700000 800000)
+problems_7=("kTrees")
+
+
 rm -rf data
 mkdir data
 
@@ -249,6 +259,150 @@ do
 	t_file=data/time/r_${problem}.csv
 	
 	for size in ${sizes_4[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
+		printHeap $file $problem $RECURSIVE $size
+		printExtraHeap $file $problem $RECURSIVE $size
+		printStack $file $problem $RECURSIVE $size
+		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $RECURSIVE $problem $size
+	done
+done
+
+#iterative for fifth problems
+for problem in ${problems_5[@]}
+do
+	file=data/mem/i_${problem}.csv
+	t_file=data/time/i_${problem}.csv
+	
+	for size in ${sizes_5[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
+		printHeap $file $problem $ITERATIVE $size
+		printExtraHeap $file $problem $ITERATIVE $size
+		printStack $file $problem $ITERATIVE $size
+		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $ITERATIVE $problem $size
+	done
+done
+
+#recursive for fifth problems
+for problem in ${problems_5[@]}
+do
+	file=data/mem/r_${problem}.csv
+	t_file=data/time/r_${problem}.csv
+	
+	for size in ${sizes_5[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
+		printHeap $file $problem $RECURSIVE $size
+		printExtraHeap $file $problem $RECURSIVE $size
+		printStack $file $problem $RECURSIVE $size
+		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $RECURSIVE $problem $size
+	done
+done
+
+#iterative for sixth problems
+for problem in ${problems_6[@]}
+do
+	file=data/mem/i_${problem}.csv
+	t_file=data/time/i_${problem}.csv
+	
+	for size in ${sizes_6[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
+		printHeap $file $problem $ITERATIVE $size
+		printExtraHeap $file $problem $ITERATIVE $size
+		printStack $file $problem $ITERATIVE $size
+		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $ITERATIVE $problem $size
+	done
+done
+
+#recursive for sixth problems
+for problem in ${problems_6[@]}
+do
+	file=data/mem/r_${problem}.csv
+	t_file=data/time/r_${problem}.csv
+	
+	for size in ${sizes_6[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
+		printHeap $file $problem $RECURSIVE $size
+		printExtraHeap $file $problem $RECURSIVE $size
+		printStack $file $problem $RECURSIVE $size
+		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $RECURSIVE $problem $size
+	done
+done
+
+#iterative for seventh problems
+for problem in ${problems_7[@]}
+do
+	file=data/mem/i_${problem}.csv
+	t_file=data/time/i_${problem}.csv
+	
+	for size in ${sizes_7[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
+
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
+		printHeap $file $problem $ITERATIVE $size
+		printExtraHeap $file $problem $ITERATIVE $size
+		printStack $file $problem $ITERATIVE $size
+		echo >> $file
+
+		#append time file
+		printAttempts $t_file $T_ATTEMPTS
+		printTime $t_file $ITERATIVE $problem $size
+	done
+done
+
+#recursive for seventh problems
+for problem in ${problems_7[@]}
+do
+	file=data/mem/r_${problem}.csv
+	t_file=data/time/r_${problem}.csv
+	
+	for size in ${sizes_7[@]}
 	do
 		#print size
 		echo "Size,$size" >> $file

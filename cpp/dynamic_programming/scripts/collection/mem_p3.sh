@@ -12,6 +12,7 @@ do
 	do
 		for attempt in {1..3}
 		do
+			echo "mem iterative ${problem} ${size} ${attempt}" > log.txt
 			echo "Running iterative " ${problem} " size: ${size} x${attempt}"
 
 			valgrind --tool=massif --massif-out-file=mem_results/${problem}/massif${size}_${attempt}.txt --stacks=yes ./executable.out ${problem} ${size} -iterative -q
@@ -33,6 +34,7 @@ do
 	do
 		for attempt in {1..3}
 		do
+			echo "mem recursive ${problem} ${size} ${attempt}" > log.txt
 			echo "Running recursive " ${problem} " size: ${size} x${attempt}"
 
 			valgrind --tool=massif --massif-out-file=mem_results/${problem}/massif${size}_${attempt}.txt --stacks=yes ./executable.out ${problem} ${size} -recursive -q

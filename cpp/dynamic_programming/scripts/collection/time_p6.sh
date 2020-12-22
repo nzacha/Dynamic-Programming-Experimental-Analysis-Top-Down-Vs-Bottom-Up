@@ -1,11 +1,11 @@
 #declare program arguments
-sizes_2=(10000 20000 30000 40000 50000 60000 70000 80000) #85000)
-problems_2=("chainMatrixMultiplication")
+sizes_6=(10000 20000 30000 40000 50000 60000 70000 80000 90000)
+problems_6=("treeDiameter")
 
-#time iterative second problems
-for problem in ${problems_2[@]}
+#time iterative fourth problems
+for problem in ${problems_6[@]}
 do				
-	for size in ${sizes_2[@]}
+	for size in ${sizes_6[@]}
 	do
 		for attempt in {1..12}
 		do
@@ -16,10 +16,10 @@ do
 	done
 done
 
-#time recursive second problems
-for problem in ${problems_2[@]}
+#time recursive fourth problems
+for problem in ${problems_6[@]}
 do
-	for size in ${sizes_2[@]}
+	for size in ${sizes_6[@]}
 	do
 		for attempt in {1..12}
 		do

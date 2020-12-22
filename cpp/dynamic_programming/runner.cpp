@@ -10,6 +10,9 @@
 #include "independendSets/independentSets.cpp"
 #include "knapsack/knapsack.cpp"
 #include "mostCommonSubSequence/mostCommonSubSequence.cpp"
+#include "treeDiameter/treeDiameter.cpp"
+#include "kTrees/kTrees.cpp"
+#include "longestIncreasingSubSequence/longestIncreasingSubSequence.cpp"
 
 void runAndWriteProblem(Problem<int>* problem, string outFile, bool recursive, bool iterative, bool writeOut){
     if(recursive && iterative)
@@ -20,6 +23,27 @@ void runAndWriteProblem(Problem<int>* problem, string outFile, bool recursive, b
         problem->runTimeIterative(problem->args);
     
     if(writeOut) problem->writeData(outFile);
+}
+
+void runKTrees(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+    cout << "\t=> Thread " << index << " running \"k-trees\" with " << num_of_items << endl; 
+    KTrees* problem = new KTrees(num_of_items, 3);
+    
+    runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
+}
+
+void runLISS(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+    cout << "\t=> Thread " << index << " running \"longest increasing sub sequence\" with " << num_of_items << endl; 
+    LISS* problem = new LISS(num_of_items, 1000);
+    
+    runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
+}
+
+void runTreeDiameter(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+    cout << "\t=> Thread " << index << " running \"tree diameter\" with " << num_of_items << endl; 
+    TreeDiameter* problem = new TreeDiameter(num_of_items);
+    
+    runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
 void runAllPairShortestPath(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
@@ -93,8 +117,8 @@ void runProblem(type arg, string dir_out, int numThreads, int perThreadReps, pre
     }
 }
 
-enum Program {allPairShortestPath = 0, chainMatrixMultiplcation, dijkstra, independentSets, knapsack, mostCommonSubSequence, NUM_OF_PROBLEMS};
-string ProgramNames[] = {"allPairShortestPath", "chainMatrixMultiplication", "dijkstra", "independentSets", "knapsack", "mostCommonSubSequence"};
+enum Program {allPairShortestPath = 0, chainMatrixMultiplcation, dijkstra, independentSets, knapsack, mostCommonSubSequence, longestIncreasingSubSequence, kTrees, treeDiameter, NUM_OF_PROBLEMS};
+string ProgramNames[] = {"allPairShortestPath", "chainMatrixMultiplication", "dijkstra", "independentSets", "knapsack", "mostCommonSubSequence", "longestIncreasingSubSequence", "kTrees", "treeDiameter"};
 
 void printHelpText(){
     cout << "> Program list: " << endl << "\t";
@@ -245,6 +269,9 @@ int main (int argc, char** argv){
     {ProgramNames[Program::independentSets], out_dir+ "independentSets/"},
     {ProgramNames[Program::knapsack], out_dir+ "knapsack/"},
     {ProgramNames[Program::mostCommonSubSequence], out_dir+ "mostCommonSubSequence/"},
+    {ProgramNames[Program::longestIncreasingSubSequence], out_dir+ "longestIncreasingSubSequence/"},
+    {ProgramNames[Program::kTrees], out_dir+ "kTrees/"},
+    {ProgramNames[Program::treeDiameter], out_dir+ "treeDiameter/"},
     };
 
     //Clear output directories
@@ -282,6 +309,18 @@ int main (int argc, char** argv){
         case mostCommonSubSequence:
             mkdir(fileNames[ProgramNames[Program::mostCommonSubSequence]].c_str(), S_IRWXU);
             runProblem(stoi(argument), fileNames[ProgramNames[Program::mostCommonSubSequence]], numThreads, perThreadReps, runMCSS, recursive, iterative, writeOut);
+            break;
+        case longestIncreasingSubSequence:
+            mkdir(fileNames[ProgramNames[Program::longestIncreasingSubSequence]].c_str(), S_IRWXU);
+            runProblem(stoi(argument), fileNames[ProgramNames[Program::longestIncreasingSubSequence]], numThreads, perThreadReps, runLISS, recursive, iterative, writeOut);
+            break;
+        case kTrees:
+            mkdir(fileNames[ProgramNames[Program::kTrees]].c_str(), S_IRWXU);
+            runProblem(stoi(argument), fileNames[ProgramNames[Program::kTrees]], numThreads, perThreadReps, runKTrees, recursive, iterative, writeOut);
+            break;
+        case treeDiameter:
+            mkdir(fileNames[ProgramNames[Program::treeDiameter]].c_str(), S_IRWXU);
+            runProblem(stoi(argument), fileNames[ProgramNames[Program::treeDiameter]], numThreads, perThreadReps, runTreeDiameter, recursive, iterative, writeOut);
             break;
     }
 

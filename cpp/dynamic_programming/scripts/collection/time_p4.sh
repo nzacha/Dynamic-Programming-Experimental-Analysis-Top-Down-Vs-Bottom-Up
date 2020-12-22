@@ -9,6 +9,7 @@ do
 	do
 		for attempt in {1..12}
 		do
+			echo "time iterative ${problem} ${size} ${attempt}" > log.txt
 			echo "Running iterative " ${problem} " size: ${size} x${attempt}"
 			./executable.out ${problem} ${size} -iterative -q -o -dir $DIR_ITERATIVE
 		done
@@ -22,6 +23,7 @@ do
 	do
 		for attempt in {1..12}
 		do
+			echo "time recursive ${problem} ${size} ${attempt}" > log.txt
 			echo "Running recursive " ${problem} " size: ${size} x${attempt}"
 			./executable.out ${problem} ${size} -recursive -q -o -dir $DIR_RECURSIVE		
 		done

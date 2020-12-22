@@ -120,28 +120,6 @@ class Dijkstra : public Problem <int>{
             return retVal;
         }
 
-        int iterate2(int** graph, int* array, int* path, int startPoint, int endPoint){
-            list<int> Q;
-            Q.push_front(startPoint);
-            //add ancestors of startPoint
-            for(int i=0; i<PROBLEM_SIZE; i++){
-                if(i!=startPoint && graph[startPoint][i]){
-                    Q.push_front(i);
-                }
-            }
-            int min, index;
-            while(Q.size > 1){
-                min = INT32_MAX;
-                index = -1;
-                for(int i : Q){
-                    if(array[i] < array[] + graph[][]){
-                        min = array[i] + graph[][];
-                        index = i;
-                    }
-                }
-            }
-        }
-
         int iterate(int** graph, int* array, int* path, int startPoint, int endPoint){
             bool visited[PROBLEM_SIZE];
             for(int i=0; i<PROBLEM_SIZE; i++){

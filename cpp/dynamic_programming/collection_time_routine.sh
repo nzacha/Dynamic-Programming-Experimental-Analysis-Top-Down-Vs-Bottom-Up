@@ -24,5 +24,14 @@ mkdir $DIR_RECURSIVE
 #knapsack
 ./scripts/collection/time_p4.sh
 
+#treeDiameter
+./scripts/collection/time_p6.sh
+
+#kTrees
+./scripts/collection/time_p7.sh
+
+#longestCommonSubSequence
+./scripts/collection/time_p5.sh
+
 echo "sending mail"
 mail -s "Execution Time Collection Done" zicolas3@gmail.com <<< "Hello, execution has finished :)" 

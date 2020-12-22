@@ -54,7 +54,7 @@ class TreeDiameter : public Problem <int>{
             int retVal = recurse(args->root);
             //print1D(inc_array, PROBLEM_SIZE);
             //print1D(exc_array, PROBLEM_SIZE);
-            cout << "Diameter is: " << diameter << endl;
+            //cout << "Diameter is: " << diameter << endl;
             return retVal;
         }
 
@@ -86,13 +86,11 @@ class TreeDiameter : public Problem <int>{
                 exc_array[root->index] = 2 + max1 + max2;
             }
 
-            diameter = max(diameter, max(inc_array[root->index], exc_array[root->index]));
-            return 0;
+            return diameter = max(diameter, max(inc_array[root->index], exc_array[root->index]));
         }
         
         int iterate_init(Problem_Arguments* args_generic){
             TreeDiameter_Arguments* args = (TreeDiameter_Arguments*) args_generic;
-            args->array = treeToGraph(args->root, PROBLEM_SIZE, false);
             
             //generate stack of nodes
             bool visited[PROBLEM_SIZE];
@@ -101,7 +99,7 @@ class TreeDiameter : public Problem <int>{
             }
 
             //put nodes into a queue
-            stack <TreeNode*> s;
+            stack<TreeNode*> s;
             queue<TreeNode*> nodes;
             TreeNode* node = args->root;
             nodes.push(node);
@@ -130,12 +128,12 @@ class TreeDiameter : public Problem <int>{
             int retVal = iterate(args->root, args->array, nodes);
             //print1D(inc_array, PROBLEM_SIZE);
             //print1D(exc_array, PROBLEM_SIZE);
-            cout << "Diameter is: " << retVal << endl;
+            //cout << "Diameter is: " << retVal << endl;
             return retVal;
         }
 
         int iterate(TreeNode* root, int** array, queue<TreeNode*> nodes){
-            int dpInc[PROBLEM_SIZE] ={0};
+            long dpInc[PROBLEM_SIZE] ={0};
 
             int computed = 0;   
             TreeNode* node;
@@ -189,7 +187,7 @@ class TreeDiameter : public Problem <int>{
 
                     //set the node value to the maximum of the 2 values
                 }
-                dpInc[node->value]= 1 + firstmax + secondmax;
+                dpInc[node->index]= 1 + firstmax + secondmax;
                 node->value = firstmax + 1;
                 
                 nodes.pop();
@@ -206,12 +204,12 @@ class TreeDiameter : public Problem <int>{
 
 #ifndef runner_cpp
 int main(int argc, char** argv) {
-    /*
-    string method = "recursive"; //argv[1];
-    //int problemSize = stoi(argv[2]);
+    //iterative 90000
+    string method = argv[1];
+    int problemSize = stoi(argv[2]);
      
-    TreeDiameter* problem = new TreeDiameter(10);
-    long long int time_taken;
+    TreeDiameter* problem = new TreeDiameter(problemSize);
+   long long int time_taken;
     if (method=="iterative"){
         time_taken = problem->runTimeIterative(problem->args);
     }else if (method == "recursive"){
@@ -219,14 +217,8 @@ int main(int argc, char** argv) {
     } else {
         cout << "Method not recognized" << endl;
         return 1;
-    }*/
-    
-    int problemSize = stoi(argv[1]);     
-    TreeDiameter* problem = new TreeDiameter(problemSize);    
-    long long int time_taken;
-    time_taken = problem->runTimeRecursive(problem->args);    
-    //cout <<  "time taken: " << time_taken << endl;    
-    time_taken = problem->runTimeIterative(problem->args);
-    //cout <<  "time taken: " << time_taken << endl;
+    }
+    cout <<  "time taken: " << time_taken << endl;
+    //problem->runCheck(problem->args);
 }
 #endif
