@@ -12,7 +12,7 @@ mkdir $DIR
 mkdir $DIR_ITERATIVE
 mkdir $DIR_RECURSIVE
 
-#dijkstra, independent sets
+#dijkstra, independent_sets mostCommonSubSequebce
 ./scripts/collection/time_p1.sh
 
 #chainmatrixmultiplication
@@ -22,13 +22,13 @@ mkdir $DIR_RECURSIVE
 #./scripts/collection/time_p3.sh
 
 #knapsack
-./scripts/collection/time_p4.sh
+#./scripts/collection/time_p4.sh
 
 #treeDiameter
-./scripts/collection/time_p6.sh
+#./scripts/collection/time_p6.sh
 
 #kTrees
-./scripts/collection/time_p7.sh
+#./scripts/collection/time_p7.sh
 
 #longestCommonSubSequence
 ./scripts/collection/time_p5.sh

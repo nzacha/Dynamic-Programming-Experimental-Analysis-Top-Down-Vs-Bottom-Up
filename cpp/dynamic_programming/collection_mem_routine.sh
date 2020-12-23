@@ -14,13 +14,13 @@ echo "Running Memory Routine"
 #/scripts/collection/mem_p3.sh
 
 #knapsack
-./scripts/collection/mem_p4.sh
+#./scripts/collection/mem_p4.sh
 
 #treeDiameter
-./scripts/collection/mem_p6.sh
+#./scripts/collection/mem_p6.sh
 
 #kTrees
-./scripts/collection/mem_p7.sh
+#./scripts/collection/mem_p7.sh
 
 #longestCommonSubSequence
 ./scripts/collection/mem_p5.sh
