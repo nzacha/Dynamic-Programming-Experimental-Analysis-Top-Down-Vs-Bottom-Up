@@ -1,6 +1,8 @@
 #declare program arguments
-sizes_6=(10000 20000 30000 40000 50000 60000 70000 80000 90000)
-problems_6=("treeDiameter")
+sizes_6=(1000000 2000000 3000000 4000000 5000000 6000000 7000000 8000000 9000000)
+problems_6=("treeDiameter" "kTrees")
+
+ulimit -s unlimited
 
 #time iterative fourth problems
 for problem in ${problems_6[@]}

@@ -16,11 +16,8 @@ problems_4=("knapsack")
 sizes_5=(20000 40000 60000 80000 100000 120000 140000 160000 180000 200000)
 problems_5=("longestIncreasingSubSequence")
 
-sizes_6=(10000 20000 30000 40000 50000 60000 70000 80000 90000)
-problems_6=("treeDiameter")
-
-sizes_7=(1000000 2000000 3000000 4000000 5000000 6000000 7000000 8000000)
-problems_7=("kTrees")
+sizes_6=(1000000 2000000 3000000 4000000 5000000 6000000 7000000 8000000 9000000)
+problems_6=("treeDiameter" "kTrees")
 
 
 rm -rf data
@@ -356,54 +353,6 @@ do
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_6[@]}
-	do
-		#print size
-		echo "Size,$size" >> $file
-
-		#append mem file
-		printAttempts $file $M_ATTEMPTS
-		printHeap $file $problem $RECURSIVE $size
-		printExtraHeap $file $problem $RECURSIVE $size
-		printStack $file $problem $RECURSIVE $size
-		echo >> $file
-
-		#append time file
-		printTime $t_file $RECURSIVE $problem $size
-	done
-done
-
-#iterative for seventh problems
-for problem in ${problems_7[@]}
-do
-	file=data/mem/i_${problem}.csv
-	t_file=data/time/i_${problem}.csv
-	printAttempts $t_file $T_ATTEMPTS
-		
-	for size in ${sizes_7[@]}
-	do
-		#print size
-		echo "Size,$size" >> $file
-
-		#append mem file
-		printAttempts $file $M_ATTEMPTS
-		printHeap $file $problem $ITERATIVE $size
-		printExtraHeap $file $problem $ITERATIVE $size
-		printStack $file $problem $ITERATIVE $size
-		echo >> $file
-
-		#append time file
-		printTime $t_file $ITERATIVE $problem $size
-	done
-done
-
-#recursive for seventh problems
-for problem in ${problems_7[@]}
-do
-	file=data/mem/r_${problem}.csv
-	t_file=data/time/r_${problem}.csv
-	printAttempts $t_file $T_ATTEMPTS
-		
-	for size in ${sizes_7[@]}
 	do
 		#print size
 		echo "Size,$size" >> $file

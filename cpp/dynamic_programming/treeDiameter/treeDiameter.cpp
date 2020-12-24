@@ -29,12 +29,9 @@ class TreeDiameter : public Problem <int>{
         }
 
         void* initArray(int defaultValue){ 
-            int** array = new int*[PROBLEM_SIZE];
+            int* array = new int[PROBLEM_SIZE];
             for(int i=0; i<PROBLEM_SIZE; i++){
-                array[i] = new int[PROBLEM_WIDTH];
-                for(int j=0; j<PROBLEM_WIDTH; j++){
-                    array[i][j] = defaultValue;
-                }
+                array[i] = defaultValue;
             }
             return array;
         }
@@ -46,8 +43,8 @@ class TreeDiameter : public Problem <int>{
         int *inc_array, *exc_array, diameter;
         int recurse_init(Problem_Arguments* args_generic){
             TreeDiameter_Arguments* args = (TreeDiameter_Arguments*) args_generic;
-            inc_array = new int[PROBLEM_SIZE];
-            exc_array = new int[PROBLEM_SIZE];
+            inc_array = (int*)initArray(0);
+            exc_array = (int*)initArray(0);
 
             //cout << "Showing tree before" << endl;
             //showTree(args->root, PROBLEM_SIZE);
@@ -125,14 +122,14 @@ class TreeDiameter : public Problem <int>{
                 cout << "Running Bottom-up " << flush;
                 Console::create_progressbar(10);
             #endif
-            int retVal = iterate(args->root, args->array, nodes);
+            int retVal = iterate(args->root, nodes);
             //print1D(inc_array, PROBLEM_SIZE);
             //print1D(exc_array, PROBLEM_SIZE);
             //cout << "Diameter is: " << retVal << endl;
             return retVal;
         }
 
-        int iterate(TreeNode* root, int** array, queue<TreeNode*> nodes){
+        int iterate(TreeNode* root, queue<TreeNode*> nodes){
             long dpInc[PROBLEM_SIZE] ={0};
 
             int computed = 0;   
@@ -204,7 +201,7 @@ class TreeDiameter : public Problem <int>{
 
 #ifndef runner_cpp
 int main(int argc, char** argv) {
-    //iterative 90000
+    //iterative 900000
     string method = argv[1];
     int problemSize = stoi(argv[2]);
      

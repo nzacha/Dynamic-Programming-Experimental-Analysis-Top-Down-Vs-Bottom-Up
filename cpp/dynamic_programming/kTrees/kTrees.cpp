@@ -30,12 +30,9 @@ class KTrees : public Problem <int>{
         }
 
         void* initArray(int defaultValue){ 
-            int** array = new int*[PROBLEM_SIZE];
+            int* array = new int[PROBLEM_SIZE];
             for(int i=0; i<PROBLEM_SIZE; i++){
-                array[i] = new int[PROBLEM_WIDTH];
-                for(int j=0; j<PROBLEM_WIDTH; j++){
-                    array[i][j] = defaultValue;
-                }
+                array[i] = 0;
             }
             return array;
         }
@@ -47,7 +44,7 @@ class KTrees : public Problem <int>{
         int recurse_init(Problem_Arguments* args_generic){
             KTrees_Arguments* args = (KTrees_Arguments*) args_generic;
             //showTree(args->root, PROBLEM_SIZE);
-            args->array = new int[PROBLEM_SIZE];
+            args->array = (int*)initArray(0);
             int retVal = recurse(args->root, args->array, PROBLEM_WIDTH);
             //cout << "Array" << endl;
             //print1D(args->array, PROBLEM_SIZE);
@@ -73,7 +70,7 @@ class KTrees : public Problem <int>{
         int iterate_init(Problem_Arguments* args_generic){
             KTrees_Arguments* args = (KTrees_Arguments*) args_generic;
             //showTree(args->root, PROBLEM_SIZE);
-            args->array = new int[PROBLEM_SIZE];
+            args->array = (int*)initArray(0);
             
             //generate stack of nodes
             bool visited[PROBLEM_SIZE];
