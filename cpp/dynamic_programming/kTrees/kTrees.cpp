@@ -97,12 +97,17 @@ class KTrees : public Problem <int>{
             }
 
             #ifdef CONSOLE
-                cout << "Running Bottom-up " << flush;
-                Console::create_progressbar(10);
+                if(Console::ACTIVE){
+                    cout << "Running Bottom-up " << flush;
+                    Console::create_progressbar(10);
+                }
             #endif
             //cout << "Array" << endl;
             //print1D(args->array, PROBLEM_SIZE);
             int retVal = iterate(args->root, args->array, nodes, PROBLEM_WIDTH);
+            if(Console::ACTIVE){
+                Console::clear_line();
+            }
             //cout << "Array" << endl;
             //print1D(args->array, PROBLEM_SIZE);
             //cout << "Num of trees, of " << PROBLEM_WIDTH << " is: " << retVal << endl;                        
@@ -114,9 +119,11 @@ class KTrees : public Problem <int>{
             TreeNode* node;
             while(nodes.size() > 0){
                 #ifdef CONSOLE
-                    Console::clear_line();
-                    cout << "Running Bottom-up " << flush;
-                    Console::update_progressbar(computed, PROBLEM_SIZE);
+                    if((computed%100000==0) && Console::ACTIVE){
+                        Console::clear_line();
+                        cout << "Running Bottom-up " << flush;
+                        Console::update_progressbar(computed, PROBLEM_SIZE);
+                    }
                 #endif    
                 node = nodes.front();
 

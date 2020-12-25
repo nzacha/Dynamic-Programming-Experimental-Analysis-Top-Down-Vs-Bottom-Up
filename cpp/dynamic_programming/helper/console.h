@@ -24,20 +24,23 @@ class TimeTracker{
         }
 
     public:
-        int updateTimeInNanoSeconds = 200000000;
-    
+        int updateTimeInNanoSeconds = 1000000000;
         TimeTracker(){};
-
+        long long unsigned int averageTime=0;
         string  get_tracked_time(int jobsRemaining){
             long long unsigned int time_taken = getTimeDiff();
+            
             tracked_elapsed += time_taken;
             if(!begun_tracking) {
                 begun_tracking = true;
                 return "";
             }
-            if(tracked_elapsed > 200000000){
+            if(tracked_elapsed > updateTimeInNanoSeconds){            
+                if(averageTime == 0) averageTime = time_taken;
+                else averageTime = (averageTime + time_taken) /2;
+
                 tracked_elapsed = 0;
-                tracked_ETA = (time_taken) * jobsRemaining;
+                tracked_ETA = (averageTime) * jobsRemaining;
                 tracked_level = 0;
 
                 while(tracked_ETA / modifier[tracked_level] >= 1){
@@ -54,6 +57,7 @@ class TimeTracker{
 };
 
 namespace Console{
+    bool ACTIVE = false;
     static void backspace(){
         cout << "\b" << flush;
     }
@@ -112,7 +116,7 @@ namespace Console{
 
     TimeTracker progressbarTracker;
     int progressbar_length = 0, textSize = 0;
-    int print_progressbar(int progress, float percentage, int job, int jobs_size){
+    int print_progressbar(int progress, double percentage, int job, int jobs_size){
         stringstream pb;
         pb.precision(2); 
 
@@ -135,8 +139,8 @@ namespace Console{
     }
 
     void showProgress(int job, int jobs_size){
-        float roundup_offset = progressbar_length * 1.0f / jobs_size / 2;
-        float percentage = job * 1.0f / jobs_size;
+        double roundup_offset = progressbar_length * 1.0f / jobs_size / 2;
+        double percentage = job * 1.0f / jobs_size;
         int progress = (int) (percentage * progressbar_length + roundup_offset);
 
         textSize = print_progressbar(progress, percentage, job, jobs_size);
@@ -148,7 +152,7 @@ namespace Console{
     }
 
     static void update_progressbar(int job, int jobs_size){
-        if(job > jobs_size) return;
+        if(job >= jobs_size) return;
         
         //clear_progressbar();
         showProgress(job, jobs_size);

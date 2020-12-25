@@ -1,6 +1,6 @@
 #declare program arguments
-sizes_3=(2500 5000 7500 10000 12500 15000 17500)
-problems_3=("allPairShortestPath")
+sizes_3=(20000000 40000000 60000000 80000000 100000000 120000000 140000000)
+problems_3=("treeDiameter" "kTrees")
 
 #iterative for third problems
 for problem in ${problems_3[@]}

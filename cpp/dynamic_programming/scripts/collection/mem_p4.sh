@@ -1,6 +1,6 @@
 #declare program arguments
-sizes_4=(20000 40000 60000 80000 100000 120000 130000)
-problems_4=("knapsack")
+sizes_4=(8000 16000 24000 32000 40000 48000 56000)
+problems_5=( "longestIncreasingSubSequence1D" "longestIncreasingSubSequence2D")
 
 #iterative for fourth problems
 for problem in ${problems_4[@]}

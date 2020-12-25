@@ -4,25 +4,19 @@ mkdir mem_results
 
 echo "Running Memory Routine"
 
-#dijkstra, independent sets
+#dijkstra, independent_sets mostCommonSubSequebce
 ./scripts/collection/mem_p1.sh
 
-#chainmatrixmultiplication
+#knapsack
 ./scripts/collection/mem_p2.sh
 
-#allpairshortestpath
-#/scripts/collection/mem_p3.sh
+#treeDiameter kTrees
+/scripts/collection/mem_p3.sh
 
-#knapsack
-#./scripts/collection/mem_p4.sh
+#longestCommonSubSequence1D longestCommonSubSequence2D
+./scripts/collection/mem_p4.sh
 
-#treeDiameter
-#./scripts/collection/mem_p6.sh
-
-#kTrees
-#./scripts/collection/mem_p7.sh
-
-#longestCommonSubSequence
+#chainmatrixmultiplication
 ./scripts/collection/mem_p5.sh
 
 echo "sending mail"

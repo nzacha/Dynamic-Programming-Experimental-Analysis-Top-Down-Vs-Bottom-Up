@@ -3,6 +3,8 @@
 #include <thread>
 #include <sys/stat.h>
 
+#include "helper/console.h"
+#define CONSOLE
 #include "helper/problem.h"
 #include "allpairShortestPath/allpairShortestPath.cpp"
 #include "chainMatrixMultiplication/chainMatrixMultiplication.cpp"
@@ -12,7 +14,8 @@
 #include "mostCommonSubSequence/mostCommonSubSequence.cpp"
 #include "treeDiameter/treeDiameter.cpp"
 #include "kTrees/kTrees.cpp"
-#include "longestIncreasingSubSequence/longestIncreasingSubSequence.cpp"
+#include "longestIncreasingSubSequence/longestIncreasingSubSequence1D.cpp"
+#include "longestIncreasingSubSequence/longestIncreasingSubSequence2D.cpp"
 
 void runAndWriteProblem(Problem<int>* problem, string outFile, bool recursive, bool iterative, bool writeOut){
     if(recursive && iterative)
@@ -32,9 +35,16 @@ void runKTrees(int index, int num_of_items, string outFile, bool recursive, bool
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runLISS(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
-    cout << "\t=> Thread " << index << " running \"longest increasing sub sequence\" with " << num_of_items << endl; 
+void runLISS1D(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+    cout << "\t=> Thread " << index << " running \"longest increasing sub sequence 1D\" with " << num_of_items << endl; 
     LISS* problem = new LISS(num_of_items, 1000);
+    
+    runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
+}
+
+void runLISS2D(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+    cout << "\t=> Thread " << index << " running \"longest increasing sub sequence 2D\" with " << num_of_items << endl; 
+    LISS2D* problem = new LISS2D(num_of_items, 1000);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
@@ -117,8 +127,8 @@ void runProblem(type arg, string dir_out, int numThreads, int perThreadReps, pre
     }
 }
 
-enum Program {allPairShortestPath = 0, chainMatrixMultiplcation, dijkstra, independentSets, knapsack, mostCommonSubSequence, longestIncreasingSubSequence, kTrees, treeDiameter, NUM_OF_PROBLEMS};
-string ProgramNames[] = {"allPairShortestPath", "chainMatrixMultiplication", "dijkstra", "independentSets", "knapsack", "mostCommonSubSequence", "longestIncreasingSubSequence", "kTrees", "treeDiameter"};
+enum Program {allPairShortestPath = 0, chainMatrixMultiplcation, dijkstra, independentSets, knapsack, mostCommonSubSequence, longestIncreasingSubSequence1D, longestIncreasingSubSequence2D, kTrees, treeDiameter, NUM_OF_PROBLEMS};
+string ProgramNames[] = {"allPairShortestPath", "chainMatrixMultiplication", "dijkstra", "independentSets", "knapsack", "mostCommonSubSequence", "longestIncreasingSubSequence1D", "longestIncreasingSubSequence2D", "kTrees", "treeDiameter"};
 
 void printHelpText(){
     cout << "> Program list: " << endl << "\t";
@@ -220,6 +230,8 @@ int main (int argc, char** argv){
             }
             argument = argv[++i];
 
+        } else if(arg == "-progress"){
+            Console::ACTIVE = true;
         } else {
             for(int j=0; j<Program::NUM_OF_PROBLEMS; j++){
                 if(arg == ProgramNames[j]){
@@ -269,7 +281,8 @@ int main (int argc, char** argv){
     {ProgramNames[Program::independentSets], out_dir+ "independentSets/"},
     {ProgramNames[Program::knapsack], out_dir+ "knapsack/"},
     {ProgramNames[Program::mostCommonSubSequence], out_dir+ "mostCommonSubSequence/"},
-    {ProgramNames[Program::longestIncreasingSubSequence], out_dir+ "longestIncreasingSubSequence/"},
+    {ProgramNames[Program::longestIncreasingSubSequence1D], out_dir+ "longestIncreasingSubSequence1D/"},
+    {ProgramNames[Program::longestIncreasingSubSequence2D], out_dir+ "longestIncreasingSubSequence2D/"},
     {ProgramNames[Program::kTrees], out_dir+ "kTrees/"},
     {ProgramNames[Program::treeDiameter], out_dir+ "treeDiameter/"},
     };
@@ -310,9 +323,13 @@ int main (int argc, char** argv){
             mkdir(fileNames[ProgramNames[Program::mostCommonSubSequence]].c_str(), S_IRWXU);
             runProblem(stoi(argument), fileNames[ProgramNames[Program::mostCommonSubSequence]], numThreads, perThreadReps, runMCSS, recursive, iterative, writeOut);
             break;
-        case longestIncreasingSubSequence:
-            mkdir(fileNames[ProgramNames[Program::longestIncreasingSubSequence]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::longestIncreasingSubSequence]], numThreads, perThreadReps, runLISS, recursive, iterative, writeOut);
+        case longestIncreasingSubSequence1D:
+            mkdir(fileNames[ProgramNames[Program::longestIncreasingSubSequence1D]].c_str(), S_IRWXU);
+            runProblem(stoi(argument), fileNames[ProgramNames[Program::longestIncreasingSubSequence1D]], numThreads, perThreadReps, runLISS1D, recursive, iterative, writeOut);
+            break;
+        case longestIncreasingSubSequence2D:
+            mkdir(fileNames[ProgramNames[Program::longestIncreasingSubSequence2D]].c_str(), S_IRWXU);
+            runProblem(stoi(argument), fileNames[ProgramNames[Program::longestIncreasingSubSequence2D]], numThreads, perThreadReps, runLISS2D, recursive, iterative, writeOut);
             break;
         case kTrees:
             mkdir(fileNames[ProgramNames[Program::kTrees]].c_str(), S_IRWXU);

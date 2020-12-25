@@ -89,12 +89,15 @@ class ChainMatrixMultiplication : public Problem <int>{
             ChainMatrix_Arguments* args = (ChainMatrix_Arguments*) args_generic;
             args->array = (int**)initArray(0);
             #ifdef CONSOLE
-                cout << "Running Bottom-up " << flush;
-                Console::create_progressbar(10);
+                if(Console::ACTIVE){
+                    cout << "Running Bottom-up " << flush;
+                    Console::create_progressbar(10);
+                }
             #endif
             int retVal = iterate(args->array, args->matrixSizes);
             #ifdef CONSOLE
-                Console::clear_line();
+                if(Console::ACTIVE)
+                    Console::clear_line();
             #endif
             #ifdef DEBUG
                 print2D(args->array, PROBLEM_SIZE-1, PROBLEM_SIZE-2);
@@ -106,9 +109,11 @@ class ChainMatrixMultiplication : public Problem <int>{
             int indexStart, indexEnd, val;
             for(int step=1; step<PROBLEM_SIZE; step++){
                 #ifdef CONSOLE
-                    Console::clear_line();
-                    cout << "Running Bottom-up " << flush;
-                    Console::update_progressbar(step, PROBLEM_SIZE);
+                    if(Console::ACTIVE){
+                        Console::clear_line();
+                        cout << "Running Bottom-up " << flush;
+                        Console::update_progressbar(step, PROBLEM_SIZE);
+                    }
                 #endif
                 for(indexStart=0; indexStart<PROBLEM_SIZE - step -1; indexStart++){
                     indexEnd = indexStart + step;

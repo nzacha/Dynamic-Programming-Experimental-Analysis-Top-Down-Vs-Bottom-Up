@@ -122,7 +122,13 @@ class MostCommonSubSequence : public Problem <int>{
         int iterate_init(Problem_Arguments* args_generic){
             MCSS_Arguments* args = (MCSS_Arguments*) args_generic;            
             args->array = (int**)initArray(0);
+            if(Console::ACTIVE){
+                Console::create_progressbar(10);
+            }
             int retVal = iterate(args->array, args->seqA, args->seqB);
+            if(Console::ACTIVE){
+                Console::clear_line();
+            }
             #ifdef DEBUG
                 printSolution(args->array, args->seqA, args->seqB);
                 print2D<int>(getSolution2D(), PROBLEM_WIDTH, PROBLEM_SIZE);
@@ -135,6 +141,10 @@ class MostCommonSubSequence : public Problem <int>{
             int width = seqB.length();
 
             for(int i=1; i<=height; i++){
+                if(Console::ACTIVE){
+                    Console::clear_line();
+                    Console::update_progressbar(i, PROBLEM_SIZE);     
+                }
                 for(int j=1; j<=width; j++){
                     if(seqA[i-1] == seqB[j-1]){
                         array[i][j] = array[i-1][j-1] +1;

@@ -2,23 +2,22 @@
 
 #declare program arguments
 sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-problems_1=("dijkstra" "independentSets")
+problems_1=("dijkstra" "independentSets" "mostCommonSubSequence")
 
-sizes_2=(10000 20000 30000 40000 50000 60000 70000 80000)
-problems_2=("chainMatrixMultiplication" "mostCommonSubSequence")
+sizes_2=(15000 30000 45000 60000 75000 90000 105000 120000 135000)
+problems_2=("knapsack")
 
-#sizes_3=(2500 5000 7500 10000 12500 15000 17500)
-problems_3=("allPairShortestPath")
+sizes_3=(20000000 40000000 60000000 80000000 100000000 120000000 140000000)
+problems_3=("treeDiameter" "kTrees")
 
-sizes_4=(20000 40000 60000 80000 100000 120000 130000)
-problems_4=("knapsack")
+sizes_4=(8000 16000 24000 32000 40000 48000 56000)
+problems_5=( "longestIncreasingSubSequence1D" "longestIncreasingSubSequence2D")
 
-sizes_5=(20000 40000 60000 80000 100000 120000 140000 160000 180000 200000)
-problems_5=("longestIncreasingSubSequence")
+sizes_5=(10000 20000 30000 40000 50000 60000 70000 80000)
+problems_5=("chainMatrixMultiplication")
 
-sizes_6=(1000000 2000000 3000000 4000000 5000000 6000000 7000000 8000000 9000000)
-problems_6=("treeDiameter" "kTrees")
-
+#sizes_6=(2500 5000 7500 10000 12500 15000 17500)
+#problems_6=("allPairShortestPath")
 
 rm -rf data
 mkdir data
@@ -71,7 +70,7 @@ function printStack {
 }
 
 function printTime {
-	printf "Time," >> $1
+	printf "${4}," >> $1
 	for (( i=1; i<=$T_ATTEMPTS; i++))
 	do
 		cat time_results/$2/$3/time_item_${4}_rep_0.txt | grep "$2 time taken: " | tr -d "{$2} time taken: " | rev | cut -c 3- | rev | cut -d ' ' -f 1 | head -$i | tail -1 | tr -d '\n' >> $1

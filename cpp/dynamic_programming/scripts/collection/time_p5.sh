@@ -1,6 +1,6 @@
 #declare program arguments
-sizes_5=(20000 40000 60000 80000 100000 120000 140000 160000 180000 200000)
-problems_5=("longestIncreasingSubSequence")
+sizes_5=(10000 20000 30000 40000 50000 60000 70000 80000)
+problems_5=("chainMatrixMultiplication")
 
 #time iterative fourth problems
 for problem in ${problems_5[@]}

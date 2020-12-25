@@ -15,22 +15,16 @@ mkdir $DIR_RECURSIVE
 #dijkstra, independent_sets mostCommonSubSequebce
 ./scripts/collection/time_p1.sh
 
-#chainmatrixmultiplication
+#knapsack
 ./scripts/collection/time_p2.sh
 
-#allpairshortestpath
-#./scripts/collection/time_p3.sh
+#treeDiameter kTrees
+./scripts/collection/time_p3.sh
 
-#knapsack
-#./scripts/collection/time_p4.sh
+#longestCommonSubSequence1D longestCommonSubSequence2D
+./scripts/collection/time_p4.sh
 
-#treeDiameter
-#./scripts/collection/time_p6.sh
-
-#kTrees
-#./scripts/collection/time_p7.sh
-
-#longestCommonSubSequence
+#chainmatrixmultiplication
 ./scripts/collection/time_p5.sh
 
 echo "sending mail"

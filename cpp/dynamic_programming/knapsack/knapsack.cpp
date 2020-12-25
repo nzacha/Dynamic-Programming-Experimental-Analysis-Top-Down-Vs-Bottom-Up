@@ -95,12 +95,15 @@ class Knapsack : public Problem <int>{
             Knapsack_Arguments* args = (Knapsack_Arguments*) args_generic;
             args->weights = (int**)initArray(-1);
             #ifdef CONSOLE
-                cout << "Running Bottom-up " << flush;
-                Console::create_progressbar(10);
+                if(Console::ACTIVE){
+                    cout << "Running Bottom-up " << flush;
+                    Console::create_progressbar(10);
+                }
             #endif
             int retval = iterate(args->items, args->weights);
             #ifdef CONSOLE
-                Console::clear_line();
+                if(Console::ACTIVE)
+                    Console::clear_line();
             #endif
             #ifdef DEBUG
                 print2D(args->weights, PROBLEM_WIDTH+1, PROBLEM_SIZE+1);
@@ -114,9 +117,11 @@ class Knapsack : public Problem <int>{
             // Build table K[][] in bottom up manner 
             for (itemIndex = 0; itemIndex <= PROBLEM_SIZE; itemIndex++) { 
                 #ifdef CONSOLE
-                    Console::clear_line();
-                    cout << "Running Bottom-up " << flush;
-                    Console::update_progressbar(itemIndex, PROBLEM_SIZE);
+                    if(Console::ACTIVE){
+                        Console::clear_line();
+                        cout << "Running Bottom-up " << flush;
+                        Console::update_progressbar(itemIndex, PROBLEM_SIZE);
+                    }
                 #endif    
                 for (weightIndex = 0; weightIndex <= PROBLEM_WIDTH; weightIndex++) { 
                     Item* item = items[itemIndex-1];

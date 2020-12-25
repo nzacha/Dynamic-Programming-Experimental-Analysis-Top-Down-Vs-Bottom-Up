@@ -1,6 +1,6 @@
 #declare program arguments
-sizes_2=(10000 20000 30000 40000 50000 60000 70000 80000) #85000)
-problems_2=("chainMatrixMultiplication")
+sizes_2=(15000 30000 45000 60000 75000 90000 105000 120000 135000)
+problems_2=("knapsack")
 
 #time iterative second problems
 for problem in ${problems_2[@]}

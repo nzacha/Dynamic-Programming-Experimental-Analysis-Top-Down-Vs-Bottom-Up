@@ -171,12 +171,15 @@ class IndependentSet : public Problem <int>{
                 s.pop();
             }
             #ifdef CONSOLE
-                cout << "Running Bottom-up " << flush;
-                Console::create_progressbar(10);
+                if(Console::ACTIVE){                
+                    cout << "Running Bottom-up " << flush;
+                    Console::create_progressbar(10);
+                }
             #endif
             int retVal = iterate(args->tree, nodes);
             #ifdef CONSOLE
-                Console::clear_line();
+                if(Console::ACTIVE)                   
+                    Console::clear_line();
             #endif
             return retVal;
         }
@@ -186,9 +189,11 @@ class IndependentSet : public Problem <int>{
             TreeNode* node;
             while(nodes.size() > 0){
                 #ifdef CONSOLE
-                    Console::clear_line();
-                    cout << "Running Bottom-up " << flush;
-                    Console::update_progressbar(computed, PROBLEM_SIZE);
+                    if(Console::ACTIVE){                
+                        Console::clear_line();
+                        cout << "Running Bottom-up " << flush;
+                        Console::update_progressbar(computed, PROBLEM_SIZE);
+                    }
                 #endif    
                 
                 node = nodes.front();

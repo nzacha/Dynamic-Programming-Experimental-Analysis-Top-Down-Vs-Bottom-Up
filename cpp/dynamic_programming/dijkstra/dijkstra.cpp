@@ -102,8 +102,10 @@ class Dijkstra : public Problem <int>{
             args->array[args->start_point] = 0;
             
             #ifdef CONSOLE
-                cout << "Running Bottom-up " << flush;
-                Console::create_progressbar(10);
+                if(Console::ACTIVE){
+                    cout << "Running Bottom-up " << flush;
+                    Console::create_progressbar(10);
+                }
             #endif
             for(int i=0; i<PROBLEM_SIZE; i++){
                 if(i == args->start_point) continue;
@@ -115,7 +117,8 @@ class Dijkstra : public Problem <int>{
             
             int retVal = iterate(args->graph, args->array, args->path, args->start_point, args->end_point);
             #ifdef CONSOLE
-                Console::clear_line();
+                if(Console::ACTIVE)
+                    Console::clear_line();
             #endif
             return retVal;
         }
@@ -130,9 +133,11 @@ class Dijkstra : public Problem <int>{
             int index, min;
             for(int i=0; i<PROBLEM_SIZE; i++){
                 #ifdef CONSOLE
-                    Console::clear_line();
-                    cout << "Running Bottom-up " << flush;
-                    Console::update_progressbar(i, PROBLEM_SIZE);
+                    if(Console::ACTIVE){
+                        Console::clear_line();
+                        cout << "Running Bottom-up " << flush;
+                        Console::update_progressbar(i, PROBLEM_SIZE);
+                    }
                 #endif    
                 
                 if(i==0){
