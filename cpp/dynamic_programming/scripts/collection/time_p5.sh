@@ -2,6 +2,8 @@
 sizes_5=(10000 20000 30000 40000 50000 60000 70000 80000)
 problems_5=("chainMatrixMultiplication")
 
+ulimit -s unlimited
+
 #time iterative fourth problems
 for problem in ${problems_5[@]}
 do				

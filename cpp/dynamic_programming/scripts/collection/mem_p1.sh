@@ -1,6 +1,8 @@
 #declare program arguments
 sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-problems_1=("dijkstra" "independentSets" "mostCommonSubSequence")
+problems_1=("mostCommonSubSequence" "dijkstra" "independentSets")
+
+ulimit -s unlimited
 
 #iterative for first problems
 for problem in ${problems_1[@]}

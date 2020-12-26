@@ -2,6 +2,8 @@
 sizes_3=(20000000 40000000 60000000 80000000 100000000 120000000 140000000)
 problems_3=("treeDiameter" "kTrees")
 
+ulimit -s unlimited
+
 #time iterative third problems
 for problem in ${problems_3[@]}
 do				

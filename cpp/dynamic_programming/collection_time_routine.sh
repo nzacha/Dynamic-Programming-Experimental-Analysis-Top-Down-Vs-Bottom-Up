@@ -13,7 +13,7 @@ mkdir $DIR_ITERATIVE
 mkdir $DIR_RECURSIVE
 
 #dijkstra, independent_sets mostCommonSubSequebce
-./scripts/collection/time_p1.sh
+#./scripts/collection/time_p1.sh
 
 #knapsack
 ./scripts/collection/time_p2.sh
