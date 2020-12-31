@@ -46,10 +46,9 @@ class ChainMatrixMultiplication : public Problem <int>{
             int** array = new int*[size];
             for(int i=0; i<size; i++){
                 array[i] = new int[size];
+                for (int j = 0; j < size; j++)
+                    array[i][j] = defaultValue; 
             }
-
-            for (int i = 0; i < size; i++)
-                array[i][i] = defaultValue; 
 
             return array;
         }

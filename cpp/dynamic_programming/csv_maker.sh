@@ -11,7 +11,7 @@ sizes_3=(20000000 40000000 60000000 80000000 100000000 120000000 140000000)
 problems_3=("treeDiameter" "kTrees")
 
 sizes_4=(8000 16000 24000 32000 40000 48000 56000)
-problems_5=( "longestIncreasingSubSequence1D" "longestIncreasingSubSequence2D")
+problems_4=("longestIncreasingSubSequence1D" "longestIncreasingSubSequence2D")
 
 sizes_5=(10000 20000 30000 40000 50000 60000 70000 80000)
 problems_5=("chainMatrixMultiplication")
@@ -22,6 +22,7 @@ problems_5=("chainMatrixMultiplication")
 rm -rf data
 mkdir data
 
+mkdir data/per
 mkdir data/mem
 mkdir data/time
 
@@ -79,11 +80,22 @@ function printTime {
 	echo >> $1
 }
 
+function printPerMem {
+	printf "${4}," >> $1	
+	for (( i=1; i<=$M_ATTEMPTS; i++))
+	do
+		cat mem_results/${2}/${3}/per_${4}_${i}.txt | tr , . | sort -n | tail -1 | tr -d '\n' >> $1
+		printf "," >> $1
+	done
+	echo >> $1
+}
+
 #iterative for first problems
 for problem in ${problems_1[@]}
 do
 	file=data/mem/i_${problem}.csv
 	t_file=data/time/i_${problem}.csv
+	p_file=data/per/i_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_1[@]}
@@ -100,6 +112,9 @@ do
 
 		#append time file
 		printTime $t_file $ITERATIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $ITERATIVE $size
 	done
 done
 
@@ -108,6 +123,7 @@ for problem in ${problems_1[@]}
 do
 	file=data/mem/r_${problem}.csv
 	t_file=data/time/r_${problem}.csv
+	p_file=data/per/r_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_1[@]}
@@ -124,6 +140,9 @@ do
 
 		#append time file
 		printTime $t_file $RECURSIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $RECURSIVE $size
 	done
 done
 
@@ -132,6 +151,7 @@ for problem in ${problems_2[@]}
 do
 	file=data/mem/i_${problem}.csv
 	t_file=data/time/i_${problem}.csv
+	p_file=data/per/i_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_2[@]}
@@ -148,6 +168,9 @@ do
 
 		#append time file
 		printTime $t_file $ITERATIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $ITERATIVE $size
 
 	done
 done
@@ -157,6 +180,7 @@ for problem in ${problems_2[@]}
 do
 	file=data/mem/r_${problem}.csv
 	t_file=data/time/r_${problem}.csv
+	p_file=data/per/r_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_2[@]}
@@ -173,6 +197,9 @@ do
 
 		#append time file
 		printTime $t_file $RECURSIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $RECURSIVE $size
 	done
 done
 
@@ -181,6 +208,7 @@ for problem in ${problems_3[@]}
 do
 	file=data/mem/i_${problem}.csv
 	t_file=data/time/i_${problem}.csv
+	p_file=data/per/i_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_3[@]}
@@ -197,6 +225,9 @@ do
 
 		#append time file
 		printTime $t_file $ITERATIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $ITERATIVE $size
 	done
 done
 
@@ -205,6 +236,7 @@ for problem in ${problems_3[@]}
 do
 	file=data/mem/r_${problem}.csv
 	t_file=data/time/r_${problem}.csv
+	p_file=data/per/r_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_3[@]}
@@ -221,6 +253,9 @@ do
 
 		#append time file
 		printTime $t_file $RECURSIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $RECURSIVE $size
 	done
 done
 
@@ -229,6 +264,7 @@ for problem in ${problems_4[@]}
 do
 	file=data/mem/i_${problem}.csv
 	t_file=data/time/i_${problem}.csv
+	p_file=data/per/i_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_4[@]}
@@ -245,6 +281,9 @@ do
 
 		#append time file
 		printTime $t_file $ITERATIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $ITERATIVE $size
 	done
 done
 
@@ -253,6 +292,7 @@ for problem in ${problems_4[@]}
 do
 	file=data/mem/r_${problem}.csv
 	t_file=data/time/r_${problem}.csv
+	p_file=data/per/r_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_4[@]}
@@ -269,6 +309,9 @@ do
 
 		#append time file
 		printTime $t_file $RECURSIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $RECURSIVE $size
 	done
 done
 
@@ -277,6 +320,7 @@ for problem in ${problems_5[@]}
 do
 	file=data/mem/i_${problem}.csv
 	t_file=data/time/i_${problem}.csv
+	p_file=data/per/i_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_5[@]}
@@ -293,6 +337,9 @@ do
 
 		#append time file
 		printTime $t_file $ITERATIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $ITERATIVE $size
 	done
 done
 
@@ -301,6 +348,7 @@ for problem in ${problems_5[@]}
 do
 	file=data/mem/r_${problem}.csv
 	t_file=data/time/r_${problem}.csv
+	p_file=data/per/r_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_5[@]}
@@ -317,6 +365,9 @@ do
 
 		#append time file
 		printTime $t_file $RECURSIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $RECURSIVE $size
 	done
 done
 
@@ -325,6 +376,7 @@ for problem in ${problems_6[@]}
 do
 	file=data/mem/i_${problem}.csv
 	t_file=data/time/i_${problem}.csv
+	p_file=data/per/i_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_6[@]}
@@ -341,6 +393,9 @@ do
 
 		#append time file
 		printTime $t_file $ITERATIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $ITERATIVE $size
 	done
 done
 
@@ -349,6 +404,7 @@ for problem in ${problems_6[@]}
 do
 	file=data/mem/r_${problem}.csv
 	t_file=data/time/r_${problem}.csv
+	p_file=data/per/r_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
 	for size in ${sizes_6[@]}
@@ -365,5 +421,8 @@ do
 
 		#append time file
 		printTime $t_file $RECURSIVE $problem $size
+
+		#print mem %
+		printPerMem $p_file $problem $RECURSIVE $size
 	done
 done

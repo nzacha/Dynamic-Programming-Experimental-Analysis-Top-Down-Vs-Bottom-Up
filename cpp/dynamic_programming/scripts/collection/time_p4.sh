@@ -1,9 +1,10 @@
 #declare program arguments
 sizes_4=(8000 16000 24000 32000 40000 48000 56000)
-problems_4=("longestIncreasingSubSequence1D" "longestIncreasingSubSequence2D")
+problems_4=("longestIncreasingSubSequence2D") #"longestIncreasingSubSequence1D" 
 
 ulimit -s unlimited
 
+: '
 #time iterative fourth problems
 for problem in ${problems_4[@]}
 do				
@@ -17,6 +18,7 @@ do
 		done
 	done
 done
+'
 
 #time recursive fourth problems
 for problem in ${problems_4[@]}

@@ -1,5 +1,5 @@
 #declare program arguments
-sizes_5=(10000 20000 30000 40000 50000 60000 70000 80000)
+sizes_5=(20000 30000 40000 50000 60000 70000 80000) #10000
 problems_5=("chainMatrixMultiplication")
 
 ulimit -s unlimited

@@ -30,6 +30,7 @@ done
 #recursive for fourth problems
 for problem in ${problems_4[@]}
 do
+	#mkdir mem_results/${problem}
 	mkdir mem_results/${problem}/recursive			
 	
 	for size in ${sizes_4[@]}
