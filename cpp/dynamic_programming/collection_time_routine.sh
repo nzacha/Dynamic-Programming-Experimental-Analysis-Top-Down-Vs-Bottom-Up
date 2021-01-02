@@ -16,7 +16,7 @@ mkdir $DIR_RECURSIVE
 #./scripts/collection/time_p5.sh
 
 #longestCommonSubSequence1D longestCommonSubSequence2D
-./scripts/collection/time_p4.sh
+#./scripts/collection/time_p4.sh
 
 #dijkstra, independent_sets mostCommonSubSequebce
 #./scripts/collection/time_p1.sh

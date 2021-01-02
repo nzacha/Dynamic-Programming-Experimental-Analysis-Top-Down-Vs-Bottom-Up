@@ -8,7 +8,7 @@ echo "Running Memory Routine"
 #./scripts/collection/mem_p5.sh
 
 #knapsack
-./scripts/collection/mem_p2.sh
+#./scripts/collection/mem_p2.sh
 
 #treeDiameter kTrees
 #./scripts/collection/mem_p3.sh

@@ -1,13 +1,13 @@
 #declare program arguments
-sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-problems_1=("dijkstra" "mostCommonSubSequence" "independentSets")
-methods=("iterative") #"recursive" 
+sizes_4=(15000 30000 45000 60000 75000 90000 105000 120000 135000)
+problems_4=("knapsack")
+methods=("recursive" "iterative")
 
 ulimit -s unlimited
 
 rm -f tmp.txt	
 
-for problem in ${problems_1[@]}
+for problem in ${problems_4[@]}
 do
 	for method in ${methods[@]}
 	do
@@ -15,7 +15,7 @@ do
 		mkdir mem_results/${problem}
 		mkdir mem_results/${problem}/${method}
 					
-		for size in ${sizes_1[@]}
+		for size in ${sizes_4[@]}
 		do
 			for attempt in {1..3}
 			do
