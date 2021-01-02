@@ -5,7 +5,6 @@ methods=("iterative") #"recursive"
 
 ulimit -s unlimited
 
-
 for problem in ${problems_4[@]}
 do
 	for method in ${methods[@]}
