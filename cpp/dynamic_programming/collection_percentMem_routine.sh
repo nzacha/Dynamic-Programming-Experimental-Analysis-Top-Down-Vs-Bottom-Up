@@ -6,8 +6,11 @@ echo "Running Perecent Memory Routine"
 #kTrees treeDiameter
 #./scripts/collection/per_p3.sh
 
-#mostCommonSubSequebce
+#"dijkstra" "mostCommonSubSequence" "independentSets"
 ./scripts/collection/per_p1.sh
+
+#knapsack
+./scripts/collection/per_p4.sh
 
 #chainmatrixmultiplication
 #./scripts/collection/per_p2.sh
