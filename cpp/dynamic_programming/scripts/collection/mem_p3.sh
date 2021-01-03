@@ -1,7 +1,7 @@
 #declare program arguments
 sizes_3=(20000000 40000000 60000000 80000000 100000000 120000000 140000000)
 problems_3=("treeDiameter" "kTrees")
-methods=("iterative") #"recursive" 
+methods=("iterative") # "recursive" 
 
 ulimit -s unlimited
 

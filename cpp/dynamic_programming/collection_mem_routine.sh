@@ -11,7 +11,7 @@ echo "Running Memory Routine"
 #./scripts/collection/mem_p2.sh
 
 #treeDiameter kTrees
-#./scripts/collection/mem_p3.sh
+./scripts/collection/mem_p3.sh
 
 #longestCommonSubSequence1D longestCommonSubSequence2D
 #./scripts/collection/mem_p4.sh

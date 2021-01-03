@@ -70,31 +70,34 @@ class KTrees : public Problem <int>{
         int iterate_init(Problem_Arguments* args_generic){
             KTrees_Arguments* args = (KTrees_Arguments*) args_generic;
             //showTree(args->root, PROBLEM_SIZE);
-            args->array = (int*)initArray(0);
             
             //generate stack of nodes
-            bool visited[PROBLEM_SIZE];
+            bool* visited = new bool[PROBLEM_SIZE];
             for(int i=0; i<PROBLEM_SIZE; i++){
                 visited[i] = false;
             }
-
+            visited[args->root->index] = true;
+            
             //put nodes into a queue
-            stack <TreeNode*> s;
+            stack<TreeNode*> s;
             queue<TreeNode*> nodes;
             TreeNode* node = args->root;
+            visited[args->root->index] = true;
             nodes.push(node);
-            s.push(node);
-            while(s.size() > 0){
-                node = s.top();
-                s.pop();
+            while(true){
                 for(TreeNode* child : node->children){
                     if(!visited[child->index]){
                         visited[child->index] = true;
-                        s.push(child);                        
+                        s.push(child);
                         nodes.push(child);
                     }
                 }
+                if(s.size()<=0)
+                    break;
+                node = s.top();
+                s.pop();
             }
+            delete visited;
 
             #ifdef CONSOLE
                 if(Console::ACTIVE){
@@ -102,6 +105,8 @@ class KTrees : public Problem <int>{
                     Console::create_progressbar(10);
                 }
             #endif
+    
+            args->array = (int*)initArray(0);
             //cout << "Array" << endl;
             //print1D(args->array, PROBLEM_SIZE);
             int retVal = iterate(args->root, args->array, nodes, PROBLEM_WIDTH);

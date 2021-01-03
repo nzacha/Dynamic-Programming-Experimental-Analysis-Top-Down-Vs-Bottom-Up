@@ -90,15 +90,17 @@ class TreeDiameter : public Problem <int>{
             TreeDiameter_Arguments* args = (TreeDiameter_Arguments*) args_generic;
             
             //generate stack of nodes
-            bool visited[PROBLEM_SIZE];
+            bool* visited = new bool[PROBLEM_SIZE];
             for(int i=0; i<PROBLEM_SIZE; i++){
                 visited[i] = false;
             }
-
+            visited[args->root->index] = true;
+            
             //put nodes into a queue
             stack<TreeNode*> s;
             queue<TreeNode*> nodes;
             TreeNode* node = args->root;
+            visited[args->root->index] = true;
             nodes.push(node);
             while(true){
                 for(TreeNode* child : node->children){
@@ -113,32 +115,38 @@ class TreeDiameter : public Problem <int>{
                 node = s.top();
                 s.pop();
             }
-            inc_array = new int[PROBLEM_SIZE];
-            exc_array = new int[PROBLEM_SIZE];
+            delete visited;
 
             //cout << "Showing tree before" << endl;
             //showTree(args->root, PROBLEM_SIZE);
             #ifdef CONSOLE
-                cout << "Running Bottom-up " << flush;
-                Console::create_progressbar(10);
+                if(Console::ACTIVE){
+                    cout << "Running Bottom-up " << flush;
+                    Console::create_progressbar(10);
+                }
             #endif
-            int retVal = iterate(args->root, nodes);
+
+            long* array = new long[PROBLEM_SIZE];
+            for(int i=0; i<PROBLEM_SIZE; i++)
+                array[i] = (long)0;
+
+            int retVal = iterate(array, args->root, nodes);
             //print1D(inc_array, PROBLEM_SIZE);
             //print1D(exc_array, PROBLEM_SIZE);
             //cout << "Diameter is: " << retVal << endl;
             return retVal;
         }
 
-        int iterate(TreeNode* root, queue<TreeNode*> nodes){
-            long dpInc[PROBLEM_SIZE] ={0};
-
-            int computed = 0;   
+        int iterate(long* array, TreeNode* root, queue<TreeNode*> nodes){
+            int computed = 0;  
             TreeNode* node;
             while(nodes.size() > 0){
                 #ifdef CONSOLE
-                    Console::clear_line();
-                    cout << "Running Bottom-up " << flush;
-                    Console::update_progressbar(computed, PROBLEM_SIZE);
+                    if(Console::ACTIVE){
+                        Console::clear_line();
+                        cout << "Running Bottom-up " << flush;
+                        Console::update_progressbar(computed, PROBLEM_SIZE);
+                    }
                 #endif    
                 node = nodes.front();
 
@@ -146,7 +154,7 @@ class TreeDiameter : public Problem <int>{
                 //and if so, remove it from the queue
                 if(node->children.size() == 0) {
                     node->value = 1;
-                    dpInc[node->index]= 1;  
+                    array[node->index]= 1;  
                     nodes.pop();                    
                     computed++;              
                     continue;
@@ -184,14 +192,14 @@ class TreeDiameter : public Problem <int>{
 
                     //set the node value to the maximum of the 2 values
                 }
-                dpInc[node->index]= 1 + firstmax + secondmax;
+                array[node->index]= 1 + firstmax + secondmax;
                 node->value = firstmax + 1;
                 
                 nodes.pop();
                 computed++;
             }
 
-            return dpInc[root->index];
+            return array[root->index];
         }
 
         int* getSolution1D(){
