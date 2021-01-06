@@ -64,10 +64,11 @@ class LISS2D : public Problem <int>{
             if(array[prev][curr] >= 0) return array[prev][curr];
             //curr value is bigger so we skip
             if(data[prev] >= data[curr]){                
-                return recurse(array, data, prev, curr+1);
-            }
-            //otherwise: curr value is not bigger
-            array[prev][curr] = max(recurse(array, data, prev, curr+1), 1 + recurse(array, data, curr, curr+1));
+                return array[prev][curr] = recurse(array, data, prev, curr+1);
+            }else{
+	            //otherwise: curr value is not bigger
+	            array[prev][curr] = max(recurse(array, data, prev, curr+1), 1 + recurse(array, data, curr, curr+1));
+	        }
             return array[prev][curr];
         }
         
