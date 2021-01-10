@@ -10,6 +10,10 @@ class IndendentSets_Arguments : public Problem_Arguments{
             this->graph = graph;
         }
 
+        IndendentSets_Arguments(TreeNode* tree){
+            this->tree = tree;
+        }
+
         TreeNode* rootGraph(int** graph, int size, int noEdge){
             TreeNode** nodes = new TreeNode*[size];
             for(int i=0; i<size; i++){  
@@ -50,16 +54,17 @@ class IndependentSet : public Problem <int>{
             #ifdef DEBUG
                 showTree(tree, PROBLEM_SIZE);
             #endif
-            int** graph = treeToGraph(tree, problem_size, false);
-            #ifdef DEBUG
-                cout << "Graph: " << endl;
-                print2D(graph, PROBLEM_SIZE, PROBLEM_SIZE);
-            #endif
-            destroyTree(tree);
-            
+            /*
+            * int** graph = treeToGraph(tree, problem_size, false);
+            * #ifdef DEBUG
+            *     cout << "Graph: " << endl;
+            *     print2D(graph, PROBLEM_SIZE, PROBLEM_SIZE);
+            * #endif
+            * destroyTree(tree);
+            */
             //int** graph = generateGraph(problem_size, min_neighbours, max_neighbours, true);
             
-            args = new IndendentSets_Arguments(graph);
+            args = new IndendentSets_Arguments(tree);
         }
 
         void* generateData(){ 
@@ -103,7 +108,7 @@ class IndependentSet : public Problem <int>{
         
         int recurse_init(Problem_Arguments* args_generic){
             IndendentSets_Arguments* args = (IndendentSets_Arguments*) args_generic;
-            args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
+            //args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
             int retVal = recurse(args->tree);
             
             return retVal;
@@ -143,7 +148,7 @@ class IndependentSet : public Problem <int>{
 
         int iterate_init(Problem_Arguments* args_generic){
             IndendentSets_Arguments* args = (IndendentSets_Arguments*) args_generic;
-            args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
+            //args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
 
             //generate stack of nodes
             bool visited[PROBLEM_SIZE];

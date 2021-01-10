@@ -97,6 +97,7 @@ TreeNode* generateConnectedTree(int treeSize, int degree){
     for(int i=0; i<treeSize; i++){
         node = nodes[i];
         int genSize = rand() % degree;
+        if (i==0 && genSize == 0) genSize = 1;
         for(int j=placed; node->children.size() <= genSize && j<treeSize; j++, placed++){
             node->children.push_back(nodes[j]);
         }
