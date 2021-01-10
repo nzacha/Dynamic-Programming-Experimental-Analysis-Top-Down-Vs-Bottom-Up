@@ -19,13 +19,23 @@ class TreeDiameter_Arguments : public Problem_Arguments{
 class TreeDiameter : public Problem <int>{
 
     public: 
-        TreeDiameter(int problemSize){
+        int degree = 2;
+
+        TreeDiameter(int problemSize, int degree){
             this->PROBLEM_SIZE = problemSize;
-            args = new TreeDiameter_Arguments((TreeNode*)generateData());
+            this->degree = degree;
+            TreeNode* root = (TreeNode*)generateData();
+            args = new TreeDiameter_Arguments(root);
+
+            #ifdef DEBUG
+                showTree(root, PROBLEM_SIZE);
+            #endif
         }
 
         void* generateData(){
-            return generatePerfectTree(PROBLEM_SIZE, 2);
+            return generateConnectedTree(PROBLEM_SIZE, this->degree);
+            //return generateConnectedTree(PROBLEM_SIZE, this->degree, 0.5);
+            //return generatePerfectTree(PROBLEM_SIZE, this->degree);
         }
 
         void* initArray(int defaultValue){ 
@@ -68,10 +78,11 @@ class TreeDiameter : public Problem <int>{
             //find 2 max fvalues
             int max1=-1, max2=-1;
             for(int i=0; i<fValues.size(); i++){
-                if(fValues[i] > max2){
-                    max2 = fValues[i];
-                }else if(fValues[i] > max1){
+                if(fValues[i] >= max1){
+                    max2 = max1;
                     max1 = fValues[i];
+                }else if(fValues[i] > max2){
+                    max2 = fValues[i];
                 }
             }
             
@@ -80,7 +91,7 @@ class TreeDiameter : public Problem <int>{
                inc_array[root->index] += max1;
             
             if(max2 != -1){
-                exc_array[root->index] = 2 + max1 + max2;
+                exc_array[root->index] = 1 + max1 + max2;
             }
 
             return diameter = max(diameter, max(inc_array[root->index], exc_array[root->index]));
@@ -139,6 +150,7 @@ class TreeDiameter : public Problem <int>{
 
         int iterate(long* array, TreeNode* root, queue<TreeNode*> nodes){
             int computed = 0;  
+            int maxVal=0;
             TreeNode* node;
             while(nodes.size() > 0){
                 #ifdef CONSOLE
@@ -192,14 +204,15 @@ class TreeDiameter : public Problem <int>{
 
                     //set the node value to the maximum of the 2 values
                 }
-                array[node->index]= 1 + firstmax + secondmax;
                 node->value = firstmax + 1;
-                
+                array[node->index]= 1 + firstmax + secondmax;
+                maxVal = max(max(node->value, array[node->index]), maxVal);
+
                 nodes.pop();
                 computed++;
             }
 
-            return array[root->index];
+            return maxVal;
         }
 
         int* getSolution1D(){

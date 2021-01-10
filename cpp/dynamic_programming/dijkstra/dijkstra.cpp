@@ -18,13 +18,13 @@ class Dijkstra : public Problem <int>{
     int max_weight, min_weight;
 
     public: 
-        Dijkstra(int problem_size, int start_point, int end_point){
+        Dijkstra(int problem_size, int maxValue, int start_point, int end_point){
             this->PROBLEM_SIZE = problem_size;
             this->PROBLEM_WIDTH = this->PROBLEM_SIZE;
 
-            max_neighbours = 5;
-            min_neighbours = 3;
-            max_weight = 20;
+            max_neighbours = maxValue;
+            min_neighbours = 1;
+            max_weight = maxValue;
             min_weight = 1;
 
             int** graph = (int**)generateData(); 

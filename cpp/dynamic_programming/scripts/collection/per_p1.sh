@@ -1,7 +1,8 @@
 #declare program arguments
 sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-problems_1=("dijkstra" "mostCommonSubSequence" "independentSets")
-methods=("iterative") #"recursive" 
+args_1=(5 50 500)
+problems_1=("dijkstra" "independentSets")
+methods=("iterative" "recursive")  
 
 ulimit -s unlimited
 
@@ -17,24 +18,27 @@ do
 					
 		for size in ${sizes_1[@]}
 		do
-			for attempt in {1..3}
+			for arg in ${args_1[@]}
 			do
-				echo "per ${method} ${problem} ${size} ${attempt}" > log.txt
-				echo "Running ${method} " ${problem} " size: ${size} x${attempt}"
+				for attempt in {1..3}
+				do
+					echo "per ${method} ${problem} ${size} ${arg} ${attempt}" > log.txt
+					echo "Running ${method} " ${problem} " size: ${size} arg: ${arg} x${attempt}"
 
-				./executable.out ${problem} ${size} -${method} -q &
-				pid=$!
+					./executable.out ${problem} ${size} ${arg} -${method} -q &
+					pid=$!
 
-				top -d 0.1 -bp ${pid} >> tmp.txt &
-				top_pid=$!
+					top -d 0.1 -bp ${pid} >> tmp.txt &
+					top_pid=$!
 
-				#wait for program end
-				tail --pid=${pid} -f /dev/null
-				#kill top_pid
+					#wait for program end
+					tail --pid=${pid} -f /dev/null
+					#kill top_pid
 
-				cat tmp.txt | grep ${pid} | tr -s ' ' | cut -d ' ' -f11 > mem_results/${problem}/${method}/per_${size}_${attempt}.txt
+					cat tmp.txt | grep ${pid} | tr -s ' ' | cut -d ' ' -f11 > mem_results/${problem}/${method}/per_${size}_${arg}_${attempt}.txt
 
-				rm tmp.txt
+					rm tmp.txt
+				done
 			done
 		done
 	done

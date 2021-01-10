@@ -28,101 +28,102 @@ void runAndWriteProblem(Problem<int>* problem, string outFile, bool recursive, b
     if(writeOut) problem->writeData(outFile);
 }
 
-void runKTrees(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runKTrees(int index, int num_of_items, int degree, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=> Thread " << index << " running \"k-trees\" with " << num_of_items << endl; 
-    KTrees* problem = new KTrees(num_of_items, 3);
+    KTrees* problem = new KTrees(num_of_items, 3, degree);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runLISS1D(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runLISS1D(int index, int num_of_items, int max_size, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=> Thread " << index << " running \"longest increasing sub sequence 1D\" with " << num_of_items << endl; 
-    LISS* problem = new LISS(num_of_items, 1000);
+    LISS* problem = new LISS(num_of_items, max_size);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runLISS2D(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runLISS2D(int index, int num_of_items, int max_size, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=> Thread " << index << " running \"longest increasing sub sequence 2D\" with " << num_of_items << endl; 
-    LISS2D* problem = new LISS2D(num_of_items, 1000);
+    LISS2D* problem = new LISS2D(num_of_items, max_size);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runTreeDiameter(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runTreeDiameter(int index, int num_of_items, int degree, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=> Thread " << index << " running \"tree diameter\" with " << num_of_items << endl; 
-    TreeDiameter* problem = new TreeDiameter(num_of_items);
+    TreeDiameter* problem = new TreeDiameter(num_of_items, degree);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runAllPairShortestPath(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runAllPairShortestPath(int index, int num_of_items, int arg2, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=> Thread " << index << " running \"all pair shortest path\" with " << num_of_items << endl; 
     ShortestPath* problem = new ShortestPath(num_of_items);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runChainMatrixMultiplication(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runChainMatrixMultiplication(int index, int num_of_items, int max_size, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=>Thread " << index << " running \"chain matrix multiplication\" with " << num_of_items << endl; 
-    ChainMatrixMultiplication* problem = new ChainMatrixMultiplication(num_of_items);
+    ChainMatrixMultiplication* problem = new ChainMatrixMultiplication(num_of_items, max_size);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runDijkstra(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runDijkstra(int index, int num_of_items, int max_vals, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=> Thread " << index << " running \"dijkstra\" with " << num_of_items << endl; 
-    Dijkstra* problem = new Dijkstra(num_of_items, 0, num_of_items-1);
+    Dijkstra* problem = new Dijkstra(num_of_items, max_vals, 0, num_of_items-1);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runIndependentSets(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runIndependentSets(int index, int num_of_items, int degree, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=> Thread " << index << " running \"independent sets\" with " << num_of_items << endl; 
-    IndependentSet* problem = new IndependentSet(num_of_items);
+    IndependentSet* problem = new IndependentSet(num_of_items, degree);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runKnapsack(int index, int num_of_items, string outFile, bool recursive, bool iterative, bool writeOut){
+void runKnapsack(int index, int num_of_items, int sack_size, string outFile, bool recursive, bool iterative, bool writeOut){
     cout << "\t=> Thread " << index << " running \"knapsack\" with " << num_of_items << endl; 
-    Knapsack* problem = new Knapsack(num_of_items, num_of_items/5);
+    Knapsack* problem = new Knapsack(num_of_items, sack_size);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-void runMCSS(int index, int size, string outFile, bool recursive, bool iterative, bool writeOut){
-    cout << "\t=> Thread " << index << " running \"most common sub-sequence\" with " << size << endl; 
+void runMCSS(int index, int size, int alphabetSize, string outFile, bool recursive, bool iterative, bool writeOut){
+    cout << "\t=> Thread " << index << " running \"most common sub-sequence\" with " << size << ", " << alphabetSize << endl; 
     /*
     * string inputDir = "mostCommonSubSequence/Inputs/";
     * string seqA_file = inputDir+ "sequenceA"+ fileName; 
     * string seqB_file = inputDir+ "sequenceB"+ fileName; 
     * MostCommonSubSequence* problem = new MostCommonSubSequence(true, getSequenceFromFile(seqA_file), getSequenceFromFile(seqB_file));
     */
-   MostCommonSubSequence* problem = new MostCommonSubSequence(size, size);
+    MostCommonSubSequence* problem = new MostCommonSubSequence(size, size, alphabetSize);
     
     runAndWriteProblem(problem, outFile, recursive, iterative, writeOut);
 }
 
-template <typename type, typename pred>
-void runProblem(type arg, string dir_out, int numThreads, int perThreadReps, pred funct, bool recursive, bool iterative, bool writeOut){
-    stringstream ss;
+template <typename type, typename type2, typename pred>
+void runProblem(type arg, type2 arg2, string dir_out, int numThreads, int perThreadReps, pred funct, bool recursive, bool iterative, bool writeOut){
+    stringstream ss, ss2;
     ss << arg;
+    ss2 << arg2;
     
     for(int r=0; r<perThreadReps; r++){
-        cout << "> Working on Item " << arg << " x " << r << endl; 
+        cout << "> Working on Item " << arg << ", " << arg2 << " x " << r << endl; 
 
         if(numThreads > 1){
             cout << "numThreads > 1 : doing nothing" << endl;
             thread threads[numThreads];
             for(int i=0; i<numThreads; i++){
-                threads[i] = thread(funct, i, arg, dir_out+ "time_item_"+ ss.str()+ "_thread_"+to_string(i)+ "rep_"+to_string(r)+".txt", recursive, iterative, writeOut);
+                threads[i] = thread(funct, i, arg, arg2, dir_out+ "time_item_"+ ss.str()+ "_thread_"+to_string(i)+ "rep_"+to_string(r)+".txt", recursive, iterative, writeOut);
                 }   
             for(int i=0; i<numThreads; i++){
                 threads[i].join();
             }
         }else{
-            funct(0, arg, dir_out+ "time_item_"+ ss.str()+ "_rep_"+to_string(r)+".txt", recursive, iterative, writeOut);
+            funct(0, arg, arg2, dir_out + "time_item_" + ss.str() + "_arg_" + ss2.str() + ".txt", recursive, iterative, writeOut);
         }
     }
 }
@@ -149,7 +150,7 @@ void printHelpText(){
 }
 
 int main (int argc, char** argv){
-    string argument, out_dir = "results/";
+    string argument, argument2, out_dir = "results/";
     //The index of the program to run
     int program = -1;
     //The number of threads to be used per problem
@@ -229,6 +230,7 @@ int main (int argc, char** argv){
                 return 1;   
             }
             argument = argv[++i];
+            argument2 = argv[++i];
 
         } else if(arg == "-progress"){
             Console::ACTIVE = true;
@@ -246,6 +248,7 @@ int main (int argc, char** argv){
                         return 1;   
                     }
                     argument = argv[++i];
+                    argument2 = argv[++i];
                     break;
                 }
             }
@@ -301,43 +304,43 @@ int main (int argc, char** argv){
     switch (program){
         case allPairShortestPath:
             mkdir(fileNames[ProgramNames[Program::allPairShortestPath]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::allPairShortestPath]], numThreads, perThreadReps, runAllPairShortestPath, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::allPairShortestPath]], numThreads, perThreadReps, runAllPairShortestPath, recursive, iterative, writeOut);
             break;
         case chainMatrixMultiplcation:
             mkdir(fileNames[ProgramNames[Program::chainMatrixMultiplcation]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::chainMatrixMultiplcation]], numThreads, perThreadReps, runChainMatrixMultiplication, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::chainMatrixMultiplcation]], numThreads, perThreadReps, runChainMatrixMultiplication, recursive, iterative, writeOut);
             break;
         case dijkstra:  
             mkdir(fileNames[ProgramNames[Program::dijkstra]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::dijkstra]], numThreads, perThreadReps, runDijkstra, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::dijkstra]], numThreads, perThreadReps, runDijkstra, recursive, iterative, writeOut);
             break;
         case independentSets:
             mkdir(fileNames[ProgramNames[Program::independentSets]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::independentSets]], numThreads, perThreadReps, runIndependentSets, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::independentSets]], numThreads, perThreadReps, runIndependentSets, recursive, iterative, writeOut);
             break;
         case knapsack:
             mkdir(fileNames[ProgramNames[Program::knapsack]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::knapsack]], numThreads, perThreadReps, runKnapsack, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::knapsack]], numThreads, perThreadReps, runKnapsack, recursive, iterative, writeOut);
             break;
         case mostCommonSubSequence:
             mkdir(fileNames[ProgramNames[Program::mostCommonSubSequence]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::mostCommonSubSequence]], numThreads, perThreadReps, runMCSS, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::mostCommonSubSequence]], numThreads, perThreadReps, runMCSS, recursive, iterative, writeOut);
             break;
         case longestIncreasingSubSequence1D:
             mkdir(fileNames[ProgramNames[Program::longestIncreasingSubSequence1D]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::longestIncreasingSubSequence1D]], numThreads, perThreadReps, runLISS1D, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::longestIncreasingSubSequence1D]], numThreads, perThreadReps, runLISS1D, recursive, iterative, writeOut);
             break;
         case longestIncreasingSubSequence2D:
             mkdir(fileNames[ProgramNames[Program::longestIncreasingSubSequence2D]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::longestIncreasingSubSequence2D]], numThreads, perThreadReps, runLISS2D, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::longestIncreasingSubSequence2D]], numThreads, perThreadReps, runLISS2D, recursive, iterative, writeOut);
             break;
         case kTrees:
             mkdir(fileNames[ProgramNames[Program::kTrees]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::kTrees]], numThreads, perThreadReps, runKTrees, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::kTrees]], numThreads, perThreadReps, runKTrees, recursive, iterative, writeOut);
             break;
         case treeDiameter:
             mkdir(fileNames[ProgramNames[Program::treeDiameter]].c_str(), S_IRWXU);
-            runProblem(stoi(argument), fileNames[ProgramNames[Program::treeDiameter]], numThreads, perThreadReps, runTreeDiameter, recursive, iterative, writeOut);
+            runProblem(stoi(argument), stoi(argument2), fileNames[ProgramNames[Program::treeDiameter]], numThreads, perThreadReps, runTreeDiameter, recursive, iterative, writeOut);
             break;
     }
 

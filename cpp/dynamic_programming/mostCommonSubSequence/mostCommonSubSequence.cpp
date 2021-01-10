@@ -34,13 +34,14 @@ string getSequenceFromFile(string filename){
     return str.str();
 }
 
-string generateSequence(int length){
-    char sequence[length];
+string generateSequence(int length, int alphabetSize){
+    char sequence[length+1];
     
     for(int i=0; i<length; i++){
-        int c = rand()%26;
+        int c = rand()%alphabetSize;
         sequence[i] = (char) (c +'A');
     }
+    sequence[length] = '\0';
     string s = sequence;
     return s;
 }
@@ -62,9 +63,9 @@ class MostCommonSubSequence : public Problem <int>{
             args = new MCSS_Arguments(seqA, seqB);
         }
 
-        MostCommonSubSequence(int lengthA, int lengthB){
-            string seqA = generateSequence(lengthA);
-            string seqB = generateSequence(lengthB);
+        MostCommonSubSequence(int lengthA, int lengthB, int alphabetSize){
+            string seqA = generateSequence(lengthA, alphabetSize);
+            string seqB = generateSequence(lengthB, alphabetSize);
             
             this->PROBLEM_SIZE = seqA.length() +1;
             this->PROBLEM_WIDTH = seqB.length() +1;

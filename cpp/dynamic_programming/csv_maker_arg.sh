@@ -17,10 +17,6 @@ sizes_4=(8000 16000 24000 32000 40000 48000 56000)
 args_4=(50 500 5000)
 problems_4=("longestIncreasingSubSequence2D") #"longestIncreasingSubSequence1D" 
 
-sizes_5=(1000 2000 3000 4000 5000 6000)
-args_5=(50 500 5000)
-problems_5=("chainMatrixMultiplication")
-
 sizes_6=(500 1000 1500 2000 2500 3000)
 args_6=(1 2 6 11 16 21 26)
 problems_6=("mostCommonSubSequence")
@@ -355,26 +351,23 @@ do
 	p_file=data/per/i_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 		
-	for arg in ${args_5[@]}
-	do	
-		for size in ${sizes_5[@]}
-		do
-			#print size
-			echo "Size,$size" >> $file
+	for size in ${sizes_5[@]}
+	do
+		#print size
+		echo "Size,$size" >> $file
 
-			#append mem file
-			printAttempts $file $M_ATTEMPTS
-			printHeap $file $problem $ITERATIVE $size $arg
-			printExtraHeap $file $problem $ITERATIVE $size $arg
-			printStack $file $problem $ITERATIVE $size $arg
-			echo >> $file
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
+		printHeap $file $problem $ITERATIVE $size $arg
+		printExtraHeap $file $problem $ITERATIVE $size $arg
+		printStack $file $problem $ITERATIVE $size $arg
+		echo >> $file
 
-			#append time file
-			printTime $t_file $ITERATIVE $problem $size $arg
+		#append time file
+		printTime $t_file $ITERATIVE $problem $size $arg
 
-			#print mem %
-			printPerMem $p_file $problem $ITERATIVE $size $arg
-		done
+		#print mem %
+		printPerMem $p_file $problem $ITERATIVE $size $arg
 	done
 done
 
@@ -386,27 +379,23 @@ do
 	p_file=data/per/r_${problem}.csv
 	rintAttempts $t_file $T_ATTEMPTS
 		
-		
-	for arg in ${args_5[@]}
+	for size in ${sizes_5[@]}
 	do
-		for size in ${sizes_5[@]}
-		do
-			#print size
-			echo "Size,$size" >> $file
+		#print size
+		echo "Size,$size" >> $file
 
-			#append mem file
-			printAttempts $file $M_ATTEMPTS
-			printHeap $file $problem $RECURSIVE $size $arg
-			printExtraHeap $file $problem $RECURSIVE $size $arg
-			printStack $file $problem $RECURSIVE $size $arg
-			echo >> $file
+		#append mem file
+		printAttempts $file $M_ATTEMPTS
+		printHeap $file $problem $RECURSIVE $size $arg
+		printExtraHeap $file $problem $RECURSIVE $size $arg
+		printStack $file $problem $RECURSIVE $size $arg
+		echo >> $file
 
-			#append time file
-			printTime $t_file $RECURSIVE $problem $size $arg
+		#append time file
+		printTime $t_file $RECURSIVE $problem $size $arg
 
-			#print mem %
-			printPerMem $p_file $problem $RECURSIVE $size $arg
-		done
+		#print mem %
+		printPerMem $p_file $problem $RECURSIVE $size $arg
 	done
 done
 

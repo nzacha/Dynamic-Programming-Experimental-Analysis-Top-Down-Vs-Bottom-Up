@@ -1,14 +1,14 @@
 #declare program arguments
-sizes_3=(20000000 40000000 60000000 80000000 100000000 120000000 140000000)
-args_3=(10 100 1000 10000)
-problems_3=("treeDiameter" "kTrees")
-methods=("iterative" "recursive")
+sizes_6=(500 1000 1500 2000 2500 3000)
+args_6=(1 2 6 11 16 21 26)
+problems_6=("mostCommonSubSequence")
+methods=("iterative" "recursive")  
 
 ulimit -s unlimited
 
 rm -f tmp.txt	
 
-for problem in ${problems_3[@]}
+for problem in ${problems_6[@]}
 do
 	for method in ${methods[@]}
 	do
@@ -16,9 +16,9 @@ do
 		mkdir mem_results/${problem}
 		mkdir mem_results/${problem}/${method}
 					
-		for size in ${sizes_3[@]}
+		for size in ${sizes_6[@]}
 		do
-			for arg in ${args_3[@]}
+			for arg in ${args_6[@]}
 			do
 				for attempt in {1..3}
 				do

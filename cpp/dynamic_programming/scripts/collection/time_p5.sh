@@ -1,7 +1,8 @@
 #declare program arguments
-sizes_5=(20000 30000 40000 50000 60000 70000 80000) #10000
+sizes_5=(1000 2000 3000 4000 5000 6000)
+args_5=(50 500 5000)
 problems_5=("chainMatrixMultiplication")
-methods=("iterative") #"recursive" 
+methods=("iterative" "recursive") 
 
 ulimit -s unlimited
 
@@ -11,11 +12,14 @@ do
 	do
 		for size in ${sizes_5[@]}
 		do
-			for attempt in {1..12}
+			for arg in ${args_5[@]}
 			do
-				echo "time ${method} ${problem} ${size} ${attempt}" > log.txt
-				echo "Running ${method} " ${problem} " size: ${size} x${attempt}"
-				./executable.out ${problem} ${size} -${method} -q -o -dir $DIR_RECURSIVE		
+				for attempt in {1..12}
+				do
+					echo "time ${method} ${problem} ${size} ${arg} ${attempt}" > log.txt
+					echo "Running ${method} " ${problem} " size: ${size} arg: ${arg}, x${attempt}"
+					./executable.out ${problem} ${size} ${arg} -${method} -q -o -dir $DIR/$method		
+				done
 			done
 		done
 	done

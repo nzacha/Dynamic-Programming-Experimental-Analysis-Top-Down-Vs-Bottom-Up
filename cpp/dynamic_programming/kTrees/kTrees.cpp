@@ -18,15 +18,19 @@ class KTrees : public Problem <int>{
 
     public: 
         int DEFAULT_VALUE = 0;
+        int degree;
 
-        KTrees(int problemSize, int problemWidth){
+        KTrees(int problemSize, int problemWidth, int degree){
             this->PROBLEM_SIZE = problemSize;
             this->PROBLEM_WIDTH = problemWidth;
+            this->degree = degree;
             args = new KTrees_Arguments((TreeNode*)generateData());
         }
 
         void* generateData(){
-            return generatePerfectTree(PROBLEM_SIZE, 2);
+            return generateConnectedTree(PROBLEM_SIZE, this->degree);
+            //return generateConnectedTree(PROBLEM_SIZE, this->degree, 0.5);
+            //return generatePerfectTree(PROBLEM_SIZE, this->degree);
         }
 
         void* initArray(int defaultValue){ 

@@ -1,14 +1,14 @@
 #declare program arguments
-sizes_3=(20000000 40000000 60000000 80000000 100000000 120000000 140000000)
-args_3=(10 100 1000 10000)
-problems_3=("treeDiameter" "kTrees")
-methods=("iterative" "recursive")
+sizes_5=(1000 2000 3000 4000 5000 6000)
+args_5=(50 500 5000)
+problems_5=("chainMatrixMultiplication")
+methods=("iterative" "recursive") 
 
 ulimit -s unlimited
 
 rm -f tmp.txt	
 
-for problem in ${problems_3[@]}
+for problem in ${problems_5[@]}
 do
 	for method in ${methods[@]}
 	do
@@ -16,14 +16,14 @@ do
 		mkdir mem_results/${problem}
 		mkdir mem_results/${problem}/${method}
 					
-		for size in ${sizes_3[@]}
+		for size in ${sizes_5[@]}
 		do
-			for arg in ${args_3[@]}
+			for arg in ${args_5[@]}
 			do
 				for attempt in {1..3}
 				do
-					echo "per ${method} ${problem} ${size} ${arg} ${attempt}" > log.txt
-					echo "Running ${method} " ${problem} " size: ${size} arg: ${arg} x${attempt}"
+					echo "per ${method} ${problem} ${size} ${attempt}" > log.txt
+					echo "Running ${method} " ${problem} " size: ${size} arg: x${attempt}"
 
 					./executable.out ${problem} ${size} ${arg} -${method} -q &
 					pid=$!

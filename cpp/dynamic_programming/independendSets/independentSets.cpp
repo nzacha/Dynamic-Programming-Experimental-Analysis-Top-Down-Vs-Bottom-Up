@@ -39,14 +39,14 @@ class IndependentSet : public Problem <int>{
     int max_neighbours, min_neighbours;
 
     public: 
-        IndependentSet(int problem_size){
+        IndependentSet(int problem_size, int degree){
             this->PROBLEM_SIZE = problem_size;
             this->PROBLEM_WIDTH = problem_size;
 
             max_neighbours = problem_size;
             min_neighbours = 1;
 
-            TreeNode* tree = generateConnectedTree(problem_size, 2, 1);
+            TreeNode* tree = generateConnectedTree(problem_size, degree);
             #ifdef DEBUG
                 showTree(tree, PROBLEM_SIZE);
             #endif

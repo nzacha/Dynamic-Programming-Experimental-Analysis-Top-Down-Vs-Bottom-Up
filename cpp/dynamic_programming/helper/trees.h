@@ -84,40 +84,61 @@ void showTree(TreeNode* root, int size){
     cout << endl;
 }
 
-TreeNode* generateConnectedTree(int treeSize, int degree, int connectivity){
+TreeNode* generateConnectedTree(int treeSize, int degree){
+    srand (time(NULL));
+    
+    TreeNode** nodes = new TreeNode*[treeSize];
+    for(int i=0; i<treeSize; i++){
+        nodes[i] = new TreeNode(i);
+    }
+
+    TreeNode* node;
+    int placed=1;
+    for(int i=0; i<treeSize; i++){
+        node = nodes[i];
+        int genSize = rand() % degree;
+        for(int j=placed; node->children.size() <= genSize && j<treeSize; j++, placed++){
+            node->children.push_back(nodes[j]);
+        }
+    }
+
+    return nodes[0];
+}
+/*
+TreeNode* generateConnectedTree(int treeSize, int degree, double density){
     srand (time(NULL));
     int generatedNodes = 0;
     TreeNode* root = new TreeNode(generatedNodes++);
 
+    //nodes available for children
     list<TreeNode*> toAdd;
     toAdd.push_back(root);
 
     TreeNode* node;
     list<TreeNode*>::iterator parent;
     for(int i=generatedNodes; i<treeSize; i++){
-        int connections = (rand() % connectivity) +1;
         node = new TreeNode(generatedNodes++);
-        for(int j=0; j<min(connections, (int)toAdd.size()); j++){
-            int index;
-            do{            
-                //find a parent that doesnt contain the node
-                index = rand() % (toAdd.size());
-                parent = toAdd.begin();
-                advance(parent, index);
-            }while(find((*parent)->children.begin(), (*parent)->children.end(), node) != (*parent)->children.end());
-            //push node into parent
-            (*parent)->children.push_back(node);
-            
-            //if parent has reached degree limit erase him
-            if((*parent)->children.size() >= degree){
-                toAdd.erase(parent);
-            }
-            //add node in available nodes list
-            toAdd.push_back(node);
+        parent = toAdd.begin();
+        
+        //find parent
+        int tmp = ((int)(toAdd.size() * density));
+        int index = rand() % (tmp == 0 ? 1 : tmp);
+
+        advance(parent, index);
+        
+        //put node into parent
+        (*parent)->children.push_back(node);
+        
+        //if parent has reached degree limit erase him
+        if((*parent)->children.size() >= degree){
+            toAdd.erase(parent);
         }
+        //add node in available nodes list
+        toAdd.push_back(node);
     }
+
     return root;
-}
+}*/
 
 TreeNode* generatePerfectTree(int treeSize, int degree){
     int generatedNodes =0, childrenIndex =0;

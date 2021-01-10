@@ -11,9 +11,12 @@ class ChainMatrix_Arguments : public Problem_Arguments{
 
 class ChainMatrixMultiplication : public Problem <int>{
     public: 
-        ChainMatrixMultiplication(int problem_size){
+        int MAX_SIZE = 20;
+        int MIN_SIZE = 1;
+        ChainMatrixMultiplication(int problem_size, int max_size){
             this->PROBLEM_SIZE = problem_size+1;
             this->PROBLEM_WIDTH = PROBLEM_SIZE;
+            MAX_SIZE = max_size;
             args = new ChainMatrix_Arguments((int*)generateData());
             #ifdef DEBUG
                 print1D(((ChainMatrix_Arguments*)args)->matrixSizes, PROBLEM_SIZE);

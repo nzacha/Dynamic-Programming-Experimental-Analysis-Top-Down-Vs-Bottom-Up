@@ -1,18 +1,18 @@
 #declare program arguments
-sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-args_1=(5 50 500)
-problems_1=("dijkstra" "independentSets")
+sizes_6=(500 1000 1500 2000 2500 3000)
+args_6=(1 2 6 11 16 21 26)
+problems_6=("mostCommonSubSequence")
 methods=("iterative" "recursive")  
 
 ulimit -s unlimited
 
-for problem in ${problems_1[@]}
+for problem in ${problems_6[@]}
 do
 	for method in ${methods[@]}
 	do
-		for size in ${sizes_1[@]}
+		for size in ${sizes_6[@]}
 		do
-			for arg in ${args_1[@]}
+			for arg in ${args_6[@]}
 			do
 				for attempt in {1..12}
 				do
