@@ -83,7 +83,7 @@ function printTime {
 	printf "${4}," >> $1
 	for (( i=1; i<=$T_ATTEMPTS; i++))
 	do
-		cat time_results/$2/$3/time_item_${4}_${5}_rep_0.txt | grep "$2 time taken: " | tr -d "{$2} time taken: " | rev | cut -c 3- | rev | cut -d ' ' -f 1 | head -$i | tail -1 | tr -d '\n' >> $1
+		cat time_results/$2/$3/time_item_${4}_arg_${5}.txt | grep "$2 time taken: " | tr -d "{$2} time taken: " | rev | cut -c 3- | rev | cut -d ' ' -f 1 | head -$i | tail -1 | tr -d '\n' >> $1
 		printf "," >> $1
 	done
 	echo >> $1
