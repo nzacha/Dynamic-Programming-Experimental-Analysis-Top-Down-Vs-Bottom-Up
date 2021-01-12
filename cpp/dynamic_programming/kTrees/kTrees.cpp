@@ -83,23 +83,20 @@ class KTrees : public Problem <int>{
             visited[args->root->index] = true;
             
             //put nodes into a queue
-            stack<TreeNode*> s;
-            queue<TreeNode*> nodes;
-            TreeNode* node = args->root;
+            stack<TreeNode*> nodes, s_sorted;
+            nodes.push(args->root);
             visited[args->root->index] = true;
-            nodes.push(node);
-            while(true){
+            TreeNode* node;
+            while(nodes.size()>0){
+                node = nodes.top();
+                s_sorted.push(node);
+                nodes.pop();
                 for(TreeNode* child : node->children){
                     if(!visited[child->index]){
                         visited[child->index] = true;
-                        s.push(child);
                         nodes.push(child);
                     }
                 }
-                if(s.size()<=0)
-                    break;
-                node = s.top();
-                s.pop();
             }
             delete visited;
 
@@ -113,7 +110,7 @@ class KTrees : public Problem <int>{
             args->array = (int*)initArray(0);
             //cout << "Array" << endl;
             //print1D(args->array, PROBLEM_SIZE);
-            int retVal = iterate(args->root, args->array, nodes, PROBLEM_WIDTH);
+            int retVal = iterate(args->root, args->array, s_sorted, PROBLEM_WIDTH);
             if(Console::ACTIVE){
                 Console::clear_line();
             }
@@ -123,7 +120,7 @@ class KTrees : public Problem <int>{
             return retVal;
         }
 
-        int iterate(TreeNode* root, int* array, queue<TreeNode*> nodes, int k){
+        int iterate(TreeNode* root, int* array, stack<TreeNode*> nodes, int k){
             int computed = 0;   
             TreeNode* node;
             while(nodes.size() > 0){
@@ -134,7 +131,7 @@ class KTrees : public Problem <int>{
                         Console::update_progressbar(computed, PROBLEM_SIZE);
                     }
                 #endif    
-                node = nodes.front();
+                node = nodes.top();
 
                 //if node has no children (is a leaf) set leaf value 
                 //and if so, remove it from the queue
@@ -151,6 +148,7 @@ class KTrees : public Problem <int>{
                 bool canCompute=true;
                 for(TreeNode* child: node->children){
                     if(array[child->index] == 0){
+                        cout << "Sort error" << endl;
                         canCompute = false;
                         break;
                     }

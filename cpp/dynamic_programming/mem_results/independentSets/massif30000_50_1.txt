@@ -1,0 +1,1061 @@
+desc: --massif-out-file=mem_results/independentSets/massif30000_50_1.txt --stacks=yes
+cmd: ./executable.out independentSets 30000 50 -recursive -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=22080449
+mem_heap_B=58754280
+mem_heap_extra_B=964232
+mem_stacks_B=3296
+heap_tree=detailed
+n4: 58754280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 56280000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 56280000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 56280000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 56280000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n1: 1200000 0x10F719: generateConnectedTree(int, int) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1200000 0x112DA5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1200000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1200000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n1: 719976 0x10F7AC: generateConnectedTree(int, int) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 719976 0x112DA5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 719976 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 719976 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 554304 in 10 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=37675361
+mem_heap_B=121034280
+mem_heap_extra_B=968384
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 121034280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 118560000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 118560000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 118560000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 118560000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=49724609
+mem_heap_B=169154280
+mem_heap_extra_B=971592
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 169154280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 166680000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 166680000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 166680000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 166680000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=66281057
+mem_heap_B=235274280
+mem_heap_extra_B=976000
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 235274280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 232800000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 232800000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 232800000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 232800000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=88186049
+mem_heap_B=322754280
+mem_heap_extra_B=981832
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 322754280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 320280000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 320280000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 320280000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 320280000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=102428801
+mem_heap_B=379634280
+mem_heap_extra_B=985624
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 379634280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 377160000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 377160000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 377160000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 377160000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=119165537
+mem_heap_B=446474280
+mem_heap_extra_B=990080
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 446474280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 444000000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 444000000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 444000000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 444000000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=138786881
+mem_heap_B=524834280
+mem_heap_extra_B=995304
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 524834280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 522360000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 522360000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 522360000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 522360000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=161743553
+mem_heap_B=616514280
+mem_heap_extra_B=1001416
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 616514280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 614040000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 614040000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 614040000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 614040000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=174694241
+mem_heap_B=668234280
+mem_heap_extra_B=1004864
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 668234280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 665760000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 665760000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 665760000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 665760000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=190529537
+mem_heap_B=731474280
+mem_heap_extra_B=1009080
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 731474280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 729000000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 729000000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 729000000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 729000000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=205854017
+mem_heap_B=792674280
+mem_heap_extra_B=1013160
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 792674280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 790200000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 790200000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 790200000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 790200000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=222440513
+mem_heap_B=858914280
+mem_heap_extra_B=1017576
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 858914280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 856440000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 856440000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 856440000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 856440000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=240409217
+mem_heap_B=930674280
+mem_heap_extra_B=1022360
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 930674280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 928200000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 928200000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 928200000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 928200000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=259880321
+mem_heap_B=1008434280
+mem_heap_extra_B=1027544
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1008434280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1005960000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1005960000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1005960000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1005960000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=280943969
+mem_heap_B=1092554280
+mem_heap_extra_B=1033152
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1092554280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1090080000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1090080000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1090080000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1090080000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=303720353
+mem_heap_B=1183514280
+mem_heap_extra_B=1039216
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1183514280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1181040000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1181040000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1181040000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1181040000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=328359713
+mem_heap_B=1281914280
+mem_heap_extra_B=1045776
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1281914280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1279440000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1279440000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1279440000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1279440000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=341460641
+mem_heap_B=1334234280
+mem_heap_extra_B=1049264
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1334234280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1331760000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1331760000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1331760000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1331760000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=355102433
+mem_heap_B=1388714280
+mem_heap_extra_B=1052896
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1388714280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1386240000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1386240000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1386240000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1386240000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=369285089
+mem_heap_B=1445354280
+mem_heap_extra_B=1056672
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1445354280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1442880000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1442880000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1442880000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1442880000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=384038657
+mem_heap_B=1504274280
+mem_heap_extra_B=1060600
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1504274280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1501800000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1501800000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1501800000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1501800000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=403329473
+mem_heap_B=1581314280
+mem_heap_extra_B=1065736
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1581314280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1578840000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1578840000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1578840000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1578840000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=419465249
+mem_heap_B=1645754280
+mem_heap_extra_B=1070032
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1645754280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1643280000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1643280000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1643280000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1643280000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=436262081
+mem_heap_B=1712834280
+mem_heap_extra_B=1074504
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1712834280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1710360000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1710360000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1710360000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1710360000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=453750017
+mem_heap_B=1782674280
+mem_heap_extra_B=1079160
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1782674280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1780200000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1780200000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1780200000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1780200000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=471959105
+mem_heap_B=1855394280
+mem_heap_extra_B=1084008
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1855394280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1852920000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1852920000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1852920000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1852920000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=490889345
+mem_heap_B=1930994280
+mem_heap_extra_B=1089048
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 1930994280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1928520000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 1928520000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 1928520000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 1928520000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=510570785
+mem_heap_B=2009594280
+mem_heap_extra_B=1094288
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2009594280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2007120000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2007120000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2007120000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2007120000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=531063521
+mem_heap_B=2091434280
+mem_heap_extra_B=1099744
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2091434280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2088960000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2088960000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2088960000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2088960000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=546988961
+mem_heap_B=2155034280
+mem_heap_extra_B=1103984
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2155034280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2152560000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2152560000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2152560000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2152560000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=568984097
+mem_heap_B=2242874280
+mem_heap_extra_B=1109840
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2242874280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2240400000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2240400000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2240400000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2240400000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=591820577
+mem_heap_B=2334074280
+mem_heap_extra_B=1115920
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2334074280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2331600000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2331600000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2331600000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2331600000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=615618593
+mem_heap_B=2429114280
+mem_heap_extra_B=1122256
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2429114280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2426640000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2426640000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2426640000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2426640000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=640378145
+mem_heap_B=2527994280
+mem_heap_extra_B=1128848
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2527994280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2525520000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2525520000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2525520000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2525520000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=653118497
+mem_heap_B=2578874280
+mem_heap_extra_B=1132240
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2578874280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2576400000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2576400000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2576400000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2576400000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=666129281
+mem_heap_B=2630834280
+mem_heap_extra_B=1135704
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2630834280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2628360000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2628360000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2628360000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2628360000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=679410497
+mem_heap_B=2683874280
+mem_heap_extra_B=1139240
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2683874280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2681400000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2681400000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2681400000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2681400000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=692932097
+mem_heap_B=2737874280
+mem_heap_extra_B=1142840
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2737874280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2735400000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2735400000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2735400000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2735400000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=706754177
+mem_heap_B=2793074280
+mem_heap_extra_B=1146520
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2793074280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2790600000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2790600000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2790600000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2790600000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=720846689
+mem_heap_B=2849354280
+mem_heap_extra_B=1150272
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2849354280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2846880000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2846880000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2846880000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2846880000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=735209633
+mem_heap_B=2906714280
+mem_heap_extra_B=1154096
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2906714280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2904240000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2904240000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2904240000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2904240000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=749873057
+mem_heap_B=2965274280
+mem_heap_extra_B=1158000
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 2965274280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2962800000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 2962800000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 2962800000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 2962800000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=764836961
+mem_heap_B=3025034280
+mem_heap_extra_B=1161984
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3025034280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3022560000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3022560000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3022560000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3022560000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=780101345
+mem_heap_B=3085994280
+mem_heap_extra_B=1166048
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3085994280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3083520000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3083520000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3083520000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3083520000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=795666209
+mem_heap_B=3148154280
+mem_heap_extra_B=1170192
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3148154280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3145680000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3145680000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3145680000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3145680000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=811561601
+mem_heap_B=3211634280
+mem_heap_extra_B=1174424
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3211634280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3209160000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3209160000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3209160000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3209160000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=827757473
+mem_heap_B=3276314280
+mem_heap_extra_B=1178736
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3276314280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3273840000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3273840000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3273840000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3273840000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=835359617
+mem_heap_B=3306674280
+mem_heap_extra_B=1180760
+mem_stacks_B=3232
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=835990625
+mem_heap_B=3309194280
+mem_heap_extra_B=1180928
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3309194280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3306720000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3306720000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3306720000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3306720000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=844283873
+mem_heap_B=3342314280
+mem_heap_extra_B=1183136
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3342314280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3339840000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3339840000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3339840000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3339840000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=852667265
+mem_heap_B=3375794280
+mem_heap_extra_B=1185368
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3375794280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3373320000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3373320000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3373320000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3373320000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=861140801
+mem_heap_B=3409634280
+mem_heap_extra_B=1187624
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3409634280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3407160000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3407160000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3407160000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3407160000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=869704481
+mem_heap_B=3443834280
+mem_heap_extra_B=1189904
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3443834280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3441360000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3441360000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3441360000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3441360000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=878358305
+mem_heap_B=3478394280
+mem_heap_extra_B=1192208
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3478394280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3475920000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3475920000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3475920000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3475920000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=887072225
+mem_heap_B=3513194280
+mem_heap_extra_B=1194528
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3513194280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3510720000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3510720000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3510720000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3510720000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=895876289
+mem_heap_B=3548354280
+mem_heap_extra_B=1196872
+mem_stacks_B=3296
+heap_tree=detailed
+n2: 3548354280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3545880000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3545880000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3545880000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3545880000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=904770497
+mem_heap_B=3583874280
+mem_heap_extra_B=1199240
+mem_stacks_B=3296
+heap_tree=peak
+n2: 3583874280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3581400000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3581400000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3581400000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3581400000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2474280 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=916863188
+mem_heap_B=3602001427
+mem_heap_extra_B=725205
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=929085188
+mem_heap_B=3602028787
+mem_heap_extra_B=743445
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=941314811
+mem_heap_B=3602059051
+mem_heap_extra_B=763621
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=953534039
+mem_heap_B=3602085355
+mem_heap_extra_B=781157
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=965753078
+mem_heap_B=3602111587
+mem_heap_extra_B=798645
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=977977094
+mem_heap_B=3602139715
+mem_heap_extra_B=817397
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=990201173
+mem_heap_B=3602167867
+mem_heap_extra_B=836165
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1002433694
+mem_heap_B=3602199235
+mem_heap_extra_B=857077
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1014659033
+mem_heap_B=3602227867
+mem_heap_extra_B=876165
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1026869882
+mem_heap_B=3602250979
+mem_heap_extra_B=891573
+mem_stacks_B=3512
+heap_tree=detailed
+n2: 3602250979 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3600000000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3600000000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3600000000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3600000000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2250979 in 16 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=69
+#-----------
+time=1039083125
+mem_heap_B=3602275003
+mem_heap_extra_B=907605
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1051309094
+mem_heap_B=3602303875
+mem_heap_extra_B=926853
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1063525802
+mem_heap_B=3602329219
+mem_heap_extra_B=943749
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=1075749944
+mem_heap_B=3602357395
+mem_heap_extra_B=962533
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=1087980764
+mem_heap_B=3602388115
+mem_heap_extra_B=983013
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=1100200433
+mem_heap_B=3602414587
+mem_heap_extra_B=1000661
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=1112417078
+mem_heap_B=3602439907
+mem_heap_extra_B=1017541
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=1124631077
+mem_heap_B=3602464219
+mem_heap_extra_B=1033749
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=1136846021
+mem_heap_B=3602488891
+mem_heap_extra_B=1050197
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=1149068651
+mem_heap_B=3602516491
+mem_heap_extra_B=1068597
+mem_stacks_B=3512
+heap_tree=detailed
+n2: 3602516491 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3600000000 0x110217: treeToGraph(TreeNode*, int, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 3600000000 0x112DB5: runIndependentSets(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 3600000000 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n0: 3600000000 0x10E25B: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 2516491 in 16 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=79
+#-----------
+time=1161289706
+mem_heap_B=3602543491
+mem_heap_extra_B=1086597
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=1173519203
+mem_heap_B=3602573707
+mem_heap_extra_B=1106741
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=1185738557
+mem_heap_B=3602600059
+mem_heap_extra_B=1124309
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=1197964463
+mem_heap_B=3602628907
+mem_heap_extra_B=1143541
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=1210190180
+mem_heap_B=3602657683
+mem_heap_extra_B=1162725
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=1222410479
+mem_heap_B=3602684395
+mem_heap_extra_B=1180533
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=1234638338
+mem_heap_B=3602713987
+mem_heap_extra_B=1200261
+mem_stacks_B=3512
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=9015614568
+mem_heap_B=3602714347
+mem_heap_extra_B=1200501
+mem_stacks_B=3512
+heap_tree=empty

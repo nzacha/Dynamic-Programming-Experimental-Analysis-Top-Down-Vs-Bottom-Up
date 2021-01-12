@@ -150,38 +150,37 @@ class IndependentSet : public Problem <int>{
             IndendentSets_Arguments* args = (IndendentSets_Arguments*) args_generic;
             //args->tree = args->rootGraph(args->graph, PROBLEM_SIZE, NO_EDGE);
 
-            //generate stack of nodes
-            bool visited[PROBLEM_SIZE];
+            bool* visited = new bool[PROBLEM_SIZE];
             for(int i=0; i<PROBLEM_SIZE; i++){
                 visited[i] = false;
             }
+            visited[args->tree->index] = true;
             
-            //put the nodes in a queue
-            stack <TreeNode*> s;
-            queue <TreeNode*> nodes;
-            TreeNode* node = args->tree;
-            visited[node->index] = true;
-            nodes.push(node);
-            while(true){
+            //put nodes into a queue
+            stack<TreeNode*> nodes, s_sorted;
+            nodes.push(args->tree);
+            visited[args->tree->index] = true;
+            TreeNode* node;
+            while(nodes.size()>0){
+                node = nodes.top();
+                s_sorted.push(node);
+                nodes.pop();
                 for(TreeNode* child : node->children){
                     if(!visited[child->index]){
                         visited[child->index] = true;
-                        s.push(child);
                         nodes.push(child);
                     }
                 }
-                if(s.size()<=0)
-                    break;
-                node = s.top();
-                s.pop();
             }
+            delete visited;
+
             #ifdef CONSOLE
                 if(Console::ACTIVE){                
                     cout << "Running Bottom-up " << flush;
                     Console::create_progressbar(10);
                 }
             #endif
-            int retVal = iterate(args->tree, nodes);
+            int retVal = iterate(args->tree, s_sorted);
             #ifdef CONSOLE
                 if(Console::ACTIVE)                   
                     Console::clear_line();
@@ -189,7 +188,7 @@ class IndependentSet : public Problem <int>{
             return retVal;
         }
 
-        int iterate(TreeNode* root, queue<TreeNode*> nodes){           
+        int iterate(TreeNode* root, stack<TreeNode*> nodes){           
             int computed = 0;
             TreeNode* node;
             while(nodes.size() > 0){
@@ -201,7 +200,7 @@ class IndependentSet : public Problem <int>{
                     }
                 #endif    
                 
-                node = nodes.front();
+                node = nodes.top();
                 
                 //if node has no children (is a leaf) set leaf value 
                 //and if so, remove it from the queue

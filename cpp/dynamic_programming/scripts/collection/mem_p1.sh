@@ -1,7 +1,7 @@
 #declare program arguments
 sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-args_1=(5 50 500)
-problems_1=("dijkstra" "independentSets")
+args_1=(5 50 500 5000)
+problems_1=("dijkstra")
 methods=("iterative" "recursive")
 
 ulimit -s unlimited

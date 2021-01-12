@@ -108,23 +108,20 @@ class TreeDiameter : public Problem <int>{
             visited[args->root->index] = true;
             
             //put nodes into a queue
-            stack<TreeNode*> s;
-            queue<TreeNode*> nodes;
-            TreeNode* node = args->root;
+            stack<TreeNode*> nodes, s_sorted;
+            nodes.push(args->root);
             visited[args->root->index] = true;
-            nodes.push(node);
-            while(true){
+            TreeNode* node;
+            while(nodes.size()>0){
+                node = nodes.top();
+                s_sorted.push(node);
+                nodes.pop();
                 for(TreeNode* child : node->children){
                     if(!visited[child->index]){
                         visited[child->index] = true;
-                        s.push(child);
                         nodes.push(child);
                     }
                 }
-                if(s.size()<=0)
-                    break;
-                node = s.top();
-                s.pop();
             }
             delete visited;
 
@@ -141,14 +138,14 @@ class TreeDiameter : public Problem <int>{
             for(int i=0; i<PROBLEM_SIZE; i++)
                 array[i] = (long)0;
 
-            int retVal = iterate(array, args->root, nodes);
+            int retVal = iterate(array, args->root, s_sorted);
             //print1D(inc_array, PROBLEM_SIZE);
             //print1D(exc_array, PROBLEM_SIZE);
             //cout << "Diameter is: " << retVal << endl;
             return retVal;
         }
 
-        int iterate(long* array, TreeNode* root, queue<TreeNode*> nodes){
+        int iterate(long* array, TreeNode* root, stack<TreeNode*> nodes){
             int computed = 0;  
             int maxVal=0;
             TreeNode* node;
@@ -160,7 +157,7 @@ class TreeDiameter : public Problem <int>{
                         Console::update_progressbar(computed, PROBLEM_SIZE);
                     }
                 #endif    
-                node = nodes.front();
+                node = nodes.top();
 
                 //if node has no children (is a leaf) set leaf value 
                 //and if so, remove it from the queue

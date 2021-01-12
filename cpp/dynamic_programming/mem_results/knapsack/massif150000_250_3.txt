@@ -1,0 +1,641 @@
+desc: --massif-out-file=mem_results/knapsack/massif150000_250_3.txt --stacks=yes
+cmd: ./executable.out knapsack 150000 250 -recursive -q
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=68685615
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=14403256
+heap_tree=peak
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=120438596
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=6382312
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=181067411
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=1366080
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=230162970
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=10597000
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=263113918
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=7564800
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=316333968
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=9751384
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=372355018
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=7564552
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=439603309
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=2353240
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=484443185
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=10467736
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=549211893
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=10886776
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=589069568
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=12447640
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=643873858
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=1441384
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=681639673
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=8133352
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=734511815
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=288192
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=802490276
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=4921152
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=840256117
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=3726376
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=893128273
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=5444352
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=946000412
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=7161976
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1021532099
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=4767928
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1066348946
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=12843256
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1122370028
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=1743352
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1189595296
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=5377000
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1234412147
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=13449784
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1301637420
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=125560
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1346454269
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=8197336
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1391271123
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=3927496
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1458496407
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=2940328
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1503313299
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=11009608
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1548130147
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=2122936
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1621600507
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=13959016
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=1661458204
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=8216200
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1701315920
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=93312
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1741173616
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=1637856
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1800960161
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=12431896
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1860746727
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=6268264
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1940462124
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=9351648
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=2020177533
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=12434152
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=2060035261
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=13974040
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=2119821817
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=7803784
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=2159679519
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=9342568
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=2219466081
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=3170208
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=2259323794
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=4708168
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=2299181503
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=6244648
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=2339039222
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=7780792
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=2378896941
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=9316216
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=2418754636
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=10850976
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=2458612353
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=12385384
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=2518398910
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=6204864
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=2578185462
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=23232
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=2611136411
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=9433248
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=2644087367
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=1882176
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=2677038325
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=11292712
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2709989288
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=3740344
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=2742940244
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=13148832
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=2775891210
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=5595640
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=2808842158
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=11029288
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=2841793114
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=7450120
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=2874744065
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=617608
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=2907695014
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=9304128
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=2940645971
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=1746616
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=2973596922
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=11153416
+heap_tree=detailed
+n2: 154275335 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 150601004 0x1181C4: Knapsack::recurse_init(Problem_Arguments*) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+  n1: 150601004 0x1111B2: runAndWriteProblem(Problem<int>*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+   n1: 150601004 0x112063: runKnapsack(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+    n1: 150601004 0x11BA41: void runProblem<int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool)>(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, void (*)(int, int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, bool, bool, bool), bool, bool, bool) (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+     n0: 150601004 0x10E07C: main (in /home/nzacha/Projects/Dissertation/cpp/dynamic_programming/executable.out)
+ n0: 3674331 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=62
+#-----------
+time=3006547873
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=3597120
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=3039498821
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=13003968
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=3072449776
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=5446456
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=3105400731
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=11886664
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=3138351684
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=7293120
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=3171302643
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=1515304
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=3204253591
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=9139960
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=3237204539
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=1581408
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=3270155487
+mem_heap_B=154275335
+mem_heap_extra_B=4200497
+mem_stacks_B=10986904
+heap_tree=empty

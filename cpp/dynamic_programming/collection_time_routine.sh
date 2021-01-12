@@ -16,19 +16,19 @@ mkdir $DIR_RECURSIVE
 ./scripts/collection/time_p1.sh
 
 #knapsack
-./scripts/collection/time_p2.sh
+#./scripts/collection/time_p2.sh
 
 #treeDiameter kTrees
 ./scripts/collection/time_p3.sh
 
 #longestCommonSubSequence1D longestCommonSubSequence2D
-./scripts/collection/time_p4.sh
+#./scripts/collection/time_p4.sh
 
 #chainmatrixmultiplication
-./scripts/collection/time_p5.sh
+#./scripts/collection/time_p5.sh
 
 #mostCommonSubSequebce
-./scripts/collection/time_p6.sh
+#./scripts/collection/time_p6.sh
 
 echo "sending mail"
 mail -s "Execution Time Collection Done" zicolas3@gmail.com <<< "Hello, execution has finished :)" 

@@ -11,13 +11,16 @@ echo "Running Memory Routine"
 #./scripts/collection/mem_p2.sh
 
 #treeDiameter kTrees
-./scripts/collection/mem_p3.sh
+#./scripts/collection/mem_p3.sh
 
 #longestCommonSubSequence1D longestCommonSubSequence2D
-./scripts/collection/mem_p4.sh
+#./scripts/collection/mem_p4.sh
 
 #chainmatrixmultiplication
-./scripts/collection/mem_p5.sh
+#./scripts/collection/mem_p5.sh
+
+#mostCommonSubSequence
+#./scripts/collection/mem_p6.sh
 
 echo "sending mail"
-mail -s "Memory Collection Done" zicolas3@gmail.com <<< "Hello, execution has finished :)" 
+mail -s "Memory Collection Done" zicolas3@gmail.com <<< "Hello, execution has finished :)"  

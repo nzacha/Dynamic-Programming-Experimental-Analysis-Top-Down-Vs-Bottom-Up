@@ -2,8 +2,8 @@
 
 #declare program arguments
 sizes_1=(7500 15000 22500 30000 37500 45000 52500 60000)
-args_1=(5 50 500)
-problems_1=("dijkstra" "independentSets")
+args_1=(5 50 500 5000)
+problems_1=("dijkstra")
 
 sizes_2=(15000 30000 45000 60000 75000 90000 105000 120000 135000 150000)
 args_2=(250 2500 25000)
@@ -11,14 +11,14 @@ problems_2=("knapsack")
 
 sizes_3=(20000000 40000000 60000000 80000000 100000000 120000000 140000000)
 args_3=(10 100 1000 10000)
-problems_3=("treeDiameter" "kTrees")
+problems_3=("treeDiameter" "independentSets" "kTrees")
 
 sizes_4=(8000 16000 24000 32000 40000 48000 56000)
-args_4=(50 500 5000)
+args_4=(50 500 5000 50000 500000)
 problems_4=("longestIncreasingSubSequence2D") #"longestIncreasingSubSequence1D" 
 
 sizes_5=(1000 2000 3000 4000 5000 6000)
-args_5=(50 500 5000)
+args_5=(50 500 5000 50000)
 problems_5=("chainMatrixMultiplication")
 
 sizes_6=(500 1000 1500 2000 2500 3000)
