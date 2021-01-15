@@ -14,10 +14,10 @@ args_3=(10 100 1000 10000)
 problems_3=("treeDiameter" "independentSets" "kTrees")
 
 sizes_4=(8000 16000 24000 32000 40000 48000 56000)
-args_4=(50 500 5000 50000 500000)
-problems_4=("longestIncreasingSubSequence2D") #"longestIncreasingSubSequence1D" 
+args_4=(50 500 5000)
+problems_4=("longestIncreasingSubSequence2D" "longestIncreasingSubSequence1D") 
 
-sizes_5=(1000 2000 3000 4000 5000 6000)
+sizes_5=(500 1000 1500 2000 2500 3000)
 args_5=(50 500 5000 50000)
 problems_5=("chainMatrixMultiplication")
 
@@ -200,7 +200,7 @@ do
 	p_file=data/per/r_${problem}.csv
 	printAttempts $t_file $T_ATTEMPTS
 			
-	for arg in ${args_1[@]}
+	for arg in ${args_2[@]}
 	do
 		for size in ${sizes_2[@]}
 		do

@@ -4,13 +4,13 @@ mkdir mem_results
 
 echo "Running Memory Routine"
 
-#dijkstra, independent_sets
+#dijkstra
 #./scripts/collection/mem_p1.sh
 
 #knapsack
 #./scripts/collection/mem_p2.sh
 
-#treeDiameter kTrees
+#treeDiameter kTrees independent_sets
 #./scripts/collection/mem_p3.sh
 
 #longestCommonSubSequence1D longestCommonSubSequence2D
@@ -20,7 +20,7 @@ echo "Running Memory Routine"
 #./scripts/collection/mem_p5.sh
 
 #mostCommonSubSequence
-#./scripts/collection/mem_p6.sh
+./scripts/collection/mem_p6.sh
 
 echo "sending mail"
 mail -s "Memory Collection Done" zicolas3@gmail.com <<< "Hello, execution has finished :)"  

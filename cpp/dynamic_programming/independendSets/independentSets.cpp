@@ -210,7 +210,11 @@ class IndependentSet : public Problem <int>{
                     computed++;
                     continue;
                 }
-                
+
+                /*
+                this is not required if the nodes are inserted in the stack in DFS order,
+                however if we use a queue with not sorted nodes then this is required
+
                 //check if node children have computed value
                 //if theres a child without a value then set flag to false
                 bool canCompute = true;
@@ -230,6 +234,7 @@ class IndependentSet : public Problem <int>{
                     continue;
                 }
                 //the value can be computed
+                */
 
                 //calculate value including the current node
                 int val_including = 1;

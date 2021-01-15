@@ -1,6 +1,5 @@
 #clean results directory
 #rm -rf time_results
-mkdir time_results
 
 echo "Running Time Routine"
 
@@ -13,13 +12,13 @@ mkdir $DIR_ITERATIVE
 mkdir $DIR_RECURSIVE
 
 #dijkstra, independent_sets
-./scripts/collection/time_p1.sh
+#./scripts/collection/time_p1.sh
 
 #knapsack
-#./scripts/collection/time_p2.sh
+./scripts/collection/time_p2.sh
 
 #treeDiameter kTrees
-./scripts/collection/time_p3.sh
+#./scripts/collection/time_p3.sh
 
 #longestCommonSubSequence1D longestCommonSubSequence2D
 #./scripts/collection/time_p4.sh

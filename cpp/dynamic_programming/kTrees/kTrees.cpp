@@ -143,12 +143,15 @@ class KTrees : public Problem <int>{
                     continue;
                 }
 
+                /*
+                this is not required if the nodes are inserted in the stack in DFS order,
+                however if we use a queue with not sorted nodes then this is required
+
                 //check if node children have computed value
                 //if theres a child without a value then set flag to false
-                bool canCompute=true;
+                bool canCompute = true;
                 for(TreeNode* child: node->children){
-                    if(array[child->index] == 0){
-                        cout << "Sort error" << endl;
+                    if(child->value == 0){
                         canCompute = false;
                         break;
                     }
@@ -156,15 +159,15 @@ class KTrees : public Problem <int>{
 
                 //if value can't be computed directly (flag is false)
                 //put node back into the back of the queue
-                //and continue to the next node                                                
+                //and continue to the next node
                 if(!canCompute) {
                     nodes.pop();
                     nodes.push(node);
                     continue;
                 }
-
                 //the value can be computed
-                
+                */
+
                 for(TreeNode* child: node->children){
                     array[node->index] += array[child->index];
                     node->value += child->value;

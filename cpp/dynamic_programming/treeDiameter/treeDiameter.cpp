@@ -169,6 +169,10 @@ class TreeDiameter : public Problem <int>{
                     continue;
                 }
 
+                /*
+                this is not required if the nodes are inserted in the stack in DFS order,
+                however if we use a queue with not sorted nodes then this is required
+
                 //check if node children have computed value
                 //if theres a child without a value then set flag to false
                 bool canCompute = true;
@@ -188,6 +192,7 @@ class TreeDiameter : public Problem <int>{
                     continue;
                 }
                 //the value can be computed
+                */
 
                 //calculate firstmax and secondmax of node
                 int firstmax=0, secondmax=0;

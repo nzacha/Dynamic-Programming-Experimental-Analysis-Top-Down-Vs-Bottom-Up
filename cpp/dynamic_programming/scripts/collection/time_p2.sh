@@ -1,8 +1,8 @@
 #declare program arguments
-sizes_2=(15000 30000 45000 60000 75000 90000 105000 120000 135000 150000)
+sizes_2=(135000 150000) #15000 30000 45000 60000 75000 90000 105000 120000 
 args_2=(250 2500 25000)
 problems_2=("knapsack")
-methods=("iterative" "recursive")
+methods=("recursive") #iterative
 
 ulimit -s unlimited
 

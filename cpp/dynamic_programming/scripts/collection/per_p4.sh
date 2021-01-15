@@ -1,7 +1,7 @@
 #declare program arguments
 sizes_4=(8000 16000 24000 32000 40000 48000 56000)
 args_4=(50 500 5000)
-problems_4=("longestIncreasingSubSequence2D") #"longestIncreasingSubSequence1D" 
+problems_4=("longestIncreasingSubSequence1D") #"longestIncreasingSubSequence2D" 
 methods=("iterative" "recursive") 
 
 ulimit -s unlimited
